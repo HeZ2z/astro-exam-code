@@ -1,10 +1,14 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
 @import "./typography.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root,
 html[data-theme="light"] {
+  --font-sans-app:
+    "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
+    "Microsoft YaHei", sans-serif;
   --background: #fdfdfd;
   --foreground: #282728;
   --accent: #006cac;
@@ -21,7 +25,7 @@ html[data-theme="dark"] {
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-sans-app);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
@@ -63,8 +67,6 @@ html[data-theme="dark"] {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
 }
 
-/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
-/* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 1rem;
 }

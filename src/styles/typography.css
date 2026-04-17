@@ -1,7 +1,6 @@
 @plugin "@tailwindcss/typography";
 
 @layer base {
-  /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
     @apply prose;
 
@@ -89,9 +88,16 @@
     pre {
       @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
     }
+
+    .katex-display {
+      @apply overflow-x-auto overflow-y-hidden py-2;
+    }
+
+    .mermaid {
+      @apply my-6 flex justify-center overflow-x-auto;
+    }
   }
 
-  /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
     @apply flex border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
   }
@@ -100,8 +106,6 @@
     @apply bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
   }
 
-  /* Styles for Shiki transformers */
-  /* https://shiki.style/packages/transformers */
   .astro-code {
     .line.diff.add {
       @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];

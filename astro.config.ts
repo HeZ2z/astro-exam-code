@@ -1,8 +1,10 @@
-import { defineConfig, envField, fontProviders } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import rehypeKatex from "rehype-katex";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import remarkMath from "remark-math";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -11,7 +13,6 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 
-// https://astro.build/config
 export default defineConfig({
   site: SITE.website,
   integrations: [
@@ -20,12 +21,26 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    remarkPlugins: [
+      remarkMath,
+      remarkToc,
+      [remarkCollapse, { test: "Table of contents" }],
+    ],
+    rehypePlugins: [[rehypeKatex, { strict: false }]],
     shikiConfig: {
-      // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
       defaultColor: false,
       wrap: false,
+      langAlias: {
+        Java: "java",
+        Javascript: "javascript",
+        Python: "python",
+        C: "c",
+        Text: "text",
+        input: "text",
+        output: "text",
+        redis: "text",
+      },
       transformers: [
         transformerFileName({ style: "v2", hideDot: false }),
         transformerNotationHighlight(),
@@ -59,15 +74,5 @@ export default defineConfig({
   },
   experimental: {
     preserveScriptOrder: true,
-    fonts: [
-      {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
-      },
-    ],
   },
 });
