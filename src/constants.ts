@@ -2,7 +2,6 @@ import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
-import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
@@ -19,26 +18,14 @@ interface Social {
 export const SOCIALS: Social[] = [
   {
     name: "GitHub",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on GitHub`,
+    href: "https://github.com/HeZ2z/astro-exam-code",
+    linkTitle: `${SITE.title} GitHub 仓库`,
     icon: IconGitHub,
   },
   {
-    name: "X",
-    href: "https://x.com/username",
-    linkTitle: `${SITE.title} on X`,
-    icon: IconBrandX,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/username/",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    icon: IconLinkedin,
-  },
-  {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
+    href: "mailto:hez2z@foxmail.com",
+    linkTitle: `给 ${SITE.title} 发送邮件`,
     icon: IconMail,
   },
 ] as const;
@@ -47,37 +34,37 @@ export const SHARE_LINKS: Social[] = [
   {
     name: "WhatsApp",
     href: "https://wa.me/?text=",
-    linkTitle: `Share this post via WhatsApp`,
+    linkTitle: "通过 WhatsApp 分享这篇资料",
     icon: IconWhatsapp,
   },
   {
     name: "Facebook",
     href: "https://www.facebook.com/sharer.php?u=",
-    linkTitle: `Share this post on Facebook`,
+    linkTitle: "分享到 Facebook",
     icon: IconFacebook,
   },
   {
     name: "X",
     href: "https://x.com/intent/post?url=",
-    linkTitle: `Share this post on X`,
+    linkTitle: "分享到 X",
     icon: IconBrandX,
   },
   {
     name: "Telegram",
     href: "https://t.me/share/url?url=",
-    linkTitle: `Share this post via Telegram`,
+    linkTitle: "通过 Telegram 分享这篇资料",
     icon: IconTelegram,
   },
   {
     name: "Pinterest",
     href: "https://pinterest.com/pin/create/button/?url=",
-    linkTitle: `Share this post on Pinterest`,
+    linkTitle: "分享到 Pinterest",
     icon: IconPinterest,
   },
   {
     name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `Share this post via email`,
+    href: "mailto:?subject=分享一篇复习资料&body=",
+    linkTitle: "通过邮件分享这篇资料",
     icon: IconMail,
   },
 ] as const;

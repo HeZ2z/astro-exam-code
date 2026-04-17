@@ -8,7 +8,6 @@ import Card from "@/components/Card.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 import { SITE } from "@/config";
 
-// Redirect to 404 page if `showArchives` config is false
 if (!SITE.showArchives) {
   return Astro.redirect("/404");
 }
@@ -16,24 +15,24 @@ if (!SITE.showArchives) {
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "1 月",
+  "2 月",
+  "3 月",
+  "4 月",
+  "5 月",
+  "6 月",
+  "7 月",
+  "8 月",
+  "9 月",
+  "10 月",
+  "11 月",
+  "12 月",
 ];
 ---
 
-<Layout title={`Archives | ${SITE.title}`}>
+<Layout title={`归档 | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Archives" pageDesc="All the articles I've archived.">
+  <Main pageTitle="归档" pageDesc="按时间查看历次整理的课程资料与回忆版。">
     {
       Object.entries(
         getPostsByGroupCondition(posts, post =>

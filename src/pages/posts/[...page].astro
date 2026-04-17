@@ -18,9 +18,9 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout title={`资料 | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+  <Main pageTitle="资料" pageDesc="按时间整理的全部考试资料与复习文章。">
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>
