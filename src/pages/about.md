@@ -1,37 +1,28 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "关于"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+期末复习资料站用于集中整理课程回忆版、重点笔记、小测记录和复习时常用的补充资料。
 
-![Astro Paper](public/astropaper-og.jpg)
+这个站点保留了 AstroPaper 原有的页面结构，但内容定位不再是通用博客，而是更偏向课程资料与考试复习归档。
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## 你可以在这里找到什么
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+- 各门课程的回忆版真题
+- 期末重点与速通笔记
+- 平时小测、作业整理
+- 带 Mermaid 图和数学公式的资料文章
 
-## Features
+## 如何使用
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+- 先看首页推荐资料，快速进入高价值内容
+- 用标签页按课程或主题筛选
+- 用归档页按时间回溯整理记录
+- 用搜索页直接检索课程名、老师名或关键词
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## 说明
 
-and so much more.
+当前内容主要从既有博客中的考试相关文章迁移而来，首轮以高相关资料为主，暂不包含个人随笔和日常记录。
 
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+如果你发现资料有错误、遗漏，或希望补充新的课程内容，欢迎通过仓库 Issue 或邮件联系反馈。
