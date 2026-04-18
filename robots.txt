@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hez2z.github.io/hez-notes/sitemap-index.xml

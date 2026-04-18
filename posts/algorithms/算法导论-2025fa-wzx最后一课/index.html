@@ -1,0 +1,503 @@
+<!DOCTYPE html><html dir="auto" lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/"><meta name="generator" content="Astro v5.16.6"><!-- General Meta Tags --><title>算法导论-2025fa-wzx最后一课 | HeZzz&#39;s Notes</title><meta name="title" content="算法导论-2025fa-wzx最后一课 | HeZzz's Notes"><meta name="description" content="算法导论 2025 秋季学期 wzx 最后一课的五大常用算法总结。"><meta name="author" content="HeZzz"><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="算法导论-2025fa-wzx最后一课 | HeZzz's Notes"><meta property="og:description" content="算法导论 2025 秋季学期 wzx 最后一课的五大常用算法总结。"><meta property="og:url" content="https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/"><meta property="og:image" content="https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/index.png"><!-- Article Published/Modified time --><meta property="article:published_time" content="2025-11-26T02:14:16.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/"><meta property="twitter:title" content="算法导论-2025fa-wzx最后一课 | HeZzz's Notes"><meta property="twitter:description" content="算法导论 2025 秋季学期 wzx 最后一课的五大常用算法总结。"><meta property="twitter:image" content="https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/index.png"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"算法导论-2025fa-wzx最后一课 | HeZzz's Notes","image":"https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/index.png","datePublished":"2025-11-26T02:14:16.000Z","author":[{"@type":"Person","name":"HeZzz","url":"https://github.com/HeZ2z"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="HeZzz's Notes" href="https://hez2z.github.io/hez-notes/rss.xml"><meta name="theme-color" content=""><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><!-- Minimal inline script to prevent FOUC - sets theme immediately --><script>
+      (function () {
+        const initialColorScheme = ""; // "light" | "dark"
+        const currentTheme = localStorage.getItem("theme");
+
+        function getPreferTheme() {
+          if (currentTheme) return currentTheme;
+          if (initialColorScheme) return initialColorScheme;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        const themeValue = getPreferTheme();
+
+        // Set theme immediately to prevent flash
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        // Export minimal API for external script
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script><link rel="stylesheet" href="/_astro/about.C2O1XK_T.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+:where([data-astro-image]){object-fit:var(--fit);object-position:var(--pos);height:auto}:where([data-astro-image=full-width]){width:100%}:where([data-astro-image=constrained]){max-width:100%}
+</style><style>[data-astro-transition-scope="astro-fam6wyqg-1"] { view-transition-name: \7B97\6CD5\5BFC\8BBA-2025-fa-wzx\6700\540E\4E00\8BFE; }@layer astro { ::view-transition-old(\7B97\6CD5\5BFC\8BBA-2025-fa-wzx\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\7B97\6CD5\5BFC\8BBA-2025-fa-wzx\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\7B97\6CD5\5BFC\8BBA-2025-fa-wzx\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\7B97\6CD5\5BFC\8BBA-2025-fa-wzx\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: \7B97\6CD5\5BFC\8BBA-\7B97\6CD5\8BBE\8BA1\4E0E\5206\6790; }@layer astro { ::view-transition-old(\7B97\6CD5\5BFC\8BBA-\7B97\6CD5\8BBE\8BA1\4E0E\5206\6790) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\7B97\6CD5\5BFC\8BBA-\7B97\6CD5\8BBE\8BA1\4E0E\5206\6790) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\7B97\6CD5\5BFC\8BBA-\7B97\6CD5\8BBE\8BA1\4E0E\5206\6790) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\7B97\6CD5\5BFC\8BBA-\7B97\6CD5\8BBE\8BA1\4E0E\5206\6790) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-3"] { view-transition-name: \4F5C\4E1A; }@layer astro { ::view-transition-old(\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\4F5C\4E1A) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-4"] { view-transition-name: \671F\672B\590D\4E60; }@layer astro { ::view-transition-old(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <a id="skip-to-content" href="#main-content" class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4">
+跳到正文
+</a> <header class="app-layout flex flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="py-4 sm:py-6 border-b border-border relative w-full bg-background flex items-baseline justify-between sm:items-center"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> HeZzz&#39;s Notes </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&#38;>li>a]:block [&#38;>li>a]:px-4 [&#38;>li>a]:py-3 [&#38;>li>a]:text-center [&#38;>li>a]:font-medium [&#38;>li>a]:hover:text-accent sm:[&#38;>li>a]:px-2 sm:[&#38;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/posts" class="active-nav">
+资料
+</a> </li> <li class="col-span-2"> <a href="/tags">
+标签
+</a> </li> <li class="col-span-2"> <a href="/about">
+关于
+</a> </li> <li class="col-span-2"> <a href="/archives" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex justify-center p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/search" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="切换亮色或暗色模式" aria-label="切换主题" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function s(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!n||!o||e.addEventListener("click",()=>{const c=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",c?"false":"true"),e.setAttribute("aria-label",c?"打开菜单":"关闭菜单"),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")})}s();document.addEventListener("astro:after-swap",s);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline -ms-2 mt-8 mb-2 hover:text-foreground/75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg><span>返回</span> </a></div><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="app-layout pb-12" data-pagefind-body> <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl" data-astro-transition-scope="astro-fam6wyqg-1"> 算法导论-2025fa-wzx最后一课 </h1> <div class="my-2 flex items-center gap-2"> <div class="flex items-center gap-x-2 opacity-80"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 min-w-5.5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2025-11-26T02:14:16.000Z">26 Nov, 2025</time> </div> <span aria-hidden="true" class="max-sm:hidden hidden">|</span>  </div> <article id="article" class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <p>五大常用算法总结。</p>
+<h2 id="分治法">分治法</h2>
+<ul>
+<li>基本思想。
+<ul>
+<li>将一个问题，分解为多个子问题，递归的去解子问题，最终合并为问题的解。</li>
+<li>适用情况。
+1.问题分解为小问题后容易解决。
+2.分解后的小问题解可以合并为原问题的解。
+3.小问题之间互相独立。</li>
+<li>实例。
+0. 二分查找。
+1. 快速排序。
+2. 合并排序。
+3. 大整数乘法。
+4. 循环赛日程表。</li>
+</ul>
+</li>
+</ul>
+<h2 id="动态划分算法">动态划分算法</h2>
+<ul>
+<li>基本思想。
+<ul>
+<li>将问题分解为多个子问题（阶段），按顺序求解，前一个问题的解为后一个问题提供信息。</li>
+<li>适用情况。
+1.最优化原理：问题的最优解所包含的子问题的解也是最优的，即最优子结构。
+2.无后效性：某个状态一旦确定，就不受以后决策的影响。
+3.有重叠子问题。</li>
+<li>说明。
+<ul>
+<li>递推关系是从小的问题开始到较大问题的转化，往往可以用递归来实现，可以利用之前产生的子问题的解来减少重复的计算。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="贪心算法">贪心算法</h2>
+<ul>
+<li>基本思想。
+<ul>
+<li>不从总体最优考虑，仅考虑局部最优解，问题必须具备后无效性。</li>
+<li>步骤。
+<ul>
+<li>将问题分解为多个子问题。</li>
+<li>得到问题的局部最优解。</li>
+<li>合并子问题的局部最优解。</li>
+</ul>
+</li>
+<li>适用情况。
+1.局部最优策略能导致全局最优解。
+2.子问题后无效性。</li>
+</ul>
+</li>
+</ul>
+<h2 id="回溯法">回溯法</h2>
+<ul>
+<li>基本思想。
+<ul>
+<li>选优搜索法，走不通就退回重选，按照深度优先搜索的策略，从根节点出发，深度搜索解空间。</li>
+<li>步骤。
+<ul>
+<li>确定解空间。</li>
+<li>确定节点的扩展搜索规则。</li>
+<li>深度优先方式搜索解空间，用剪枝法避免无效搜索。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="分支界限法">分支界限法</h2>
+<ul>
+<li>基本思想。
+<ul>
+<li>与回溯法类似，也是在解空间里搜索解得算法，不同点是，回溯法一般寻找所有解，分支界限法搜索一个解或者最优解。</li>
+<li>分支：广度优先策略或者最小耗费（最大效益）优先。</li>
+<li>分支搜索方式：FIFO、LIFO、优先队列式、分支界限搜索算法。</li>
+</ul>
+</li>
+</ul>
+<h2 id="课程总结">课程总结</h2>
+<h3 id="一回溯法与分支限界">一、回溯法与分支限界</h3>
+<p><strong>回溯法:</strong></p>
+<ul>
+<li>本质：穷举法/枚举法</li>
+<li>核心思想：为提高效率，需要合理组织解空间</li>
+<li>解空间组织：
+<ul>
+<li>子集树</li>
+<li>排列树</li>
+</ul>
+</li>
+<li>搜索策略：深度优先搜索（DFS）</li>
+<li>剪枝函数：
+<ul>
+<li>约束函数：控制左子树（满足约束条件才能进入）</li>
+<li>限界函数：控制右子树（必须得到更好或同样好的解才能进入）</li>
+</ul>
+</li>
+<li>适用场景：寻找所有最优解（如图的着色问题、n皇后问题、货郎担问题、最大团问题等）</li>
+</ul>
+<p><strong>分支限界法:</strong></p>
+<ul>
+<li>解空间组织：与回溯法相同（子集树或排列树）</li>
+<li>搜索策略：广度优先搜索（BFS）或最大效益优先</li>
+<li>实现方式：队列式、优先队列式（实际中多采用优先队列式）</li>
+<li>适用场景：寻找一个最优解（以最快速度找到最优解即停止）</li>
+</ul>
+<p><strong>两者区别:</strong></p>
+<ul>
+<li>回溯法：寻找所有最优解</li>
+<li>分支限界：寻找一个最优解</li>
+</ul>
+<h3 id="二动态规划">二、动态规划</h3>
+<p><strong>前提条件:</strong></p>
+<ol>
+<li>最优子结构性质：原问题的解包含子问题的最优解</li>
+<li>子问题重叠性质：原问题可分解成多个相互重叠的子问题</li>
+</ol>
+<p><strong>核心思想:</strong></p>
+<ul>
+<li>自顶向下分析：建立递推表达式</li>
+<li>自底向上求解：从小规模问题逐渐扩大到原问题规模</li>
+</ul>
+<p><strong>特点:</strong></p>
+<ul>
+<li>保证全局最优：考虑了所有情况</li>
+<li>示例：矩阵连乘问题求n个矩阵的最优解时，同时得到n-1个、n-2个…矩阵的最优解</li>
+</ul>
+<h3 id="三贪心算法">三、贪心算法</h3>
+<p><strong>核心思想:</strong></p>
+<ul>
+<li>不从总体考虑最优，仅考虑局部最优解</li>
+<li>多阶段决策，每步选择当前最优</li>
+</ul>
+<p><strong>全局最优保证:</strong></p>
+<ul>
+<li>需要证明策略具有贪心选择性质</li>
+</ul>
+<p><strong>与动态规划的关系:</strong></p>
+<ul>
+<li>动态规划能求解的问题范围更广</li>
+<li>能用贪心解决的问题一定能用动态规划解决（反之不成立）</li>
+<li>能用贪心且保证全局最优时，优先使用贪心（更简单）</li>
+<li>典型区分：背包问题（可用贪心）vs 0-1背包问题（需用动态规划）</li>
+</ul>
+<h3 id="四分治与递归">四、分治与递归</h3>
+<p><strong>适用条件:</strong></p>
+<ol>
+<li>子问题与原问题相同</li>
+<li>子问题之间相互独立</li>
+</ol>
+<p><strong>核心思想:</strong></p>
+<ul>
+<li>将大规模问题分解为小规模问题</li>
+<li>递归求解子问题</li>
+<li>合并子问题的解</li>
+</ul>
+<p><strong>示例</strong>：搜索、排序等算法</p>
+<h3 id="五算法复杂性分析">五、算法复杂性分析</h3>
+<p><strong>复杂性类型:</strong></p>
+<ul>
+<li>时间复杂性</li>
+<li>空间复杂性
+（本课程重点关注时间复杂性）</li>
+</ul>
+<p><strong>影响因素:</strong></p>
+<ul>
+<li>算法本身</li>
+<li>输入数据</li>
+<li>问题规模</li>
+</ul>
+<p><strong>分析方法:</strong></p>
+<ul>
+<li>渐进性态分析</li>
+<li>递推表达式推导</li>
+<li>大O表示法</li>
+</ul>
+<p><strong>分析要素</strong>（递归算法）</p>
+<ol>
+<li>分解成几个子问题</li>
+<li>每个子问题是原问题规模的多少</li>
+<li>分解和合并的额外代价</li>
+</ol>
+<p><strong>题目形式:</strong></p>
+<ol>
+<li>复杂性分析</li>
+<li>具体问题求解：
+<ul>
+<li>写出解题思路</li>
+<li>可用伪代码或文字描述（第一步、第二步、第三步…）</li>
+<li>关键是讲清楚思路</li>
+</ul>
+</li>
+<li>算法选择：根据题目要求选择合适方法（贪心/动态规划等）</li>
+<li>解空间绘制：
+<ul>
+<li>回溯或分支限界的解空间类型</li>
+<li>遍历过程中的剪枝结果（重点掌握）</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="六文字记录">六、文字记录</h3>
+<p>比方说 图的着色问题,比方说 n皇后问题 对吧?货郎担问题他可能他的最优解,比如最大团问题,对吧?他的最优解可能不是一个,它有很多个,他有很多个。</p>
+<p>那么这个回溯法一般用于去寻找所有的解,你要把最优解都给我找出来。</p>
+<p>当然在这个过程中,我用剪枝策略,我左减右减,那么分支限界他一般来说我就找一个解就行了,我就想以最快的速度,采用优先队列的方式对吧,你以最快的速度导向我,引导着我去找着一个最优解,我什么时候到叶子,什么时候我就停了，这是我们说分支限界和回溯。有的教材上叫做分支界限,有的教材上叫分支限界,它指的是同一类方法,这是我们说回溯和分支限界这两种方法求解问题的时候,大概就是这个思路。</p>
+<p>其实相对而言,就这两种方法求解问题的时候,其实是比较简单的,因为你你想一下,你就,实际上你就是你确定是什么树,然后你遍历就完事了。</p>
+<p>那么除此之外，那么我们还讲了两类方法，用来做多步骤决策的。</p>
+<p>一个是什么呢?动态规划,一个是贪心,我们讲到了动态规划和贪心他们都是解决多阶段决策问题,都是解决多阶段决策问题。</p>
+<p>那么动态规划,动态规划我们要去求解这个问题的时候,求解这个问题的时候,一一讲到这个动态,一讲到动态规划,就是求解这个问题。</p>
+<p>他有它有两个前提，它有两个前提，一个是什么呢？就是最优子结构性质。</p>
+<p>你这个问题要具有最优子结构性质。</p>
+<p>什么叫最优子结构性质?就是就是原问题的解,里面包含有子问题的最优解,我们称为最优子结构性质。</p>
+<p>另外一个子问题重叠性质,就是我把它原问题分解成很多小的相互重叠的那些子问题,你把这些子问题都求完了,你自然能得到原问题的解,这是我们说动态规划求动态规划这一章我们花费的时间很多,因为这一章它很难,它很难,讲到动态规划,我们就必须要讲两句话两句话,哪两句话自顶向下的去分析,自底向上的去求解。</p>
+<p>对吧，你自顶向下去分析的过程，实际上就是你要建立一个递推表达式的过程，然后有了这个表达式，那我们就可以自底向下，自底向上去求。</p>
+<p>嗯，就是我们先从小规模的对吧求出它的解规模逐渐变大,逐渐变大，这就是什么？这就是我们说的动态规划。</p>
+<p>动态规划，它求解问题就什么呢？就是说它一定能够保证是全局最优的因为他把所有的情况都考虑了一遍。</p>
+<p>你可以想一下,咱讲的那个动态规划,那些例子,他把所有情况都考虑了一遍。</p>
+<p>你比如像矩阵连乘,对吧?两个矩阵连乘,三个矩阵连乘,三个矩阵连乘你从不同的位置开始,到不同的位置结束,它是一个什么样的最优解,他都知道,所以我们说你,比如说矩阵连乘,你要是求n个矩阵连乘它的最优解,实际上他不但知道n个矩阵连乘的最优解,他还知道n减一个矩阵连乘的最优解,他还知道n减二个矩阵连乘的最优解,对吧。</p>
+<p>所以我们说什么呢?为什么我们说原问题的解里面包含有子问题的最优解,这是就是动态规划,动态规划。</p>
+<p>而我们讲的贪心,他也是一个多步骤决策,也是个多步骤决策,只不过是什么呢?你看他不是从总体上去考虑最优,他仅仅去考虑局部最优解,局部最优解,嗯,也是一样的,就是比如,我把这个就是问题分成一个多阶段嘛,它分成多阶段,嗯,就是我每一个步骤我都去选择当前最优的,当前最优的,就这么一层一层一层的去讲。</p>
+<p>我们当时讲个贪心的时候，我们也给大家讲说贪心，贪心，它并不能保证他一定得到全局最优解，对吧？你说我怎么才能够保证他得到全局最优解呢？你必须有这样的话做保证就是你证明，你要能证明就是这个问题，就是你的这个策略。</p>
+<p>嗯，它具有什么贪心选择性质有贪心选择性质这样的话，我就能保证它是全局最优的。</p>
+<p>刚才我们区分的是回溯跟分支限界,现在我们再来区分一下动态规划跟贪心。</p>
+<p>实际上在前面的时候,我们已经区分过动态规划跟贪心了,就这两个,这两个他们之间的关系,实际上我当时不是给你画个图吗?对吧,我给你画个图,就类似这样一幅图,一个大的最外面这个最外面,这个是什么?动态规划对吧?最里面这个是贪心,也就是说,也就是说就是动态规划,它能求解的问题的范围更大。</p>
+<p>嗯，就是在这个范围内有一部分问题是用能用贪心做的。</p>
+<p>那么当然你也体会了，贪心，他简单对吧？简单。</p>
+<p>如果说他能用贪心做,又能保证得到全局最优解,那我肯定要用贪心。</p>
+<p>所以我们讲过那样的话，什么话呢？我们说能用动态规划求解的问题，不一定能用贪心来做，但是反过来，能用贪心做的，他一定能用动态规划做。</p>
+<p>这就是你要知道动态规划跟贪心他们间的关系就是你,尤其你要去区分背包问题，跟0-1背包问题对吧?跟0-1背包问题就是我们说普通的背包问题,你用贪心，普通的背包问题跟用动态规划，它有什么样的区别,我们当时的时候就专门给大家花了很多的这种精力去去讲,去讲这是什么,这是我们说的贪心的问题和动态规划的问题,它都是用来解决这种多阶段决策多阶段决策的你像这些都是用来干什么呢?找最优解的找最优解的就是你要找个最优的。</p>
+<p>他一般来说,一般来说他要他一旦问你,问你这种类似于说我要找个最优的基本上基本上来说你就他一般来说不太会直接用分治与递归这种方式,分治与递归这种方式。</p>
+<p>好,回过头来来,咱再来看咱最早介绍的这种就是第一章分治与递归。</p>
+<p>分治与递归。</p>
+<p>那么当时讲分治与递归的时候,我们特别强调的两句话,两句话就是你当你求解一个问题它比较难的时候,对吧,你把一个大规模的问题变成一个小规模的问题,就是我们当时讲了两句话,第一句话是这些小规模的子问题必须原问,问题与原问题相同,对吧,根源问题相同,这是这是一个。</p>
+<p>另外一个就是我们说这些子问题之间他们要什么呢?他们要独立,对吧?要独立,要相互独立,相互独立,这样的话,就可以采用这种递归的方式去求解。</p>
+<p>采用递归的方式去求解,这个地方给你举了很多的这个例子,你看这些例子,关于搜索的,关于排序的,关于排序的等等等等,我要讲的是我们说的五大问题,大概要说的就这么多,当然我们还有什么?还有第一章,就是那个概述,对吧,算法导论那个概述,那个概述那一章,其实嗯,就是就是要给你一个什么概念呢?就是说这个算法,它实际上它是有优劣的,算法是有优劣的。</p>
+<p>那么我怎么样去评判一个算法的优劣呢？复杂性对吧？它的复杂性呢？又分为什么呢？时间复杂性和空间复杂性。</p>
+<p>我们这个教材更多的关注的是什么呢？时间复杂性时间复杂性。</p>
+<p>这个时间复杂性怎么去评价呢？跟很多因素有关系，对吧？你比如说跟他是什么算法，它的输入又是跟它问题的规模它都有关系。</p>
+<p>那你要想准确的去评价一个算法的复杂性很难,怎么办呢?我们一般来说都是去分析它的渐进性态,也就是他的解,他的解我们在上课的时候一直给大家强调说你要有这样的技能,什么技能?就比方说,我给你一个这种递推的表达式,对吧?那你要能够去推导出推导出这个算法,它的复杂性大o表示法,它的复杂性的最后的值,对吧,它是n乘logn还是n方,还是一个什么样的结果?嗯,就是我们在讲的过程中专门给你讲,你就要找着那三个要素,对吧?三个要素,它分成了几个子问题。</p>
+<p>嗯,然后呢?这每一个子问题是原问题规模的多少你为了分解和合并,你又花费了什么样额外的代价,你要把这三个要素搞清楚,那要做搞清楚,然后这样的话就有助于去什么去,分析分析好了,我们要说的什么呢?关于内容,我就总结这么多分这么多好后面再说什么呢?就是实验当时说的截止到多少号20号,是吧几号我忘了,反正你就按照那个,你就按照那个时间点来就行了,我已经说过了,</p>
+<p>就是你在那个时间点之前,在那个时间点之前,你要把相应的个成果都交上去,然后我也说了,我们不需要去交纸质版的实验报告,实验报告,但是在系统上你要按要求去提交了,这个是作为平时成绩的一部分,平时成绩的一部分,那么这是关于实验,关于实验那么关于考试,关于考试,时间已经说过了,就是12月28号,对吧,周五的晚上,周五的晚上,那么这个题我们总共是七道大题,总共是七道大题,嗯,这个这个基本上基本上都很稳定,每年都这样的,就七道大题,你那那那你就可以数了,你就可以数了。</p>
+<p>我们总共学了几章是不是总共学了六章对吧学了六章总共七道大题对吧,那应该是每一章都会有每一章都会有,每章都会有,就是有一些问题,我在讲课的过程中,我特别给你强调,对吧,就给你强调,就我们明确一点,就是说我们的课上就是说讲了什么样的范围,它就是什么样的范围,它就是什么样的范围,就是我比如说这教材上内容很多,我我们没有讲的地方,就是不考的就不考的,你也不用去担心,你比方说那个叫什么,什么最小生成树单源最短路径,对吧,我又没讲,没讲我说明不考,不考,那么这个我们已经说了,就是说总共是七个题。</p>
+<p>那你说他这个题的形式是什么样子的，形式是什么样子？实际上以前的时候给你做过练习，那些给你截过一些图，那些图就是原，就是以前考试的那些原题。</p>
+<p>对吧，他分好几问这一问那一问那一问就累，是那个样子的。</p>
+<p>嗯，就是他一般是无外乎这样的话，比方说他他他可能会让你做这种这种跟比如跟复杂性分析有关的，对吧，或者是什么呢？是他给你一个具体的问题,给你具体的问题。</p>
+<p>那他会让你去什么呢？就是说你你把这个问题求出来，你大概会采用一个什么样的思路，你会采用一个什么样的思路，就是你要写什么呢？就是你可以去写这个，这个算法就是它的一个，就是你不用任何的这种不是，让你写这个语句不是那个意思，就是你要么可以采用这种伪代码的形式，这也没问题，嗯，伪代码你都不想写，你就可以写大白话就是第一步啥，第二步啥，第三步啥，咱就累是这样了，就是你能把你的问题讲清楚就行了。</p>
+<p>嗯，就是你比方说碰到一个碰，碰到碰到一个问题，对吧？那你根据他的要求，你肯定要想这个问题我应该用什么样的方法去去求解？就是你期末考试的时候啊，你你看到那个问题，如果如果哈，如果这个题目明确跟你说了，用什么方法求，那你老老师用什么方法，球对不对，他要没说，这个时候你就要去琢磨，有些时候可能这个本身就是个考点，就是他要去考察你有没有能力去选出合适的，根据我提的要求，你能选出合适的方法，你到底是用贪心来做，还是用动态规划来做，反正根据具体的这种问题，你去求。</p>
+<p>当然可能还会有,比方说我们说了让你去你,比如说你回溯也好,你去你你你分支限界也好,对吧?我我我问你它是什么样的这种这种这种空间类型,对吧?我我让你去画。</p>
+<p>最后的时候就是他遍历之后,他边遍历边点剪枝的那个结果,你你要你要会画,这都是明摆。</p>
+<p>即便是这么说，那每年还是很多人不会画，嗯，就是画到最后画的乱七八糟，这个期末考试的事情，我就说这么多么多。</p>
+<p>后面这今天几号,今天17号,对吧,时间其实也很短,也就是十来天的时间,就是大家集中精力。</p>
+<p>那么好好复习一下,好复习一下行。</p>
+<p>关于课,关于这个课的内容,我就说这么多。我们这个课就上到这个地方,结束就是水平有限,能力有限,这个讲的不好的地方大家多多包涵。</p>
+<p>好吧,感谢大家一路以来配合</p>
+<h2 id="考点总结">考点总结</h2>
+<h3 id="递归与分治">递归与分治</h3>
+<p>棋盘覆盖、最接近点对、循环赛日程表不考，矩阵乘法优先级低</p>
+<h3 id="dp">DP</h3>
+<p>多边形游戏、最优搜索二叉树不考</p>
+<h3 id="贪心">贪心</h3>
+<p>单源最短路径、最小生成树不考</p>
+<h3 id="回溯">回溯</h3>
+<p>符号三角形问题、圆排列、电路板排列、连续邮资不考</p>
+<h3 id="分支限界">分支限界</h3>
+<p>单源最短路径不考，布线问题考的概率低可不看，什么旅行售货员电路板排列批处理作业调度优先级比较低，来不及看就不看</p> </article> <hr class="my-8 border-dashed">  <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/tags/算法导论-算法设计与分析/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 算法导论-算法设计与分析 </a> </li><li> <a href="/tags/作业/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 作业 </a> </li><li> <a href="/tags/期末复习/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-4"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 期末复习 </a> </li> </ul> <div id="btt-btn-container" class="fixed end-4 bottom-8 z-50 md:sticky md:end-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group relative bg-background px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block rotate-90 md:hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <span class="sr-only text-sm group-hover:text-accent md:not-sr-only"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+Back To Top
+</span> </button> </div> <script data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    // Attach click event handler for back-to-top button
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+
+    // Handle button visibility according to scroll position
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇资料：</span><div class="text-center"><a href="https://wa.me/?text=https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="通过 WhatsApp 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">通过 WhatsApp 分享这篇资料</span> </a><a href="https://www.facebook.com/sharer.php?u=https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="分享到 Facebook" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg><span class="sr-only">分享到 Facebook</span> </a><a href="https://x.com/intent/post?url=https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="分享到 X" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">分享到 X</span> </a><a href="https://t.me/share/url?url=https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="通过 Telegram 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="sr-only">通过 Telegram 分享这篇资料</span> </a><a href="https://pinterest.com/pin/create/button/?url=https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="分享到 Pinterest" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="sr-only">分享到 Pinterest</span> </a><a href="mailto:?subject=分享一篇复习资料&#38;body=https://hez2z.github.io/posts/algorithms/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-2025fa-wzx%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="通过邮件分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg><span class="sr-only">通过邮件分享这篇资料</span> </a></div></div> <hr class="my-6 border-dashed"> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2"> <a href="/posts/algorithms/算法导论-2023-回忆版" class="flex w-full gap-1 hover:opacity-75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <div> <span>上一篇</span> <div class="text-sm text-accent/85">算法导论-2023-回忆版</div> </div> </a> <a href="/posts/algorithms/算法导论-2025fa-oj" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-sm text-accent/85">算法导论-2025fa-OJ</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </main> <footer class="app-layout mt-auto"> <div class="py-6 sm:py-4 border-t border-border flex flex-col items-center justify-between sm:flex-row-reverse"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/HeZ2z/hez-notes" title="HeZzz's Notes GitHub 仓库" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg> <span class="sr-only">HeZzz&#39;s Notes GitHub 仓库</span>  </a><a href="mailto:hez2z@foxmail.com" title="给 HeZzz's Notes 发送邮件" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <span class="sr-only">给 HeZzz&#39;s Notes 发送邮件</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>期末复习资料整理与分享</span> </div> </div> </footer>  <!-- Load full theme logic --> <script type="module">const s="theme",r="light",m="dark";function h(){const t=localStorage.getItem(s);return t||(window.matchMedia("(prefers-color-scheme: dark)").matches?m:r)}let e=window.theme?.themeValue??h();function c(){localStorage.setItem(s,e),o()}function o(){document.firstElementChild?.setAttribute("data-theme",e);const t=e===m?"切换到亮色模式":"切换到暗色模式";document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const n=document.body;if(n){const i=window.getComputedStyle(n).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}}window.theme?(window.theme.setPreference=c,window.theme.reflectPreference=o):window.theme={themeValue:e,setPreference:c,reflectPreference:o,getTheme:()=>e,setTheme:t=>{e=t}};o();function d(){o(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{e=e===r?m:r,window.theme?.setTheme(e),c()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",t=>{const n=t,a=document.querySelector("meta[name='theme-color']")?.getAttribute("content");a&&n.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",a)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:t})=>{e=t?m:r,window.theme?.setTheme(e),c()});</script> </body> </html> <script type="module" src="/_astro/PostDetails.astro_astro_type_script_index_0_lang.CG2F9om-.js"></script>

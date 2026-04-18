@@ -1,0 +1,415 @@
+<!DOCTYPE html><html dir="auto" lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/"><meta name="generator" content="Astro v5.16.6"><!-- General Meta Tags --><title>云计算技术-25fa-zb最后一课 | HeZzz&#39;s Notes</title><meta name="title" content="云计算技术-25fa-zb最后一课 | HeZzz's Notes"><meta name="description" content="好吧，我是把那个考试点给你说一下吧。其实就那点东西嘛"><meta name="author" content="HeZzz"><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="云计算技术-25fa-zb最后一课 | HeZzz's Notes"><meta property="og:description" content="好吧，我是把那个考试点给你说一下吧。其实就那点东西嘛"><meta property="og:url" content="https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/"><meta property="og:image" content="https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/index.png"><!-- Article Published/Modified time --><meta property="article:published_time" content="2025-11-29T11:26:38.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/"><meta property="twitter:title" content="云计算技术-25fa-zb最后一课 | HeZzz's Notes"><meta property="twitter:description" content="好吧，我是把那个考试点给你说一下吧。其实就那点东西嘛"><meta property="twitter:image" content="https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/index.png"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"云计算技术-25fa-zb最后一课 | HeZzz's Notes","image":"https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/index.png","datePublished":"2025-11-29T11:26:38.000Z","author":[{"@type":"Person","name":"HeZzz","url":"https://github.com/HeZ2z"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="HeZzz's Notes" href="https://hez2z.github.io/hez-notes/rss.xml"><meta name="theme-color" content=""><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><!-- Minimal inline script to prevent FOUC - sets theme immediately --><script>
+      (function () {
+        const initialColorScheme = ""; // "light" | "dark"
+        const currentTheme = localStorage.getItem("theme");
+
+        function getPreferTheme() {
+          if (currentTheme) return currentTheme;
+          if (initialColorScheme) return initialColorScheme;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        const themeValue = getPreferTheme();
+
+        // Set theme immediately to prevent flash
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        // Export minimal API for external script
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script><link rel="stylesheet" href="/_astro/about.C2O1XK_T.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+:where([data-astro-image]){object-fit:var(--fit);object-position:var(--pos);height:auto}:where([data-astro-image=full-width]){width:100%}:where([data-astro-image=constrained]){max-width:100%}
+</style><style>[data-astro-transition-scope="astro-fam6wyqg-1"] { view-transition-name: \4E91\8BA1\7B97\6280\672F-25-fa-zb\6700\540E\4E00\8BFE; }@layer astro { ::view-transition-old(\4E91\8BA1\7B97\6280\672F-25-fa-zb\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\4E91\8BA1\7B97\6280\672F-25-fa-zb\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\4E91\8BA1\7B97\6280\672F-25-fa-zb\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\4E91\8BA1\7B97\6280\672F-25-fa-zb\6700\540E\4E00\8BFE) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: \4E91\8BA1\7B97\6280\672F; }@layer astro { ::view-transition-old(\4E91\8BA1\7B97\6280\672F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\4E91\8BA1\7B97\6280\672F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\4E91\8BA1\7B97\6280\672F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\4E91\8BA1\7B97\6280\672F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-3"] { view-transition-name: \671F\672B\590D\4E60; }@layer astro { ::view-transition-old(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <a id="skip-to-content" href="#main-content" class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4">
+跳到正文
+</a> <header class="app-layout flex flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="py-4 sm:py-6 border-b border-border relative w-full bg-background flex items-baseline justify-between sm:items-center"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> HeZzz&#39;s Notes </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&#38;>li>a]:block [&#38;>li>a]:px-4 [&#38;>li>a]:py-3 [&#38;>li>a]:text-center [&#38;>li>a]:font-medium [&#38;>li>a]:hover:text-accent sm:[&#38;>li>a]:px-2 sm:[&#38;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/posts" class="active-nav">
+资料
+</a> </li> <li class="col-span-2"> <a href="/tags">
+标签
+</a> </li> <li class="col-span-2"> <a href="/about">
+关于
+</a> </li> <li class="col-span-2"> <a href="/archives" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex justify-center p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/search" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="切换亮色或暗色模式" aria-label="切换主题" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function s(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!n||!o||e.addEventListener("click",()=>{const c=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",c?"false":"true"),e.setAttribute("aria-label",c?"打开菜单":"关闭菜单"),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")})}s();document.addEventListener("astro:after-swap",s);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline -ms-2 mt-8 mb-2 hover:text-foreground/75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg><span>返回</span> </a></div><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="app-layout pb-12" data-pagefind-body> <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl" data-astro-transition-scope="astro-fam6wyqg-1"> 云计算技术-25fa-zb最后一课 </h1> <div class="my-2 flex items-center gap-2"> <div class="flex items-center gap-x-2 opacity-80"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 min-w-5.5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2025-11-29T11:26:38.000Z">29 Nov, 2025</time> </div> <span aria-hidden="true" class="max-sm:hidden hidden">|</span>  </div> <article id="article" class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <p>好吧，我是把那个考试点给你说一下吧。其实就那点东西嘛</p>
+<blockquote>
+<p>本文连载于<a href="https://hez2z.github.io/2025/11/29/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/">云计算技术-25fa-zb最后一课| HeZzz</a></p>
+<p>🙇‍♂️🙇‍♂️🙇‍♂️时间仓促，有不足之处烦请及时告知。<a href="mailto:hez2z@foxmail.com">邮箱hez2z@foxmail.com</a> 或者在 <a href="https://qm.qq.com/q/ojSHMvHG5a">速通之家</a> 群里 <code>@9¾</code>。</p>
+</blockquote>
+<h2 id="虚拟化">虚拟化</h2>
+<h3 id="虚拟化的定义">虚拟化的定义</h3>
+<p>在计算机科学领域中， 虚拟化代表着对计算资源的抽象，而不仅仅局限于虚拟机的概念。</p>
+<p>虚拟化是一种技术，它通过在物理硬件之上创建一个抽象层，使得多个虚拟实例能够共享同一套物理资源。这个抽象层通常由虚拟机监视器(Hypervisor)或容器引擎来实现，它们负责管理和分配底层硬件资源，如CPU、内存、存储和网络等。</p>
+<h3 id="虚拟机的类型">虚拟机的类型</h3>
+<ol>
+<li>全虚拟化，半虚拟化，硬件辅助虚拟化
+<ul>
+<li>全虚拟化：通过软件模拟完整的硬件环境，使得操作系统无需修改即可运行在虚拟机上。</li>
+<li>半虚拟化：需要对操作系统进行修改，以便更好地与虚拟化层协同工作，提高性能。</li>
+<li>硬件辅助虚拟化：利用现代处理器的虚拟化扩展(如 Intel VT-x 和 AMD-V)来提升虚拟化性能和效率。</li>
+</ul>
+</li>
+<li>硬件虚拟化技术
+<ul>
+<li>GPU 虚拟化：允许多个虚拟机共享物理 GPU 资源，以支持图形密集型应用。</li>
+<li>FPGA 虚拟化：使得多个虚拟机能够访问和使用 FPGA 资源，适用于高性能计算任务。</li>
+<li>RMDA 虚拟化：远程直接内存访问虚拟化，提升数据传输效率。</li>
+<li>NVM 虚拟化：非易失性内存虚拟化，优化存储性能。</li>
+</ul>
+</li>
+<li>容器与虚拟机对比
+<ul>
+<li>容器：轻量级，启动速度快，共享主机操作系统内核，适合微服务架构。</li>
+<li>虚拟机：重量级，启动较慢，拥有独立的操作系统，适合需要隔离的应用场景。</li>
+</ul>
+</li>
+</ol>
+<h2 id="hdfs">HDFS</h2>
+<p>“HDFS 一些语言性东西。大概是这些。”</p>
+<p>他就说了这么一句话，然后就没了，可以看看 HDFS 相关的作业或者在本站搜索 “HDFS” 查看更多。</p>
+<blockquote>
+<p><a href="http://hez2z.github.io/2025/11/29/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%BD%9C%E4%B8%9A/#HDFS-%E4%BD%9C%E4%B8%9A">http://hez2z.github.io/2025/11/29/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%BD%9C%E4%B8%9A/#HDFS-%E4%BD%9C%E4%B8%9A</a></p>
+</blockquote>
+<h2 id="mapreduce">MapReduce</h2>
+<p>那然后我可不可以给你们一个表，然后让你上一课一样是那种形式，给你问题描述，让你去写出它的输入输出。</p>
+<p>MapReduce 还有 Combiner 的,Reducer(？没听清) 的一些概念，</p>
+<p>可以看</p>
+<p>{% post_link 云计算技术-25fa-zb最后一课-MapReduce ’ 云计算技术 -25fa-zb 最后一课 - MapReduce ’ %}</p>
+<p>和</p>
+<p><a href="https://hez2z.github.io/2025/11/29/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%BD%9C%E4%B8%9A/#MapReduce">https://hez2z.github.io/2025/11/29/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%BD%9C%E4%B8%9A/#MapReduce</a></p>
+<h2 id="hbase">HBase</h2>
+<p>Hbase 让你设计一个表</p>
+<p>TODO: 我还没找到 HBase 的相关习题，帮帮我😭</p>
+<p>存储并查询电商平台的用户订单数据
+常见的查询需求：</p>
+<ol>
+<li>根据用户ID查询该用户的所有订单（按时间倒序）。</li>
+<li>根据订单ID查询订单的详细信息。</li>
+<li>根据时间范围查询某个时间段内所有订单（运营分析用）。</li>
+</ol>
+<p>A1. 设计 HBase 表结构</p>
+<p>表名：user_orders</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>列族</th><th>列限定符</th><th>说明</th></tr></thead><tbody><tr><td>info</td><td>user_id</td><td>用户ID</td></tr><tr><td>info</td><td>order_id</td><td>订单ID</td></tr><tr><td>info</td><td>order_date</td><td>订单日期</td></tr><tr><td>info</td><td>amount</td><td>订单金额</td></tr><tr><td>info</td><td>status</td><td>订单状态</td></tr><tr><td>details</td><td>item_list</td><td>订单商品列表（JSON格式）</td></tr></tbody></table>
+<p>行键设计：row_key = user_id + reverse(order_date) + order_id</p>
+<ul>
+<li>这样设计行键可以支持按用户ID查询所有订单，并且订单按时间倒序排列，方便获取最新订单。</li>
+<li>订单ID作为行键的一部分，支持根据订单ID查询订单详情。</li>
+<li>时间范围查询可以通过扫描行键前缀实现。</li>
+</ul>
+<p>根据用户 ID 查询订单：</p>
+<ul>
+<li>使用 Scan 操作，设置行键前缀为 user_id，获取该用户的所有订单，结果按时间倒序排列。</li>
+</ul>
+<p>根据订单 ID 查询订单详情：</p>
+<ul>
+<li>使用 Get 操作，直接通过 row_key 查询订单详情。</li>
+</ul>
+<p>根据时间范围查询订单：</p>
+<ul>
+<li>使用 Scan 操作，设置行键范围为 start_row_key 和 end_row_key，获取指定时间段内的所有订单。</li>
+</ul>
+<h2 id="zookeeper">ZooKeeper</h2>
+<p>他只是说了一个 “ZooKeeper”, 然后就没了，Claude 对 ZooKeeper 的理解如下。</p>
+<blockquote>
+<p><a href="https://zookeeper.apache.org/">ZooKeeper | Apache</a></p>
+<p><a href="https://www.geeksforgeeks.org/java/what-is-apache-zookeeper/">What is Apache ZooKeeper? | GeeksforGeeks</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Apache_ZooKeeper">Apache ZooKeeper | Wiki</a></p>
+</blockquote>
+<p>Apache ZooKeeper 是一个开源的分布式协调服务，旨在简化分布式应用程序的管理和协调。它提供了一组高性能的原语，用于实现分布式系统中的同步、配置管理和命名服务。</p>
+<h3 id="zookeeper-的核心功能">ZooKeeper 的核心功能</h3>
+<ol>
+<li>
+<p><strong>配置管理</strong>：ZooKeeper 可以集中管理分布式系统的配置信息，当配置发生变化时，能够及时通知各个节点更新配置。</p>
+</li>
+<li>
+<p><strong>命名服务</strong>：提供类似 DNS 的命名服务，为分布式系统中的节点提供统一的命名空间，方便节点之间的相互发现和通信。</p>
+</li>
+<li>
+<p><strong>分布式锁</strong>：通过 ZooKeeper 的顺序节点和临时节点特性，可以实现分布式锁机制，保证在分布式环境下对共享资源的互斥访问。</p>
+</li>
+<li>
+<p><strong>集群管理</strong>：监控集群中节点的状态，当节点上线或下线时，能够及时感知并通知相关节点，实现动态的集群管理。</p>
+</li>
+<li>
+<p><strong>Leader 选举</strong>：在分布式系统中，ZooKeeper 可以帮助实现 Leader 选举机制，确保在任何时刻只有一个节点作为 Leader 提供服务。</p>
+</li>
+</ol>
+<h3 id="zookeeper-的数据模型">ZooKeeper 的数据模型</h3>
+<p>ZooKeeper 采用树形的层次化命名空间，类似于文件系统的目录结构：</p>
+<ul>
+<li><strong>ZNode</strong>：ZooKeeper 中的数据节点，每个 ZNode 可以存储数据，也可以有子节点。</li>
+<li><strong>持久节点(Persistent)</strong>：创建后会一直存在，除非主动删除。</li>
+<li><strong>临时节点(Ephemeral)</strong>：与客户端会话绑定，会话结束后自动删除。</li>
+<li><strong>顺序节点(Sequential)</strong>：在节点名称后自动添加递增的序号，常用于实现分布式锁。</li>
+</ul>
+<h3 id="zookeeper-的一致性保证">ZooKeeper 的一致性保证</h3>
+<p>ZooKeeper 使用 <strong>ZAB(ZooKeeper Atomic Broadcast)协议</strong> 来保证数据的一致性：</p>
+<ol>
+<li><strong>顺序一致性</strong>：来自客户端的更新请求会按照发送顺序被应用。</li>
+<li><strong>原子性</strong>：更新操作要么成功，要么失败，不存在中间状态。</li>
+<li><strong>单一视图</strong>：无论客户端连接到哪个服务器，看到的数据视图都是一致的。</li>
+<li><strong>持久性</strong>：一旦更新被确认，该更新将持久保存，直到被覆盖。</li>
+</ol>
+<h3 id="zookeeper-集群架构">ZooKeeper 集群架构</h3>
+<p>ZooKeeper 采用主从架构：</p>
+<ul>
+<li><strong>Leader</strong>：负责处理所有的写请求，并将状态变化广播给 Follower。</li>
+<li><strong>Follower</strong>：处理读请求，参与 Leader 选举和投票，同步 Leader 的状态。</li>
+<li><strong>Observer</strong>：只处理读请求，不参与投票，用于提高读性能和可扩展性。</li>
+</ul>
+<p>集群需要满足 <strong>过半机制(Quorum)</strong>：超过半数的节点存活，集群才能正常工作。例如，5 个节点的集群最多容忍 2 个节点故障。</p>
+<h3 id="zookeeper-的应用场景">ZooKeeper 的应用场景</h3>
+<ol>
+<li><strong>分布式协调</strong>：协调分布式系统中各个节点的行为，如任务调度、资源分配等。</li>
+<li><strong>服务注册与发现</strong>：微服务架构中，服务提供者在 ZooKeeper 注册，消费者从 ZooKeeper 获取服务列表。</li>
+<li><strong>分布式队列</strong>：利用顺序节点实现分布式队列，保证任务的有序执行。</li>
+<li><strong>主备切换</strong>：当主节点故障时，通过 Leader 选举机制快速切换到备用节点。</li>
+</ol>
+<h3 id="zookeeper-与-nacos-的对比">ZooKeeper 与 Nacos 的对比</h3>
+<blockquote>
+<p>PS：诶，分布式系统中的同步、配置管理和命名服务？这好像和 Nacos 有点像？</p>
+<p>还真是，对于微服务架构，需要同时处理动态服务发现和配置管理的场景来说，Nacos 就是 ZooKeeper 的一个替代品。</p>
+</blockquote>
+<p><strong>主要区别</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特性</th><th>ZooKeeper</th><th>Nacos</th></tr></thead><tbody><tr><td>CAP 模型</td><td>CP (一致性+分区容错)</td><td>支持 AP 和 CP 模式切换</td></tr><tr><td>适用场景</td><td>强一致性要求的协调服务</td><td>微服务的注册发现和配置管理</td></tr><tr><td>使用复杂度</td><td>较高，需要理解 ZNode 模型</td><td>较低，提供友好的 UI 和 API</td></tr><tr><td>性能</td><td>写入性能较低</td><td>性能更优，特别是在 AP 模式下</td></tr></tbody></table>
+<p>在网络分区发生时，ZooKeeper 会停止对少数派分区的服务，只有多数派节点可达时才能提供服务，从而保证数据的强一致性。而 Nacos 在默认的 AP 模式下，允许各个分区继续提供服务，确保服务的持续可用，通过后台同步机制最终达到一致。</p>
+<p>如果你了解 Nacos 但是不了解 ZooKeeper，那么你可以向 AI 助手提问 “Nacos 和 ZooKeeper 有什么区别？“以便于更好地理解 ZooKeeper。</p>
+<p><img src="/pic/25cloud/zookeeper.png" alt="ZooKeeper"></p> </article> <hr class="my-8 border-dashed">  <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/tags/云计算技术/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 云计算技术 </a> </li><li> <a href="/tags/期末复习/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 期末复习 </a> </li> </ul> <div id="btt-btn-container" class="fixed end-4 bottom-8 z-50 md:sticky md:end-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group relative bg-background px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block rotate-90 md:hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <span class="sr-only text-sm group-hover:text-accent md:not-sr-only"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+Back To Top
+</span> </button> </div> <script data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    // Attach click event handler for back-to-top button
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+
+    // Handle button visibility according to scroll position
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇资料：</span><div class="text-center"><a href="https://wa.me/?text=https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="通过 WhatsApp 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">通过 WhatsApp 分享这篇资料</span> </a><a href="https://www.facebook.com/sharer.php?u=https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="分享到 Facebook" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg><span class="sr-only">分享到 Facebook</span> </a><a href="https://x.com/intent/post?url=https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="分享到 X" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">分享到 X</span> </a><a href="https://t.me/share/url?url=https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="通过 Telegram 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="sr-only">通过 Telegram 分享这篇资料</span> </a><a href="https://pinterest.com/pin/create/button/?url=https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="分享到 Pinterest" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="sr-only">分享到 Pinterest</span> </a><a href="mailto:?subject=分享一篇复习资料&#38;body=https://hez2z.github.io/posts/cloud-computing/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF-25fa-zb%E6%9C%80%E5%90%8E%E4%B8%80%E8%AF%BE/" title="通过邮件分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg><span class="sr-only">通过邮件分享这篇资料</span> </a></div></div> <hr class="my-6 border-dashed"> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2"> <a href="/posts/cloud-computing/云计算技术-25fa-zb最后一课-mapreduce" class="flex w-full gap-1 hover:opacity-75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <div> <span>上一篇</span> <div class="text-sm text-accent/85">云计算技术-25fa-zb最后一课-MapReduce</div> </div> </a> <a href="/posts/cloud-computing/云计算技术-2024fa-回忆版" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-sm text-accent/85">云计算技术-2024fa-回忆版</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </main> <footer class="app-layout mt-auto"> <div class="py-6 sm:py-4 border-t border-border flex flex-col items-center justify-between sm:flex-row-reverse"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/HeZ2z/hez-notes" title="HeZzz's Notes GitHub 仓库" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg> <span class="sr-only">HeZzz&#39;s Notes GitHub 仓库</span>  </a><a href="mailto:hez2z@foxmail.com" title="给 HeZzz's Notes 发送邮件" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <span class="sr-only">给 HeZzz&#39;s Notes 发送邮件</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>期末复习资料整理与分享</span> </div> </div> </footer>  <!-- Load full theme logic --> <script type="module">const s="theme",r="light",m="dark";function h(){const t=localStorage.getItem(s);return t||(window.matchMedia("(prefers-color-scheme: dark)").matches?m:r)}let e=window.theme?.themeValue??h();function c(){localStorage.setItem(s,e),o()}function o(){document.firstElementChild?.setAttribute("data-theme",e);const t=e===m?"切换到亮色模式":"切换到暗色模式";document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const n=document.body;if(n){const i=window.getComputedStyle(n).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}}window.theme?(window.theme.setPreference=c,window.theme.reflectPreference=o):window.theme={themeValue:e,setPreference:c,reflectPreference:o,getTheme:()=>e,setTheme:t=>{e=t}};o();function d(){o(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{e=e===r?m:r,window.theme?.setTheme(e),c()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",t=>{const n=t,a=document.querySelector("meta[name='theme-color']")?.getAttribute("content");a&&n.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",a)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:t})=>{e=t?m:r,window.theme?.setTheme(e),c()});</script> </body> </html> <script type="module" src="/_astro/PostDetails.astro_astro_type_script_index_0_lang.CG2F9om-.js"></script>

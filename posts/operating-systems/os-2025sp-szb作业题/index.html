@@ -1,0 +1,1851 @@
+<!DOCTYPE html><html dir="auto" lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/"><meta name="generator" content="Astro v5.16.6"><!-- General Meta Tags --><title>OS_2025sp_szb作业题 | HeZzz&#39;s Notes</title><meta name="title" content="OS_2025sp_szb作业题 | HeZzz's Notes"><meta name="description" content="操作系统 2025 春季学期 szb 作业题与答案整理。"><meta name="author" content="HeZzz"><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="OS_2025sp_szb作业题 | HeZzz's Notes"><meta property="og:description" content="操作系统 2025 春季学期 szb 作业题与答案整理。"><meta property="og:url" content="https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/"><meta property="og:image" content="https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/index.png"><!-- Article Published/Modified time --><meta property="article:published_time" content="2025-05-09T01:50:11.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/"><meta property="twitter:title" content="OS_2025sp_szb作业题 | HeZzz's Notes"><meta property="twitter:description" content="操作系统 2025 春季学期 szb 作业题与答案整理。"><meta property="twitter:image" content="https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/index.png"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"OS_2025sp_szb作业题 | HeZzz's Notes","image":"https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/index.png","datePublished":"2025-05-09T01:50:11.000Z","author":[{"@type":"Person","name":"HeZzz","url":"https://github.com/HeZ2z"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="HeZzz's Notes" href="https://hez2z.github.io/hez-notes/rss.xml"><meta name="theme-color" content=""><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><!-- Minimal inline script to prevent FOUC - sets theme immediately --><script>
+      (function () {
+        const initialColorScheme = ""; // "light" | "dark"
+        const currentTheme = localStorage.getItem("theme");
+
+        function getPreferTheme() {
+          if (currentTheme) return currentTheme;
+          if (initialColorScheme) return initialColorScheme;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        const themeValue = getPreferTheme();
+
+        // Set theme immediately to prevent flash
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        // Export minimal API for external script
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script><link rel="stylesheet" href="/_astro/about.C2O1XK_T.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+:where([data-astro-image]){object-fit:var(--fit);object-position:var(--pos);height:auto}:where([data-astro-image=full-width]){width:100%}:where([data-astro-image=constrained]){max-width:100%}
+</style><style>[data-astro-transition-scope="astro-fam6wyqg-1"] { view-transition-name: os-2025-sp-szb\4F5C\4E1A\9898; }@layer astro { ::view-transition-old(os-2025-sp-szb\4F5C\4E1A\9898) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(os-2025-sp-szb\4F5C\4E1A\9898) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(os-2025-sp-szb\4F5C\4E1A\9898) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(os-2025-sp-szb\4F5C\4E1A\9898) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: os; }@layer astro { ::view-transition-old(os) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(os) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(os) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(os) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-3"] { view-transition-name: \671F\672B\590D\4E60; }@layer astro { ::view-transition-old(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\671F\672B\590D\4E60) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <a id="skip-to-content" href="#main-content" class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4">
+跳到正文
+</a> <header class="app-layout flex flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="py-4 sm:py-6 border-b border-border relative w-full bg-background flex items-baseline justify-between sm:items-center"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> HeZzz&#39;s Notes </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&#38;>li>a]:block [&#38;>li>a]:px-4 [&#38;>li>a]:py-3 [&#38;>li>a]:text-center [&#38;>li>a]:font-medium [&#38;>li>a]:hover:text-accent sm:[&#38;>li>a]:px-2 sm:[&#38;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/posts" class="active-nav">
+资料
+</a> </li> <li class="col-span-2"> <a href="/tags">
+标签
+</a> </li> <li class="col-span-2"> <a href="/about">
+关于
+</a> </li> <li class="col-span-2"> <a href="/archives" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex justify-center p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/search" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="切换亮色或暗色模式" aria-label="切换主题" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function s(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!n||!o||e.addEventListener("click",()=>{const c=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",c?"false":"true"),e.setAttribute("aria-label",c?"打开菜单":"关闭菜单"),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")})}s();document.addEventListener("astro:after-swap",s);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline -ms-2 mt-8 mb-2 hover:text-foreground/75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg><span>返回</span> </a></div><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="app-layout pb-12" data-pagefind-body> <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl" data-astro-transition-scope="astro-fam6wyqg-1"> OS_2025sp_szb作业题 </h1> <div class="my-2 flex items-center gap-2"> <div class="flex items-center gap-x-2 opacity-80"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 min-w-5.5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2025-05-09T01:50:11.000Z">9 May, 2025</time> </div> <span aria-hidden="true" class="max-sm:hidden hidden">|</span>  </div> <article id="article" class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <blockquote>
+<p>本文连载于<a href="https://hez2z.github.io/2025/05/09/OS-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/">HeZzz的博客 之 OS_2025sp_szb作业题</a>。</p>
+<p>关于操作系统还有<a href="https://hez2z.github.io/2025/05/08/OS2025sp%E8%80%83%E7%82%B9/">OS_2025sp考点</a>。</p>
+<p>szb 的作业题，来源于<a href="https://qm.qq.com/q/ojSHMvHG5a">计算机速通之家 | QQ 群号：468081841</a>，把题目和答案喂给 DeepSeek 后整出来个文档。</p>
+</blockquote>
+<p>🙇‍♂️🙇‍♂️🙇‍♂️时间仓促，有不足之处烦请及时告知。<a href="mailto:hez2z@foxmail.com">邮箱hez2z@foxmail.com</a> 或者在 <a href="https://qm.qq.com/q/ojSHMvHG5a">速通之家</a> 群里 <code>@9¾</code>。</p>
+<hr>
+<p>题目:</p>
+<ul>
+<li><a href="/pdf/os25sp/hw1.pdf">第一次作业(hw1.pdf)</a></li>
+<li><a href="/pdf/os25sp/hw2.pdf">第二次作业(hw2.pdf)</a></li>
+</ul>
+<p>答案:</p>
+<ul>
+<li><a href="/pdf/os25sp/ans.pdf">答案(ans.pdf)</a></li>
+</ul>
+<hr>
+<h2 id="hw1">hw1</h2>
+<h3 id="第一题独木桥同步问题详解"><strong>第一题：独木桥同步问题详解</strong></h3>
+<blockquote>
+<p>前两道都是 PV 操作，不熟悉的可以看<a href="https://www.bilibili.com/video/BV1YE411D7nH/?share_source=copy_web&#x26;vd_source=ece2a9c84bf4c011ecb77b7f31228f25">王道计算机考研-操作系统视频</a>。</p>
+</blockquote>
+<h4 id="1-每次只允许一人过桥"><strong>1. 每次只允许一人过桥</strong></h4>
+<ul>
+<li>
+<p><strong>问题核心</strong>：确保桥的互斥访问，任何时刻仅有一个行人通过。</p>
+</li>
+<li>
+<p><strong>实现方法</strong>：</p>
+<ul>
+<li>定义一个<strong>互斥信号量 <code>mutex</code></strong>，初始值为1。</li>
+<li><strong>过桥流程</strong>：
+<ol>
+<li>行人到达桥头时执行 <code>P(mutex)</code>（申请锁）：
+<ul>
+<li>若 <code>mutex=1</code>，则获取锁成功，允许过桥。</li>
+<li>若 <code>mutex=0</code>，则阻塞等待。</li>
+</ul>
+</li>
+<li>行人过桥后执行 <code>V(mutex)</code>（释放锁），唤醒其他等待的行人。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>伪代码示例</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">semaphore mutex </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 1</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">cobegin</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">process </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">traveler</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">() {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">   // 申请锁</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    过桥;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">   // 释放锁</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">coend</span></span></code></pre>
+</li>
+<li>
+<p><strong>关键点</strong>：
+通过简单的互斥信号量实现“独占式”过桥，逻辑简单但效率较低。</p>
+</li>
+</ul>
+<hr>
+<h4 id="2-同方向可多人反方向需等待"><strong>2. 同方向可多人，反方向需等待</strong></h4>
+<ul>
+<li>
+<p><strong>问题核心</strong>：允许同方向行人批量通过，反方向行人需等待桥空闲。</p>
+</li>
+<li>
+<p><strong>实现方法</strong>：</p>
+<ul>
+<li>
+<p><strong>定义资源</strong>：</p>
+<ul>
+<li><code>numE2W</code>（东向西人数）、<code>numW2E</code>（西向东人数）：统计当前方向的行人数量。</li>
+<li><code>mutexE2W</code> 和 <code>mutexW2E</code>：保护 <code>numE2W</code> 和 <code>numW2E</code> 的互斥信号量。</li>
+<li><code>mutex</code>：方向锁，确保同方向优先占用桥。</li>
+</ul>
+</li>
+<li>
+<p><strong>过桥流程</strong>（以东向西为例）：</p>
+<ol>
+<li>行人到达时执行 <code>P(mutexE2W)</code>，修改 <code>numE2W</code>：
+<ul>
+<li>若 <code>numE2W == 0</code>（当前方向无行人），执行 <code>P(mutex)</code> 占用桥。</li>
+</ul>
+</li>
+<li><code>numE2W++</code>，释放 <code>mutexE2W</code>，开始过桥。</li>
+<li>过桥后再次执行 <code>P(mutexE2W)</code>，修改 <code>numE2W</code>：
+<ul>
+<li>若 <code>numE2W == 0</code>（当前方向无后续行人），执行 <code>V(mutex)</code> 释放桥。</li>
+</ul>
+</li>
+<li>释放 <code>mutexE2W</code>。</li>
+</ol>
+</li>
+<li>
+<p><strong>伪代码示例</strong>（东向西行人）：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">semaphore mutex </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 1</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> mutexE2W </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 1</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> mutexW2E </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 1</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">int</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> numE2W </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 0</span><span style="--shiki-light:#212121;--shiki-dark:#D6DEEB">,</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> numW2E </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 0</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">cobegin</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">process </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">travelerE2W</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">() {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutexE2W)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">       // 保护计数器</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    numE2W</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">++</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">    if</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> (numE2W </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">==</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 1</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">) {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">        P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">      // 首次占用桥</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutexE2W)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    过桥;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutexE2W)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    numE2W</span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">--</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">    if</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> (numE2W </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">==</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 0</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">) {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">        V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">      // 最后一人释放桥</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutexE2W)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">coend</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关键点</strong>：</p>
+<ul>
+<li><strong>方向锁机制</strong>：首个行人占用桥，后续同方向行人无需等待。</li>
+<li><strong>计数器保护</strong>：通过 <code>mutexE2W</code> 和 <code>mutexW2E</code> 避免并发修改计数器的竞态条件。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-东向西可多人西向东仅单人"><strong>3. 东向西可多人，西向东仅单人</strong></h4>
+<ul>
+<li>
+<p><strong>问题核心</strong>：东向西允许多个行人同时过桥，西向东必须严格互斥。</p>
+</li>
+<li>
+<p><strong>实现方法</strong>：</p>
+<ul>
+<li>
+<p><strong>东向西行人</strong>：与情况2相同，共享 <code>numE2W</code> 计数器，首个行人占用桥。</p>
+</li>
+<li>
+<p><strong>西向东行人</strong>：直接使用互斥锁 <code>mutex</code>，每次仅允许一人过桥。</p>
+</li>
+<li>
+<p><strong>伪代码示例</strong>（西向东行人）：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">process </span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">travelerW2E</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">() {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">          // 直接互斥占用桥</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    过桥;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关键点</strong>：</p>
+<ul>
+<li><strong>不对称设计</strong>：东向西方向通过计数器实现批量通过，而西向东方向强制互斥。</li>
+<li><strong>避免死锁</strong>：两种方向锁独立，不会因互相等待导致死锁。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="总结"><strong>总结</strong></h4>
+<ul>
+<li><strong>信号量选择</strong>：
+<ul>
+<li><code>mutex</code>：控制桥的占用状态。</li>
+<li><code>mutexE2W</code>/<code>mutexW2E</code>：保护方向计数器的原子性。</li>
+</ul>
+</li>
+<li><strong>同步逻辑</strong>：
+<ul>
+<li><strong>计数器增减</strong>：必须在保护信号量内完成。</li>
+<li><strong>方向锁释放</strong>：仅当计数器归零时释放，确保反方向行人能及时获得桥使用权。</li>
+</ul>
+</li>
+<li><strong>扩展思考</strong>：
+<ul>
+<li>若东西方向同时有人到达，可能引发短暂竞争，但通过锁机制确保最终一致性。</li>
+<li>可通过优化信号量设计（如读写锁）进一步提升并发效率，但需权衡复杂度。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="第二题缓冲区同步与互斥的详细解析">第二题：缓冲区同步与互斥的详细解析</h3>
+<h4 id="问题背景"><strong>问题背景</strong></h4>
+<p>三个进程 <code>P1</code>、<code>P2</code>、<code>P3</code> 共享一个包含 <code>N</code> 个单元的缓冲区：</p>
+<ul>
+<li><strong>P1</strong>：生成正整数并放入缓冲区。</li>
+<li><strong>P2</strong>：从缓冲区取出奇数并统计。</li>
+<li><strong>P3</strong>：从缓冲区取出偶数并统计。</li>
+</ul>
+<p>需用信号量机制实现以下功能：</p>
+<ol>
+<li><strong>互斥</strong>：同一时刻只能有一个进程操作缓冲区。</li>
+<li><strong>同步</strong>：
+<ul>
+<li><code>P1</code> 放入数据后，通知 <code>P2</code> 或 <code>P3</code> 取出。</li>
+<li><code>P2</code> 和 <code>P3</code> 只能取出符合条件的数据（奇数或偶数）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="信号量定义与作用"><strong>信号量定义与作用</strong></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>信号量</th><th>初始值</th><th>作用</th></tr></thead><tbody><tr><td><code>mutex</code></td><td>1</td><td>互斥访问缓冲区，确保同一时间只有一个进程操作缓冲区。</td></tr><tr><td><code>empty</code></td><td>N</td><td>表示缓冲区中空单元的数量，控制 <code>P1</code> 的写入条件。</td></tr><tr><td><code>even</code></td><td>0</td><td>表示缓冲区中偶数的数量，控制 <code>P3</code> 的读取条件。</td></tr><tr><td><code>odd</code></td><td>0</td><td>表示缓冲区中奇数的数量，控制 <code>P2</code> 的读取条件。</td></tr></tbody></table>
+<hr>
+<h4 id="伪代码解析"><strong>伪代码解析</strong></h4>
+<h5 id="p1生产者"><strong>P1（生产者）</strong></h5>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">while</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> (True){</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">    int</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> x </span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA">=</span><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic"> produce</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">         // 生成一个正整数</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(empty)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 申请空缓冲区（若无空位则阻塞）</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 申请互斥锁</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    put</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(x)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">                // 将 x 放入缓冲区</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 释放互斥锁</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">    if</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> x </span><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">%</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 2</span><span style="--shiki-light:#D32F2F;--shiki-dark:#C792EA"> ==</span><span style="--shiki-light:#1976D2;--shiki-dark:#F78C6C"> 0</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">        V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(even)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">           // 通知 P3 有偶数可用</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">    else</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">        V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(odd)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">            // 通知 P2 有奇数可用</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code></pre>
+<ul>
+<li><strong>关键点</strong>：
+<ul>
+<li><code>P(empty)</code> 先于 <code>P(mutex)</code>：避免死锁（若先申请 <code>mutex</code> 后申请 <code>empty</code>，当缓冲区满时，<code>P1</code> 会持有 <code>mutex</code> 并阻塞，其他进程无法操作缓冲区）。</li>
+<li>根据奇偶性触发对应的信号量（<code>V(even)</code> 或 <code>V(odd)</code>），通知消费者进程。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="p2奇数消费者"><strong>P2（奇数消费者）</strong></h5>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">while</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> True{</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(odd)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">                // 等待奇数可用（若无则阻塞）</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 申请互斥锁</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    getodd</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 从缓冲区取出奇数</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 释放互斥锁</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    countodd</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">            // 统计奇数</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(empty)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 释放一个空单元</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code></pre>
+<ul>
+<li><strong>关键点</strong>：
+<ul>
+<li><code>P(odd)</code> 先于 <code>P(mutex)</code>：若先申请 <code>mutex</code>，可能因无数据可用而持有锁阻塞，导致死锁。</li>
+<li><code>V(empty)</code> 表示取出数据后，空单元数量增加。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="p3偶数消费者"><strong>P3（偶数消费者）</strong></h5>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="c"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-light-font-style:inherit;--shiki-dark:#C792EA;--shiki-dark-font-style:italic">while</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> True{</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(even)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">               // 等待偶数可用（若无则阻塞）</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    P</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 申请互斥锁</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    geteven</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">             // 从缓冲区取出偶数</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(mutex)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 释放互斥锁</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    counterven</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">()</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">          // 统计偶数</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">    V</span><span style="--shiki-light:#6F42C1;--shiki-dark:#82AAFF">(empty)</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">;</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">              // 释放一个空单元</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">}</span></span></code></pre>
+<ul>
+<li><strong>逻辑与 P2 对称</strong>，仅信号量 <code>even</code> 和操作函数不同。</li>
+</ul>
+<hr>
+<h4 id="同步与互斥流程"><strong>同步与互斥流程</strong></h4>
+<ol>
+<li><strong>互斥</strong>：<code>P1</code>、<code>P2</code>、<code>P3</code> 通过 <code>mutex</code> 保证对缓冲区的互斥访问。</li>
+<li><strong>同步</strong>：
+<ul>
+<li><strong>生产者-消费者同步</strong>：<code>P1</code> 通过 <code>V(even)</code> 或 <code>V(odd)</code> 通知消费者数据可用。</li>
+<li><strong>缓冲区容量控制</strong>：<code>empty</code> 信号量确保 <code>P1</code> 不会在缓冲区满时写入。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="答案验证与边界场景"><strong>答案验证与边界场景</strong></h4>
+<ol>
+<li><strong>缓冲区满时</strong>：
+<ul>
+<li><code>P1</code> 因 <code>P(empty)</code> 阻塞，无法继续写入。</li>
+<li><code>P2</code> 或 <code>P3</code> 取出数据后，<code>V(empty)</code> 唤醒 <code>P1</code>。</li>
+</ul>
+</li>
+<li><strong>缓冲区空时</strong>：
+<ul>
+<li><code>P2</code> 或 <code>P3</code> 因 <code>P(odd)/P(even)</code> 阻塞，无法读取。</li>
+<li><code>P1</code> 写入数据后，<code>V(odd)/V(even)</code> 唤醒对应的消费者。</li>
+</ul>
+</li>
+<li><strong>奇偶数据不均衡时</strong>：
+<ul>
+<li>若缓冲区中只有奇数，<code>P3</code> 会因 <code>P(even)</code> 阻塞，直到 <code>P1</code> 写入偶数。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="总结-1"><strong>总结:</strong></h4>
+<p>通过 <code>mutex</code>、<code>empty</code>、<code>even</code>、<code>odd</code> 四个信号量的协同，实现了：</p>
+<ol>
+<li><strong>互斥</strong>：缓冲区操作的安全性。</li>
+<li><strong>同步</strong>：
+<ul>
+<li>生产者与消费者的协调。</li>
+<li>奇偶数据分类通知。</li>
+<li>缓冲区容量动态管理。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="第三题进程调度算法">第三题：进程调度算法</h3>
+<blockquote>
+<p>五个调度算法都得看一眼吧（）</p>
+</blockquote>
+<ul>
+<li>先来先服务（FCFS）</li>
+<li>短作业优先（SJF）</li>
+<li>最短剩余时间优先（SRTF）</li>
+<li>高响应比优先（HRRN）</li>
+<li>优先权调度</li>
+</ul>
+<h4 id="题目描述"><strong>题目描述</strong></h4>
+<ul>
+<li>
+<p><strong>4个进程的到达时间与所需CPU时间</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>进程</th><th>到达时间</th><th>所需 CPU 时间</th></tr></thead><tbody><tr><td>P1</td><td>0</td><td>10</td></tr><tr><td>P2</td><td>2</td><td>4</td></tr><tr><td>P3</td><td>4</td><td>10</td></tr><tr><td>P4</td><td>6</td><td>5</td></tr></tbody></table>
+</li>
+<li>
+<p><strong>要求</strong>：</p>
+<ol>
+<li><strong>短进程优先（SPF，非抢占）</strong>：分析执行顺序，计算平均周转时间和带权平均周转时间。</li>
+<li><strong>最短剩余时间优先（SRTF，抢占）</strong>：分析执行顺序，计算平均周转时间和带权平均周转时间。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="1-短进程优先spf非抢占"><strong>1. 短进程优先（SPF，非抢占）</strong></h4>
+<h5 id="执行顺序"><strong>执行顺序</strong></h5>
+<ol>
+<li><strong>0时刻</strong>：只有P1到达，开始执行P1（运行时间10）。</li>
+<li><strong>P1执行完成（时刻10）</strong>：
+<ul>
+<li>此时已到达的进程有P2（到达时间2）、P3（到达时间4）、P4（到达时间6）。</li>
+<li>选择剩余时间最短的进程：P2（4）、P4（5）、P3（10）。</li>
+<li><strong>执行顺序</strong>：P2（4）→ P4（5）→ P3（10）。</li>
+</ul>
+</li>
+</ol>
+<h5 id="时间轴"><strong>时间轴</strong></h5>
+<ul>
+<li><strong>P1</strong>：0 → 10（结束时间10）</li>
+<li><strong>P2</strong>：10 → 14（结束时间14）</li>
+<li><strong>P4</strong>：14 → 19（结束时间19）</li>
+<li><strong>P3</strong>：19 → 29（结束时间29）</li>
+</ul>
+<h5 id="计算指标"><strong>计算指标</strong></h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>进程</th><th>到达时间</th><th>结束时间</th><th>周转时间</th><th>带权周转时间</th></tr></thead><tbody><tr><td>P1</td><td>0</td><td>10</td><td>10</td><td>10/10 = 1</td></tr><tr><td>P2</td><td>2</td><td>14</td><td>12</td><td>12/4 = 3</td></tr><tr><td>P3</td><td>4</td><td>29</td><td>25</td><td>25/10 = 2.5</td></tr><tr><td>P4</td><td>6</td><td>19</td><td>13</td><td>13/5 = 2.6</td></tr></tbody></table>
+<ul>
+<li><strong>平均周转时间</strong>：( \frac{10+12+25+13}{4} = 15 )</li>
+<li><strong>带权平均周转时间</strong>：( \frac{1+3+2.5+2.6}{4} = 2.275 )</li>
+</ul>
+<hr>
+<h4 id="2-最短剩余时间优先srtf抢占"><strong>2. 最短剩余时间优先（SRTF，抢占）</strong></h4>
+<h5 id="执行顺序-1"><strong>执行顺序:</strong></h5>
+<ol>
+<li><strong>0时刻</strong>：P1开始执行。</li>
+<li><strong>时刻2</strong>：P2到达，剩余时间（P1剩余8，P2剩余4）。
+<ul>
+<li><strong>P1被抢占</strong>，执行P2（剩余时间更短）。</li>
+</ul>
+</li>
+<li><strong>时刻6</strong>：P2完成。
+<ul>
+<li>已到达进程：P1（剩余8）、P3（到达时间4，剩余10）、P4（到达时间6，剩余5）。</li>
+<li>选择剩余时间最短的进程：P4（5）→ P1（8）→ P3（10）。</li>
+</ul>
+</li>
+<li><strong>时刻11</strong>：P4完成。
+<ul>
+<li>剩余进程：P1（剩余8）、P3（剩余10）。</li>
+<li>继续执行P1（剩余8）。</li>
+</ul>
+</li>
+<li><strong>时刻19</strong>：P1完成。
+<ul>
+<li>最后执行P3（剩余10）。</li>
+</ul>
+</li>
+<li><strong>时刻29</strong>：P3完成。</li>
+</ol>
+<h5 id="时间轴-1"><strong>时间轴:</strong></h5>
+<ul>
+<li><strong>P1</strong>：0→2（被抢占）→11→19（总运行时间10）</li>
+<li><strong>P2</strong>：2→6（结束时间6）</li>
+<li><strong>P4</strong>：6→11（结束时间11）</li>
+<li><strong>P3</strong>：19→29（结束时间29）</li>
+</ul>
+<h5 id="计算指标-1"><strong>计算指标:</strong></h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>进程</th><th>到达时间</th><th>结束时间</th><th>周转时间</th><th>带权周转时间</th></tr></thead><tbody><tr><td>P1</td><td>0</td><td>19</td><td>19</td><td>19/10 = 1.9</td></tr><tr><td>P2</td><td>2</td><td>6</td><td>4</td><td>4/4 = 1</td></tr><tr><td>P3</td><td>4</td><td>29</td><td>25</td><td>25/10 = 2.5</td></tr><tr><td>P4</td><td>6</td><td>11</td><td>5</td><td>5/5 = 1</td></tr></tbody></table>
+<ul>
+<li><strong>平均周转时间</strong>：( \frac{19+4+25+5}{4} = 13.25 )</li>
+<li><strong>带权平均周转时间</strong>：( \frac{1.9+1+2.5+1}{4} = 1.6 )</li>
+</ul>
+<hr>
+<h4 id="关键点总结"><strong>关键点总结</strong></h4>
+<ol>
+<li>
+<p><strong>短进程优先（SPF）</strong>：</p>
+<ul>
+<li><strong>非抢占</strong>，一旦开始执行某进程，除非完成，否则不切换。</li>
+<li>执行顺序取决于进程到达时的剩余时间，优先选择最短的。</li>
+</ul>
+</li>
+<li>
+<p><strong>最短剩余时间优先（SRTF）</strong>：</p>
+<ul>
+<li><strong>抢占式</strong>，当新进程到达时，比较剩余时间，选择最短的立即执行。</li>
+<li>需动态更新剩余时间，可能导致频繁切换。</li>
+</ul>
+</li>
+<li>
+<p><strong>周转时间</strong> = 结束时间 - 到达时间</p>
+</li>
+<li>
+<p><strong>带权周转时间</strong> = 周转时间 / 服务时间</p>
+</li>
+<li>
+<p><strong>抢占式算法的优势</strong>：减少平均等待时间，但可能增加调度开销。</p>
+</li>
+</ol>
+<p>通过对比两种算法，SRTF的平均周转时间（13.25）优于SPF（15），体现了抢占式调度在响应短进程时的优势。</p>
+<hr>
+<h3 id="第四题批处理系统调度的详细">第四题：批处理系统调度的详细</h3>
+<h4 id="问题背景-1"><strong>问题背景:</strong></h4>
+<p>在一个具有两道作业的批处理系统中，作业调度采用<strong>短作业优先（SJF）<strong>算法，进程调度采用</strong>基于优先数的抢占式调度算法</strong>（优先数越小，优先级越高）。需分析作业序列的执行顺序、进入内存时间、结束时间，并计算平均周转时间。</p>
+<hr>
+<h4 id="作业参数"><strong>作业参数</strong></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>作业名</th><th>到达时间</th><th>估计运行时间</th><th>优先数</th></tr></thead><tbody><tr><td>A</td><td>10:00</td><td>40分钟</td><td>5</td></tr><tr><td>B</td><td>10:20</td><td>30分钟</td><td>3</td></tr><tr><td>C</td><td>10:30</td><td>50分钟</td><td>4</td></tr><tr><td>D</td><td>10:50</td><td>20分钟</td><td>6</td></tr></tbody></table>
+<hr>
+<h4 id="调度规则"><strong>调度规则</strong></h4>
+<ol>
+<li><strong>作业调度（SJF）</strong>：
+<ul>
+<li>当内存有空位时，从后备队列中选择<strong>运行时间最短</strong>的作业调入内存。</li>
+</ul>
+</li>
+<li><strong>进程调度（优先数抢占）</strong>：
+<ul>
+<li>从内存中的作业中选择<strong>优先数最小</strong>的作业执行。</li>
+<li>若新到达的作业优先数更小，则<strong>抢占当前作业</strong>。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="执行过程与时间线"><strong>执行过程与时间线</strong></h4>
+<h5 id="1-初始时刻1000"><strong>1. 初始时刻（10:00）</strong></h5>
+<ul>
+<li><strong>作业A到达</strong>，直接进入内存并开始执行（此时内存中仅A）。</li>
+<li><strong>内存状态</strong>：<code>[A]</code>。</li>
+</ul>
+<hr>
+<h5 id="2-b到达1020"><strong>2. B到达（10:20）</strong></h5>
+<ul>
+<li><strong>作业B到达</strong>，内存有空位（系统允许两道作业），B进入内存。</li>
+<li><strong>进程调度</strong>：比较A（优先数5）和B（优先数3）。B优先级更高，<strong>抢占A</strong>。</li>
+<li><strong>执行顺序</strong>：B开始执行，A被挂起。</li>
+<li><strong>内存状态</strong>：<code>[A, B]</code>。</li>
+</ul>
+<hr>
+<h5 id="3-b执行结束1050"><strong>3. B执行结束（10:50）</strong></h5>
+<ul>
+<li><strong>B运行30分钟</strong>（10:20–10:50），释放内存位置。</li>
+<li><strong>作业调度</strong>：从后备队列中选择运行时间最短的作业。此时：
+<ul>
+<li>C（到达时间10:30，运行时间50分钟）。</li>
+<li>D（到达时间10:50，运行时间20分钟）。</li>
+<li><strong>选择D</strong>（运行时间更短）。</li>
+</ul>
+</li>
+<li><strong>内存状态</strong>：<code>[A, D]</code>。</li>
+<li><strong>进程调度</strong>：比较A（优先数5）和D（优先数6）。A优先级更高，<strong>恢复执行</strong>。</li>
+</ul>
+<hr>
+<h5 id="4-a执行结束1110"><strong>4. A执行结束（11:10）</strong></h5>
+<ul>
+<li><strong>A剩余运行时间20分钟</strong>（总40分钟，已运行20分钟），从10:50执行到11:10结束。</li>
+<li><strong>内存状态</strong>：<code>[D]</code>（释放一个位置）。</li>
+<li><strong>作业调度</strong>：调入C（运行时间50分钟，但此时D已在内存）。</li>
+<li><strong>内存状态</strong>：<code>[C, D]</code>。</li>
+<li><strong>进程调度</strong>：比较C（优先数4）和D（优先数6）。C优先级更高，<strong>开始执行C</strong>。</li>
+</ul>
+<hr>
+<h5 id="5-c执行结束1200"><strong>5. C执行结束（12:00）</strong></h5>
+<ul>
+<li><strong>C运行50分钟</strong>（11:10–12:00）。</li>
+<li><strong>内存状态</strong>：<code>[D]</code>（释放一个位置）。</li>
+<li><strong>进程调度</strong>：执行D（唯一在内存中的作业）。</li>
+</ul>
+<hr>
+<h5 id="6-d执行结束1220"><strong>6. D执行结束（12:20）</strong></h5>
+<ul>
+<li><strong>D运行20分钟</strong>（12:00–12:20）。</li>
+</ul>
+<hr>
+<h4 id="作业时间表"><strong>作业时间表</strong></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>作业名</th><th>进入内存时间</th><th>结束时间</th><th>周转时间</th></tr></thead><tbody><tr><td>A</td><td>10:00</td><td>11:10</td><td>70分钟（11:10 - 10:00）</td></tr><tr><td>B</td><td>10:20</td><td>10:50</td><td>30分钟（10:50 - 10:20）</td></tr><tr><td>C</td><td>11:10</td><td>12:00</td><td>90分钟（12:00 - 10:30）</td></tr><tr><td>D</td><td>10:50</td><td>12:20</td><td>90分钟（12:20 - 10:50）</td></tr></tbody></table>
+<hr>
+<h4 id="关键逻辑验证"><strong>关键逻辑验证</strong></h4>
+<ol>
+<li><strong>作业调度（SJF）触发时机</strong>：
+<ul>
+<li>仅在内存有空位时触发（如B结束后调入D，A结束后调入C）。</li>
+</ul>
+</li>
+<li><strong>进程抢占逻辑</strong>：
+<ul>
+<li>B抢占A（优先数3 &#x3C; 5），C抢占D（优先数4 &#x3C; 6）。</li>
+</ul>
+</li>
+<li><strong>内存管理</strong>：
+<ul>
+<li>系统始终最多容纳两道作业（如B和A共存，C和D共存）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="平均周转时间计算"><strong>平均周转时间计算</strong></h4>
+<p>[
+\text{平均周转时间} = \frac{70 + 30 + 90 + 90}{4} = 70\ \text{分钟}
+]</p>
+<hr>
+<h4 id="注意"><strong>注意</strong></h4>
+<p>系统之所以在任意时刻内存中最多只维持两道作业，正是依据题目中“具有两道作业的批处理系统”这一设定：</p>
+<ol>
+<li>
+<p><strong>作业调度触发条件</strong></p>
+<ul>
+<li>只有当内存中已有作业数小于 2（即出现空闲位置）时，SJF 调度才会从后备队列中再选入一个作业。</li>
+<li>因此，每次调度只补入一个作业，直到内存正好装满两道作业或后备队列为空。</li>
+</ul>
+</li>
+<li>
+<p><strong>进程调度作用范围</strong></p>
+<ul>
+<li>进程调度（基于优先数的抢占）始终只在<strong>当前已在内存的那两道作业</strong>之间进行决策与切换。</li>
+<li>新作业只有被作业调度选中并装入内存后，才有机会参与后续的抢占式执行。</li>
+</ul>
+</li>
+</ol>
+<p>换言之，系统的双槽（two-slot）内存限制决定了“每次 SJF 只选入一个作业”以及“CPU 调度只在这两道已装入的作业间进行”。</p>
+<hr>
+<h3 id="第五题银行家算法详细解析">第五题：银行家算法详细解析</h3>
+<p>对银行家算法不熟悉的米娜桑可以先看<a href="https://www.bilibili.com/video/BV1rJ411p7au/?share_source=copy_web&#x26;vd_source=ece2a9c84bf4c011ecb77b7f31228f25">操作系统-银行家算法</a>。</p>
+<blockquote>
+<p>随便找的视频，若有更好的可以发群里 <a href="https://qm.qq.com/q/ojSHMvHG5a">计算机速通之家 | QQ 群号：468081841</a> 并艾特 <code>9¾</code></p>
+</blockquote>
+<h4 id="1-t0时刻是否为安全状态"><strong>1. T0时刻是否为安全状态？</strong></h4>
+<p><strong>步骤分析：</strong></p>
+<ol>
+<li>
+<p><strong>计算各进程剩余需求（最大需求 - 已分配）：</strong></p>
+<ul>
+<li><strong>P1</strong>：A=5-2=3，B=5-1=4，C=9-2=7</li>
+<li><strong>P2</strong>：A=5-4=1，B=3-0=3，C=6-2=4</li>
+<li><strong>P3</strong>：A=4-4=0，B=0-0=0，C=11-5=6</li>
+<li><strong>P4</strong>：A=4-2=2，B=2-0=2，C=5-4=1</li>
+<li><strong>P5</strong>：A=4-3=1，B=2-1=1，C=4-4=0</li>
+</ul>
+</li>
+<li>
+<p><strong>初始可用资源</strong>：A=2，B=3，C=3</p>
+</li>
+<li>
+<p><strong>寻找安全序列：</strong></p>
+<ul>
+<li><strong>第一步</strong>：检查 <strong>P3</strong>（剩余需求A=0，B=0，C=6），但可用C=3 &#x3C; 6，不满足。</li>
+<li><strong>第二步</strong>：检查 <strong>P5</strong>（剩余需求A=1，B=1，C=0），可用资源满足（A=2≥1，B=3≥1）。分配P5，释放其资源（A=3，B=1，C=4），可用资源变为 <strong>A=5，B=4，C=7</strong>。</li>
+<li><strong>第三步</strong>：检查 <strong>P4</strong>（剩余需求A=2，B=2，C=1），可用资源满足（A=5≥2，B=4≥2）。分配P4，释放其资源（A=2，B=0，C=4），可用资源变为 <strong>A=7，B=4，C=11</strong>。</li>
+<li><strong>第四步</strong>：检查 <strong>P1</strong>（剩余需求A=3，B=4，C=7），可用资源满足（A=7≥3，B=4≥4）。分配P1，释放其资源（A=2，B=1，C=2），可用资源变为 <strong>A=9，B=5，C=13</strong>。</li>
+<li><strong>第五步</strong>：检查 <strong>P2</strong>（剩余需求A=1，B=3，C=4），可用资源满足（A=9≥1，B=5≥3）。分配P2，释放其资源（A=4，B=0，C=2），可用资源进一步增加。</li>
+<li><strong>最终安全序列</strong>：<strong>P5 → P4 → P1 → P2 → P3</strong>（不唯一）。</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：T0时刻是安全状态，存在安全序列。</p>
+<hr>
+<h4 id="2-进程p4请求资源201能否分配"><strong>2. 进程P4请求资源（2,0,1），能否分配？</strong></h4>
+<p><strong>步骤分析：</strong></p>
+<ol>
+<li>
+<p><strong>验证请求合法性：</strong></p>
+<ul>
+<li>P4的剩余需求：A=2，B=2，C=1 → 请求（2,0,1） ≤ 剩余需求。</li>
+<li>系统当前可用资源：A=2，B=3，C=3 → 请求 ≤ 可用资源。</li>
+</ul>
+</li>
+<li>
+<p><strong>尝试分配并检查安全性：</strong></p>
+<ul>
+<li>分配后，可用资源变为：<strong>A=0，B=3，C=2</strong>。</li>
+<li>P4的已分配资源变为：A=4，B=0，C=5，剩余需求：A=0，B=2，C=0。</li>
+<li><strong>寻找安全序列：</strong>
+<ul>
+<li><strong>第一步</strong>：分配 <strong>P4</strong>（剩余需求B=2 ≤ 可用B=3），释放资源后可用资源变为 <strong>A=4，B=3，C=7</strong>。</li>
+<li><strong>第二步</strong>：分配 <strong>P5</strong>（剩余需求A=1，B=1），释放后可用资源变为 <strong>A=7，B=4，C=11</strong>。</li>
+<li><strong>第三步</strong>：分配 <strong>P1</strong>（剩余需求A=3，B=4，C=7），释放后可用资源变为 <strong>A=9，B=5，C=13</strong>。</li>
+<li><strong>第四步</strong>：分配 <strong>P2</strong>（剩余需求A=1，B=3，C=4），释放后可用资源进一步增加。</li>
+<li><strong>安全序列</strong>：<strong>P4 → P5 → P1 → P2 → P3</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：允许分配，存在安全序列。</p>
+<hr>
+<h4 id="3-在2的基础上进程p1请求资源020能否分配"><strong>3. 在（2）的基础上，进程P1请求资源（0,2,0），能否分配？</strong></h4>
+<p><strong>步骤分析：</strong></p>
+<ol>
+<li>
+<p><strong>当前可用资源</strong>（已分配P4请求后）：A=0，B=3，C=2。</p>
+</li>
+<li>
+<p><strong>验证请求合法性：</strong></p>
+<ul>
+<li>P1的剩余需求：A=3，B=4，C=7 → 请求（0,2,0） ≤ 剩余需求。</li>
+<li>可用资源：B=3 ≥ 2，其他资源足够。</li>
+</ul>
+</li>
+<li>
+<p><strong>尝试分配并检查安全性：</strong></p>
+<ul>
+<li>分配后，可用资源变为：<strong>A=0，B=1，C=2</strong>。</li>
+<li>P1的已分配资源变为：A=2，B=3，C=2，剩余需求：A=3，B=2，C=7。</li>
+<li><strong>检查安全序列：</strong>
+<ul>
+<li>所有进程的剩余需求均无法被满足：
+<ul>
+<li>P3需要C=6 > 可用C=2；</li>
+<li>P2需要A=1 > 可用A=0；</li>
+<li>P5需要A=1 > 可用A=0。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>无安全序列</strong>，系统进入不安全状态。</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：拒绝分配，请求会导致系统不安全。</p>
+<hr>
+<h4 id="最终答案"><strong>最终答案</strong></h4>
+<ol>
+<li><strong>T0时刻是安全状态</strong>，安全序列示例：P5 → P4 → P1 → P2 → P3。</li>
+<li><strong>允许P4请求（2,0,1）</strong>，存在安全序列（如P4 → P5 → P1 → P2 → P3）。</li>
+<li><strong>拒绝P1请求（0,2,0）</strong>，分配后系统将处于不安全状态。</li>
+</ol>
+<hr>
+<h2 id="hw2">hw2</h2>
+<h3 id="第1题页表结构解析">第1题：页表结构解析</h3>
+<hr>
+<h4 id="题目回顾"><strong>题目回顾</strong></h4>
+<p>一个32位地址的计算机系统使用二级页表，虚拟地址划分如下：</p>
+<ul>
+<li>顶级页表占9位</li>
+<li>二级页表占11位</li>
+</ul>
+<p><strong>问题</strong>：</p>
+<ol>
+<li>页面长度是多少？</li>
+<li>虚拟地址空间有多少个页面？</li>
+</ol>
+<hr>
+<h4 id="答案与解析"><strong>答案与解析</strong></h4>
+<h5 id="1-页面长度"><strong>1. 页面长度</strong></h5>
+<ul>
+<li><strong>计算页内偏移量</strong>：虚拟地址总长度为32位，扣除顶级页表（9位）和二级页表（11位），剩余部分为页内偏移量：<code>32 - 9 - 11 = 12 位</code>，因此，页面长度为：<code>2 ^ 12 = 4096 字节 = 4KB</code></li>
+<li><strong>验证</strong>：
+页内偏移量12位意味着每个页面可寻址4KB空间，这与现代操作系统的标准页面大小一致（如Linux默认4KB）。</li>
+</ul>
+<hr>
+<h5 id="2-虚拟地址空间的页面总数"><strong>2. 虚拟地址空间的页面总数</strong></h5>
+<ul>
+<li><strong>页号的总位数</strong>：
+页号由顶级页表索引（9位）和二级页表索引（11位）组成，总位数为：
+<code>9 + 11 = 20 位</code>
+因此，虚拟地址空间的最大页面数为：
+<code>2 ^ 20 = 1 M 个页面</code></li>
+</ul>
+<hr>
+<h4 id="关键概念总结"><strong>关键概念总结</strong></h4>
+<ol>
+<li>
+<p><strong>二级页表的作用</strong>：</p>
+<ul>
+<li>顶级页表（Page Directory）索引二级页表（Page Table），二级页表索引物理页框。</li>
+<li>分层设计减少页表内存占用（无需为未使用的虚拟地址分配二级页表）。</li>
+</ul>
+</li>
+<li>
+<p><strong>地址划分的意义</strong>：</p>
+<ul>
+<li><strong>顶级页表位（9位）</strong>：决定一级页表数量。</li>
+<li><strong>二级页表位（11位）</strong>：决定每个一级页表项能映射的二级页表数量。</li>
+<li><strong>页内偏移（12位）</strong>：决定页面大小。</li>
+</ul>
+</li>
+<li>
+<p><strong>典型应用场景</strong>：</p>
+<ul>
+<li>32位系统中，二级页表常用于平衡内存占用与地址映射效率。例如，x86架构的经典分页模式（10位顶级页表 + 10位二级页表 + 12位偏移）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="常见疑问解答"><strong>常见疑问解答</strong></h4>
+<p><strong>为什么总页号位数是20位？</strong>
+顶级页表（9位）和二级页表（11位）共同确定一个物理页框，因此页号总位数为两者之和。每个页号对应唯一的物理页框，总页数为 <code>2^20</code>。</p>
+<p><strong>如果页面长度改为8KB，地址划分会如何变化？</strong>
+页内偏移量需要13位（<code>2^13 = 8KB</code>），此时顶级页表和二级页表的位数之和为：
+<code>32 - 13 = 19 位</code>
+可能划分为9位 + 10位，或其他组合。</p>
+<hr>
+<h4 id="结论"><strong>结论</strong></h4>
+<p>通过分析虚拟地址的划分，可以得出：</p>
+<ol>
+<li><strong>页面长度</strong>：4KB</li>
+<li><strong>虚拟地址空间页面数</strong>：1M个
+这一结果与二级页表的设计逻辑完全吻合，体现了分页机制在内存管理中的核心作用。</li>
+</ol>
+<hr>
+<h3 id="第2题虚拟地址转换">第2题：虚拟地址转换</h3>
+<h4 id="一题目条件"><strong>一、题目条件</strong></h4>
+<ol>
+<li>
+<p><strong>用户编程空间</strong>：共 32 个页面，每页 1KB（即 1024 字节）。</p>
+</li>
+<li>
+<p><strong>物理内存</strong>：大小为 16KB，划分为 16 个物理块，每块 1KB。</p>
+</li>
+<li>
+<p><strong>页表内容</strong>（部分）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>页表（部分）</strong>：</th><th>页号</th><th>物理块号</th></tr></thead><tbody><tr><td>0</td><td>5</td><td></td></tr><tr><td>1</td><td>10</td><td></td></tr><tr><td>2</td><td>4</td><td></td></tr><tr><td>3</td><td>7</td><td></td></tr></tbody></table>
+</li>
+<li>
+<p><strong>逻辑地址</strong>：<code>0A5C(H)</code>（十六进制）</p>
+</li>
+</ol>
+<hr>
+<h4 id="二地址结构分析"><strong>二、地址结构分析</strong></h4>
+<ul>
+<li>页数为 32 → 页号需占 <strong>5 位</strong>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>=</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">2^5 = 32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">32</span></span></span></span>）</li>
+<li>每页大小为 1KB → 页内偏移需占 <strong>10 位</strong>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup><mo>=</mo><mn>1024</mn></mrow><annotation encoding="application/x-tex">2^{10} = 1024</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1024</span></span></span></span>）</li>
+<li>因此逻辑地址总长度为 <strong>5 + 10 = 15 位</strong></li>
+</ul>
+<hr>
+<h4 id="三逻辑地址解析"><strong>三、逻辑地址解析</strong></h4>
+<ul>
+<li>
+<p>原始逻辑地址：<code>0A5C(H)</code> = <code>0000 1010 0101 1100(B)</code>（16位）</p>
+</li>
+<li>
+<p>舍弃最高冗余位后，取低 15 位：<code>000 1010 0101 1100</code></p>
+<ul>
+<li>前 5 位：页号 = <code>00010(B)</code> = <code>2(₁₀)</code></li>
+<li>后 10 位：页内偏移 = <code>1001011100(B)</code> = <code>604(₁₀)</code> = <code>25C(H)</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="四查页表获取物理块号"><strong>四、查页表获取物理块号</strong></h4>
+<ul>
+<li>页号 2 对应的物理块号为 <strong>4</strong></li>
+</ul>
+<hr>
+<h4 id="五计算物理地址"><strong>五、计算物理地址</strong></h4>
+<h5 id="十六进制加法方式"><strong>十六进制加法方式</strong></h5>
+<ul>
+<li><strong>每块大小（即题目中 <code>每页为 1 KB</code>）</strong>：1KB = 2 ^ 10 字节</li>
+<li><strong>物理块号 4 的起始地址</strong>：4 × 1KB = 2 ^ 12 = 1000H（十六进制）</li>
+<li><strong>偏移量</strong>:
+25CH</li>
+<li><strong>最终物理地址</strong>：
+1000H + 25CH = <strong>125CH</strong></li>
+</ul>
+<hr>
+<p><strong>计算说明</strong>：</p>
+<ol>
+<li><strong>块号转起始地址</strong>：
+<ul>
+<li>块号 4 × 每块大小 1024 = 4096（十进制） = 1000H。</li>
+</ul>
+</li>
+<li><strong>偏移量直接使用</strong>：
+<ul>
+<li>逻辑地址中的偏移量为 25CH。</li>
+</ul>
+</li>
+<li><strong>物理地址合成</strong>：
+<ul>
+<li>起始地址 1000H + 偏移量 25CH = 125CH。</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：
+物理地址为 <strong>125CH</strong>。</p>
+<hr>
+<h4 id="六验证与结论"><strong>六、验证与结论</strong></h4>
+<ul>
+<li><strong>页号</strong> = 2（已在页表中）</li>
+<li><strong>偏移量</strong> = 604 ∈ [0, 1023]（合法范围）</li>
+<li><strong>最终物理地址</strong> = <code>125C(H)</code></li>
+</ul>
+<hr>
+<h4 id="七常见问题解答"><strong>七、常见问题解答</strong></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>问题</th><th>解答</th></tr></thead><tbody><tr><td><strong>为何逻辑地址为 15 位？</strong></td><td>5 位页号 + 10 位偏移，共 15 位，题中地址为 16 位，需去除最高冗余位。</td></tr><tr><td><strong>页表未包含页号 4~31 如何处理？</strong></td><td>若访问这些页，将触发缺页异常，操作系统需将页面调入内存。题目未涉及此情形。</td></tr></tbody></table>
+<hr>
+<h3 id="第3题页面置换算法详细解析">第3题：页面置换算法详细解析</h3>
+<blockquote>
+<p>DeepSeek 把自己绕进去了，这里只留下大概的解析，具体的缺页表格可以看 <a href="/pdf/ans.pdf">ans.pdf（就是文章最开始的答案文件）</a>。
+缺页这部分只考这三个算法，米娜桑不熟悉的找找视频看看书。
+放个视频<a href="https://www.bilibili.com/video/BV1et421K7d3/?share_source=copy_web&#x26;vd_source=ece2a9c84bf4c011ecb77b7f31228f25">（存档）操作系统页面置换算FIFO,OPT,LRU做题速成</a>。</p>
+<p>哦对了还有一件事，倪匡算缺页的时候不算最开始的几次（比如物理块为 3 时前三次不算缺页</p>
+</blockquote>
+<h4 id="题目要求"><strong>题目要求</strong></h4>
+<ul>
+<li><strong>页面走向</strong>：1, 2, 3, 4, 2, 3, 5, 6, 3, 1, 4, 6, 7, 5, 2, 4, 1, 3, 2</li>
+<li><strong>物理块数</strong>：3个</li>
+<li><strong>算法</strong>：FIFO、OPT、LRU</li>
+<li><strong>目标</strong>：计算缺页中断次数和缺页率</li>
+</ul>
+<hr>
+<h4 id="1-fifo先进先出算法"><strong>1. FIFO（先进先出）算法</strong></h4>
+<p><strong>核心思想</strong>：替换最早进入内存的页面。<strong>模拟过程</strong>：</p>
+<ul>
+<li>维护一个队列记录页面进入顺序，缺页时替换队首页面，新页面加入队尾。</li>
+</ul>
+<p><strong>缺页次数</strong> ：14次</p>
+<p><strong>缺页率</strong> ：14 /19</p>
+<hr>
+<h4 id="2-opt最佳置换算法"><strong>2. OPT（最佳置换）算法</strong></h4>
+<p><strong>核心思想</strong>：替换未来最长时间不会被访问的页面。<strong>模拟过程</strong>：</p>
+<ul>
+<li>预知未来访问序列，选择最晚被访问的页面替换。</li>
+</ul>
+<p><strong>缺页次数</strong>：8次
+<strong>缺页率</strong>：8 / 19</p>
+<hr>
+<h4 id="3-lru最近最久未使用算法"><strong>3. LRU（最近最久未使用）算法</strong></h4>
+<p><strong>核心思想</strong>：替换最近最久未被访问的页面。<strong>模拟过程</strong>：</p>
+<ul>
+<li>维护访问顺序，每次访问后更新页面为“最近使用”，缺页时替换最久未使用的页面。</li>
+</ul>
+<p><strong>缺页次数</strong>：13次
+<strong>缺页率</strong>：13 / 19</p>
+<hr>
+<h4 id="总结-2">总结</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>算法</th><th>缺页次数</th><th>缺页率</th></tr></thead><tbody><tr><td>FIFO</td><td>14</td><td>14 / 19</td></tr><tr><td>OPT</td><td>8</td><td>8 / 19</td></tr><tr><td>LRU</td><td>13</td><td>13 / 19</td></tr></tbody></table>
+<p><strong>关键结论</strong>：</p>
+<ol>
+<li><strong>FIFO</strong> 性能最差，因其无法适应访问模式的局部性。</li>
+<li><strong>OPT</strong> 是理论最优解，但需预知未来访问序列，实际不可行。</li>
+<li><strong>LRU</strong> 接近 OPT，但需要维护访问历史，开销较大。在此例中，由于存在周期性重复访问旧页面，LRU表现略逊于理论预期。</li>
+</ol>
+<hr>
+<h3 id="第4题tlb与缺页中断的详细解析">第4题：TLB与缺页中断的详细解析</h3>
+<h4 id="题目条件"><strong>题目条件</strong></h4>
+<ol>
+<li>
+<p><strong>系统参数</strong>：</p>
+<ul>
+<li>页面大小：4KB（页内偏移占12位）。</li>
+<li>内存访问时间：100ns，TLB访问时间：10ns。</li>
+<li>缺页处理时间：108ns（包含更新TLB和页表的时间）。</li>
+<li>驻留集大小固定为2，采用LRU置换算法和局部淘汰策略。</li>
+<li>TLB初始为空，且正常页表访问后不更新TLB（仅在缺页处理后更新）。</li>
+</ul>
+</li>
+<li>
+<p><strong>页表初始状态</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>页号</th><th>页框号</th><th>有效位</th></tr></thead><tbody><tr><td>0</td><td>101H</td><td>1</td></tr><tr><td>1</td><td>—</td><td>0</td></tr><tr><td>2</td><td>254H</td><td>1</td></tr></tbody></table>
+</li>
+</ol>
+<hr>
+<h4 id="逻辑地址访问分析"><strong>逻辑地址访问分析</strong></h4>
+<h5 id="1-访问逻辑地址-2362h"><strong>1. 访问逻辑地址 <code>2362H</code></strong></h5>
+<ul>
+<li>
+<p><strong>地址分解</strong>：</p>
+<ul>
+<li>十六进制 <code>2362H</code> → 二进制 <code>0010 0011 0110 0010</code>。</li>
+<li><strong>页号</strong>：高4位 <code>0010</code>（十进制2）。</li>
+<li><strong>页内偏移</strong>：低12位 <code>362H</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>转换流程</strong>：</p>
+<ol>
+<li><strong>访问TLB</strong>：初始为空，未命中（耗时10ns）。</li>
+<li><strong>访问页表</strong>：页号2有效，页框号为 <code>254H</code>（耗时100ns）。</li>
+<li><strong>访问物理地址</strong>：（耗时100ns）。</li>
+<li><strong>总时间</strong>：<code>10 + 100 + 100 = 210ns</code>。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h5 id="2-访问逻辑地址-1565h"><strong>2. 访问逻辑地址 <code>1565H</code></strong></h5>
+<ul>
+<li>
+<p><strong>地址分解</strong>：</p>
+<ul>
+<li>十六进制 <code>1565H</code> → 二进制 <code>0001 0101 0110 0101</code>。</li>
+<li><strong>页号</strong>：高4位 <code>0001</code>（十进制1）。</li>
+<li><strong>页内偏移</strong>：低12位 <code>565H</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>转换流程</strong>：</p>
+<ol>
+<li><strong>访问TLB</strong>：未命中（耗时10ns）。</li>
+<li><strong>访问页表</strong>：页号1无效（有效位为0），触发缺页中断。</li>
+<li><strong>缺页处理</strong>：
+<ul>
+<li>驻留集大小为2，当前驻留页为0和2（根据初始页表）。</li>
+<li>根据LRU算法，淘汰最近最少使用的页0（假设页0未被近期访问）。</li>
+<li>将页1装入原页0的页框 <code>101H</code>，更新页表（耗时108ns）。</li>
+<li><strong>更新TLB</strong>：缺页处理包含TLB更新，页1的映射被缓存。</li>
+</ul>
+</li>
+<li><strong>重新执行指令</strong>：
+<ul>
+<li>TLB命中页1（耗时10ns）。</li>
+<li>物理地址（耗时100ns）。</li>
+</ul>
+</li>
+<li><strong>总时间</strong>：<code>10（TLB） + 100（页表） + 108（缺页） + 100（物理地址） = 318ns</code>。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h5 id="3-访问逻辑地址-25a5h"><strong>3. 访问逻辑地址 <code>25A5H</code></strong></h5>
+<ul>
+<li>
+<p><strong>地址分解</strong>：</p>
+<ul>
+<li>十六进制 <code>25A5H</code> → 二进制 <code>0010 0101 1010 0101</code>。</li>
+<li><strong>页号</strong>：高4位 <code>0010</code>（十进制2）。</li>
+<li><strong>页内偏移</strong>：低12位 <code>5A5H</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>转换流程</strong>：</p>
+<ol>
+<li><strong>访问TLB</strong>：假设在缺页处理后，TLB中已缓存页2的映射（因题目未明确禁止缺页处理外的TLB更新）。</li>
+<li><strong>TLB命中</strong>：直接获取页框号 <code>254H</code>（耗时10ns）。</li>
+<li><strong>访问物理地址</strong>：物理地址（耗时100ns）。</li>
+<li><strong>总时间</strong>：<code>10 + 100 = 110ns</code>。</li>
+</ol>
+</li>
+</ul>
+<h4 id="答案总结"><strong>答案总结</strong></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>逻辑地址</th><th>转换步骤与时间（ns）</th><th></th></tr></thead><tbody><tr><td>2362H</td><td>TLB未命中 → 页表 → 物理地址（10+100+100 = 210）</td><td></td></tr><tr><td>1565H</td><td>TLB未命中 → 页表 → 缺页 → 更新TLB → 物理地址（10+100+108+100 = 318）</td><td></td></tr><tr><td>25A5H</td><td>TLB命中 → 物理地址（10+100 = 110）</td><td></td></tr></tbody></table>
+<h4 id="1565h-逻辑地址转换为物理地址">1565H 逻辑地址转换为物理地址</h4>
+<h5 id="步骤1分解逻辑地址"><strong>步骤1：分解逻辑地址</strong></h5>
+<ul>
+<li><strong>逻辑地址</strong>：<code>1565H</code>（十六进制）</li>
+<li><strong>二进制表示</strong>：<code>0001 0101 0110 0101</code></li>
+<li><strong>页面大小</strong>：4KB = (2^{12}) → 页内偏移占低12位，页号占剩余高位。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>部分</th><th>二进制值</th><th>十六进制值</th></tr></thead><tbody><tr><td>页号（高4位）</td><td><code>0001</code></td><td>1</td></tr><tr><td>页内偏移（低12位）</td><td><code>0101 0110 0101</code></td><td>565H</td></tr></tbody></table>
+<hr>
+<h5 id="步骤2查询页表"><strong>步骤2：查询页表</strong></h5>
+<p>根据题目给出的页表：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>页号</th><th>页框号</th><th>有效位</th></tr></thead><tbody><tr><td>0</td><td>101H</td><td>1</td></tr><tr><td>1</td><td>—</td><td>0</td></tr><tr><td>2</td><td>254H</td><td>1</td></tr></tbody></table>
+<ul>
+<li><strong>页号1的状态</strong>：有效位为0 → <strong>缺页</strong>，需触发缺页中断。</li>
+</ul>
+<hr>
+<h5 id="步骤3处理缺页中断"><strong>步骤3：处理缺页中断</strong></h5>
+<ol>
+<li><strong>驻留集限制</strong>：系统为进程分配固定2个物理页框，当前驻留页为0和2。</li>
+<li><strong>置换策略</strong>：
+<ul>
+<li><strong>LRU算法</strong>：淘汰最近最少使用的页。</li>
+<li><strong>局部淘汰策略</strong>：仅淘汰属于该进程的页面（此处为页0或页2）。</li>
+</ul>
+</li>
+<li><strong>淘汰页0</strong>：
+<ul>
+<li>假设页0是最近未被访问的页（题目未提供历史访问记录，默认淘汰页0）。
+| - 将页0的页框号 <code>101H</code> 分配给页1，并更新页表： | 页号 | 页框号 | 有效位 |
+| ---------------------------------------------- | ---- | ------ |
+| 1                                              | 101H | 1      |</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h5 id="步骤4生成物理地址"><strong>步骤4：生成物理地址</strong></h5>
+<ul>
+<li><strong>页框号</strong>：<code>101H</code></li>
+<li><strong>页框基地址</strong>：<code>101H &#x3C;&#x3C; 12 = 101000H</code>（左移12位对齐）。</li>
+<li><strong>页内偏移</strong>：<code>565H</code></li>
+</ul>
+<p><strong>物理地址 = 物理块号(101H) 拼接 页内偏移(565H) = <code>101565H</code></strong></p>
+<hr>
+<h3 id="第5题fifolru">第5题：FIFO，LRU</h3>
+<blockquote>
+<p>还是缺页中断，注意 <code>若该作业的第0页已经装入主存</code> 。</p>
+</blockquote>
+<h4 id="题目条件-1">题目条件</h4>
+<ul>
+<li><strong>字地址序列</strong>：115, 228, 120, 88, 446, 102, 321, 432, 260, 167</li>
+<li><strong>主存容量</strong>：300字（3个页框，每页100字）</li>
+<li><strong>初始状态</strong>：第0页已装入内存。</li>
+</ul>
+<hr>
+<h4 id="关键步骤"><strong>关键步骤</strong></h4>
+<ol>
+<li>
+<p><strong>地址到页号的转换</strong>根据页大小（100字），将地址转换为页号：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>地址</th><th>页号</th></tr></thead><tbody><tr><td>115</td><td>1</td></tr><tr><td>228</td><td>2</td></tr><tr><td>120</td><td>1</td></tr><tr><td>88</td><td>0</td></tr><tr><td>446</td><td>4</td></tr><tr><td>102</td><td>1</td></tr><tr><td>321</td><td>3</td></tr><tr><td>432</td><td>4</td></tr><tr><td>260</td><td>2</td></tr><tr><td>167</td><td>1</td></tr></tbody></table>
+<p><strong>页号序列</strong>：<code>1, 2, 1, 0, 4, 1, 3, 4, 2, 1</code></p>
+</li>
+<li>
+<p><strong>初始内存状态</strong></p>
+<ul>
+<li>初始内存包含页0，剩余两个页框为空。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="答案">答案</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>算法</th><th>缺页中断次数</th><th>缺页率</th></tr></thead><tbody><tr><td>FIFO</td><td>3</td><td>3 / 10</td></tr><tr><td>LRU</td><td>4</td><td>4 / 10</td></tr></tbody></table>
+<hr>
+<h3 id="第6题fifo与clock算法解析">第6题：FIFO与Clock算法解析</h3>
+<blockquote>
+<p>Clock 算法，会考吗？(不会考吧</p>
+</blockquote>
+<h4 id="题目条件-2"><strong>题目条件:</strong></h4>
+<ul>
+<li><strong>逻辑地址空间与物理地址空间</strong>：均为64KB（按字节编址），即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>16</mn></msup></mrow><annotation encoding="application/x-tex">2^{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">16</span></span></span></span></span></span></span></span></span></span></span></span> 字节。</li>
+<li><strong>页大小</strong>：1KB（ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">2^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span></span></span></span></span></span></span></span> 字节），页内偏移占10位。</li>
+<li><strong>页号位数</strong>：逻辑地址总位数16位，页号占6位（16-10=6）。</li>
+<li><strong>进程需求</strong>：最多需6页，当前分配4个页框（固定分配局部置换策略）。</li>
+<li><strong>当前页表状态</strong>（时刻260）：</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>页号</th><th>页框号</th><th>装入时间</th><th>访问位</th></tr></thead><tbody><tr><td>0</td><td>7</td><td>130</td><td>1</td></tr><tr><td>1</td><td>4</td><td>230</td><td>1</td></tr><tr><td>2</td><td>2</td><td>200</td><td>1</td></tr><tr><td>3</td><td>9</td><td>160</td><td>1</td></tr></tbody></table>
+<ul>
+<li><strong>逻辑地址</strong>：<code>17CAH</code></li>
+</ul>
+<hr>
+<h4 id="1逻辑地址对应的页号"><strong>（1）逻辑地址对应的页号</strong></h4>
+<ol>
+<li><strong>逻辑地址转换</strong>：
+<ul>
+<li><code>17CAH</code> = 二进制：<code>0001 0111 1100 1010</code>（16位）。</li>
+<li><strong>页内偏移</strong>：低10位（<code>1111 001010</code>）→ <code>3CA(H)</code>。</li>
+<li><strong>页号</strong>：高6位（<code>000101</code>）→ 十进制为 <strong>5</strong>。</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：
+<strong>逻辑地址对应的页号为5</strong>。</p>
+<hr>
+<h4 id="2fifo置换后的物理地址"><strong>（2）FIFO置换后的物理地址</strong></h4>
+<ol>
+<li><strong>缺页处理</strong>：
+<ul>
+<li>页号5不在内存中，触发缺页中断。</li>
+<li><strong>FIFO策略</strong>：淘汰最早装入的页。
+<ul>
+<li>当前页框分配：页0（装入时间130）、页3（160）、页2（200）、页1（230）。</li>
+<li><strong>淘汰页0</strong>，其页框7分配给页5。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>物理地址计算</strong>：
+<ul>
+<li><strong>页框号7</strong>的二进制表示：<code>000111</code>（6位）。</li>
+<li><strong>页内偏移</strong>：<code>3CA(H)</code>（低10位）。</li>
+<li><strong>物理地址</strong>：<code>000111</code>（页框号） + <code>001111001010</code>（偏移量）
+→ 二进制：<code>0001111111001010</code> = <code>1FCA(H)</code>（十六进制）。</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：
+<strong>FIFO置换后的物理地址为1FCA(H)</strong>。</p>
+<hr>
+<h4 id="3clock置换后的物理地址"><strong>（3）Clock置换后的物理地址</strong></h4>
+<ol>
+<li><strong>Clock算法流程</strong>：
+<ul>
+<li><strong>初始指针指向2号页框</strong>（对应页2，页框号2）。</li>
+<li><strong>第一轮扫描</strong>（所有访问位为1）：
+<ul>
+<li>页框2（访问位1）→ 置0，指针顺时针移动到页框9。</li>
+<li>页框9（访问位1）→ 置0，指针移动到页框7。</li>
+<li>页框7（访问位1）→ 置0，指针移动到页框4。</li>
+<li>页框4（访问位1）→ 置0，指针回到页框2。</li>
+</ul>
+</li>
+<li><strong>第二轮扫描</strong>：
+<ul>
+<li>页框2（访问位0）→ 选中置换。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>缺页处理</strong>：
+<ul>
+<li><strong>淘汰页2</strong>，其页框2分配给页5。</li>
+</ul>
+</li>
+<li><strong>物理地址计算</strong>：
+<ul>
+<li><strong>页框号2</strong>的二进制表示：<code>000010</code>（6位）。</li>
+<li><strong>页内偏移</strong>：<code>3CA(H)</code>（低10位）。</li>
+<li><strong>物理地址</strong>：<code>000010</code>（页框号） + <code>001111001010</code>（偏移量）
+→ 二进制：<code>0000101111001010</code> = <code>0BCA(H)</code>（十六进制）。</li>
+</ul>
+</li>
+</ol>
+<p><strong>结论</strong>：
+<strong>Clock置换后的物理地址为0BCA(H)</strong>。</p>
+<hr>
+<h4 id="关键总结"><strong>关键总结</strong></h4>
+<ol>
+<li><strong>页号计算</strong>：
+<ul>
+<li>逻辑地址高6位直接映射页号，低10位为页内偏移。</li>
+</ul>
+</li>
+<li><strong>FIFO策略</strong>：
+<ul>
+<li>基于页的装入时间淘汰最早进入的页。</li>
+<li>物理地址由页框号 + 偏移量组成。</li>
+</ul>
+</li>
+<li><strong>Clock算法</strong>：
+<ul>
+<li>通过循环检查访问位（Reference Bit）选择置换页。</li>
+<li>若所有访问位为1，则先置0后重新扫描。</li>
+</ul>
+</li>
+<li><strong>物理地址生成</strong>：
+<ul>
+<li>页框号（6位）与页内偏移（10位）组合为16位物理地址，需注意二进制与十六进制的转换。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="常见问题"><strong>常见问题</strong></h4>
+<ul>
+<li>**页框号如何确定？**页框号由操作系统分配，题目中已明确给出页框号（如页0→7，页1→4等）。</li>
+<li>**Clock算法中指针移动方向？**指针按顺时针方向移动（页框2→9→7→4→2）。</li>
+<li><strong>访问位（Reference Bit）的作用？</strong>
+标记页面是否被访问过，优先淘汰未被访问的页面（访问位为0）。</li>
+</ul>
+<hr>
+<p><strong>最终答案</strong>：</p>
+<ul>
+<li>（1）页号为 <strong>5</strong>。</li>
+<li>（2）FIFO物理地址为 <strong>1FCA(H)</strong>。</li>
+<li>（3）Clock物理地址为 <strong>0BCA(H)</strong>。</li>
+</ul>
+<hr>
+<h3 id="结语--更新日志">结语 &#x26; 更新日志</h3>
+<p><strong>预祝大家考试顺利！</strong></p>
+<p><strong>更新日志</strong>：</p>
+<ul>
+<li>添加了结语</li>
+<li>添加了星月夜奶茶鼠</li>
+<li>优化了一些排版</li>
+<li>更新了 <a href="#hw2">hw2</a></li>
+<li>移除了 <code>Him</code></li>
+</ul>
+<p><img src="/pic/%E6%98%9F%E6%9C%88%E5%A4%9C%E5%A5%B6%E8%8C%B6%E9%BC%A0.png" alt="img" title="星月夜奶茶鼠"></p> </article> <hr class="my-8 border-dashed">  <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/tags/os/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> OS </a> </li><li> <a href="/tags/期末复习/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 期末复习 </a> </li> </ul> <div id="btt-btn-container" class="fixed end-4 bottom-8 z-50 md:sticky md:end-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group relative bg-background px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block rotate-90 md:hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <span class="sr-only text-sm group-hover:text-accent md:not-sr-only"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+Back To Top
+</span> </button> </div> <script data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    // Attach click event handler for back-to-top button
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+
+    // Handle button visibility according to scroll position
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇资料：</span><div class="text-center"><a href="https://wa.me/?text=https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/" title="通过 WhatsApp 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">通过 WhatsApp 分享这篇资料</span> </a><a href="https://www.facebook.com/sharer.php?u=https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/" title="分享到 Facebook" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg><span class="sr-only">分享到 Facebook</span> </a><a href="https://x.com/intent/post?url=https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/" title="分享到 X" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">分享到 X</span> </a><a href="https://t.me/share/url?url=https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/" title="通过 Telegram 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="sr-only">通过 Telegram 分享这篇资料</span> </a><a href="https://pinterest.com/pin/create/button/?url=https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/" title="分享到 Pinterest" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="sr-only">分享到 Pinterest</span> </a><a href="mailto:?subject=分享一篇复习资料&#38;body=https://hez2z.github.io/posts/operating-systems/os-2025sp-szb%E4%BD%9C%E4%B8%9A%E9%A2%98/" title="通过邮件分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg><span class="sr-only">通过邮件分享这篇资料</span> </a></div></div> <hr class="my-6 border-dashed"> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2"> <a href="/posts/computer-network/计网-2025sp-速通群重点杂糅" class="flex w-full gap-1 hover:opacity-75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <div> <span>上一篇</span> <div class="text-sm text-accent/85">计网-2025sp-速通群重点杂糅</div> </div> </a> <a href="/posts/operating-systems/os-2025sp-wh考点" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-sm text-accent/85">OS_2025sp考点</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </main> <footer class="app-layout mt-auto"> <div class="py-6 sm:py-4 border-t border-border flex flex-col items-center justify-between sm:flex-row-reverse"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/HeZ2z/hez-notes" title="HeZzz's Notes GitHub 仓库" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg> <span class="sr-only">HeZzz&#39;s Notes GitHub 仓库</span>  </a><a href="mailto:hez2z@foxmail.com" title="给 HeZzz's Notes 发送邮件" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <span class="sr-only">给 HeZzz&#39;s Notes 发送邮件</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>期末复习资料整理与分享</span> </div> </div> </footer>  <!-- Load full theme logic --> <script type="module">const s="theme",r="light",m="dark";function h(){const t=localStorage.getItem(s);return t||(window.matchMedia("(prefers-color-scheme: dark)").matches?m:r)}let e=window.theme?.themeValue??h();function c(){localStorage.setItem(s,e),o()}function o(){document.firstElementChild?.setAttribute("data-theme",e);const t=e===m?"切换到亮色模式":"切换到暗色模式";document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const n=document.body;if(n){const i=window.getComputedStyle(n).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}}window.theme?(window.theme.setPreference=c,window.theme.reflectPreference=o):window.theme={themeValue:e,setPreference:c,reflectPreference:o,getTheme:()=>e,setTheme:t=>{e=t}};o();function d(){o(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{e=e===r?m:r,window.theme?.setTheme(e),c()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",t=>{const n=t,a=document.querySelector("meta[name='theme-color']")?.getAttribute("content");a&&n.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",a)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:t})=>{e=t?m:r,window.theme?.setTheme(e),c()});</script> </body> </html> <script type="module" src="/_astro/PostDetails.astro_astro_type_script_index_0_lang.CG2F9om-.js"></script>
