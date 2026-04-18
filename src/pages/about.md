@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "关于"
 ---
 
-HeZzz's Notes 用于集中整理课程回忆版、重点笔记、小测记录和复习时常用的补充资料。
+HeZzz's Notes 用于汇总往年考试题目的回忆版、期末重点、作业整理与常用复习资料等，欢迎在 Github 上查看更多内容。
 
 这个站点保留了 AstroPaper 原有的页面结构，但内容定位不再是通用博客，而是更偏向课程资料与考试复习归档。
 
@@ -16,13 +16,14 @@ HeZzz's Notes 用于集中整理课程回忆版、重点笔记、小测记录和
 
 ## 如何使用
 
-- 先看首页推荐资料，快速进入高价值内容
-- 用标签页按课程或主题筛选
-- 用归档页按时间回溯整理记录
-- 用搜索页直接检索课程名、老师名或关键词
+- 根据你所需要的课程，在搜索框中输入课程名，即可找到相关资料。
 
 ## 说明
 
-当前内容主要从既有博客中的考试相关文章迁移而来，首轮以高相关资料为主，暂不包含个人随笔和日常记录。
-
 如果你发现资料有错误、遗漏，或希望补充新的课程内容，欢迎通过仓库 Issue 或邮件联系反馈。
+
+## 一些连接
+
+- [HeZzz's Blog](https://hez2z.github.io/)
+- [HeZzz's Notes](https://hez2z.github.io/hez2z-notes/)
+- [HeZzz's Notes's Repository](https://github.com/HeZ2z/hez-notes)
