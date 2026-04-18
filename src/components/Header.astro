@@ -6,7 +6,7 @@ import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
-import { SITE } from "@/config";
+import { SITE, BASE_PATH } from "@/config";
 
 const { pathname } = Astro.url;
 
@@ -42,7 +42,7 @@ const isActive = (path: string) => {
     ]}
   >
     <a
-      href="/"
+      href={BASE_PATH}
       class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
     >
       {SITE.title}
@@ -71,17 +71,17 @@ const isActive = (path: string) => {
         ]}
       >
         <li class="col-span-2">
-          <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
+          <a href={`${BASE_PATH}/posts`} class:list={{ "active-nav": isActive("/posts") }}>
             资料
           </a>
         </li>
         <li class="col-span-2">
-          <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
+          <a href={`${BASE_PATH}/tags`} class:list={{ "active-nav": isActive("/tags") }}>
             标签
           </a>
         </li>
         <li class="col-span-2">
-          <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
+          <a href={`${BASE_PATH}/about`} class:list={{ "active-nav": isActive("/about") }}>
             关于
           </a>
         </li>
@@ -89,7 +89,7 @@ const isActive = (path: string) => {
           SITE.showArchives && (
             <li class="col-span-2">
               <LinkButton
-                href="/archives"
+                href={`${BASE_PATH}/archives`}
                 class:list={[
                   "focus-outline flex justify-center p-3 sm:p-1",
                   {
@@ -107,7 +107,7 @@ const isActive = (path: string) => {
         }
         <li class="col-span-1 flex items-center justify-center">
           <LinkButton
-            href="/search"
+            href={`${BASE_PATH}/search`}
             class:list={[
               "focus-outline flex p-3 sm:p-1",
               { "[&>svg]:stroke-accent": isActive("/search") },

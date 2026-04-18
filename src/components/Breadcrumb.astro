@@ -1,5 +1,9 @@
 ---
-const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
+import { BASE_PATH } from "@/config";
+
+const currentUrlPath = Astro.url.pathname
+  .replace(/\/+$/, "")
+  .replace(new RegExp(`^${BASE_PATH}`), "");
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
 if (breadcrumbList[0] === "posts") {
@@ -34,7 +38,7 @@ const formatBreadcrumb = (breadcrumb: string, isLast: boolean) => {
     class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
   >
     <li>
-      <a href="/" class="opacity-80">首页</a>
+      <a href={BASE_PATH} class="opacity-80">首页</a>
       <span aria-hidden="true" class="opacity-80">&raquo;</span>
     </li>
     {
@@ -47,7 +51,7 @@ const formatBreadcrumb = (breadcrumb: string, isLast: boolean) => {
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}/`} class="opacity-70">
+            <a href={`${BASE_PATH}/${breadcrumb}/`} class="opacity-70">
               {formatBreadcrumb(breadcrumb, false)}
             </a>
             <span aria-hidden="true">&raquo;</span>

@@ -21,3 +21,5 @@ export const SITE = {
   lang: "zh-CN",
   timezone: "Asia/Shanghai",
 } as const;
+
+export const BASE_PATH = new URL(SITE.website).pathname.replace(/\/$/, "");
