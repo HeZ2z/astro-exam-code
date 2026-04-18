@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://hez2z.github.io/astro-exam-code/",
+  website: "https://hez2z.github.io/hez-notes/",
   author: "HeZzz",
   profile: "https://github.com/HeZ2z",
   desc: "汇总课程回忆版、期末重点、小测整理与复习资料。",
@@ -14,7 +14,7 @@ export const SITE = {
   editPost: {
     enabled: false,
     text: "编辑此页",
-    url: "https://github.com/HeZ2z/astro-exam-code/edit/main/",
+    url: "https://github.com/HeZ2z/hez-notes/edit/main/",
   },
   dynamicOgImage: true,
   dir: "auto",

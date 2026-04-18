@@ -1,7 +1,7 @@
 # HeZzz's Notes
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![GitHub](https://img.shields.io/github/license/HeZ2z/astro-exam-code?color=%232F3741&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/HeZ2z/hez-notes?color=%232F3741&style=for-the-badge)
 
 复习笔记与一手资料整理，涵盖课程重点、期末回忆版与零散知识点。
 
