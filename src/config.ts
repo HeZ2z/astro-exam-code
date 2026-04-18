@@ -13,7 +13,7 @@ export const SITE = {
   showBackButton: true,
   editPost: {
     enabled: true,
-    text: "编辑此页",
+    text: "在 Github 上编辑此页",
     url: "https://github.com/HeZ2z/hez-notes/edit/main/",
   },
   dynamicOgImage: true,
