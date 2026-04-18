@@ -11,7 +11,7 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : BASE_PATH;
 
 <Layout title={`搜索 | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="搜索" pageDesc="搜索课程名、关键词、老师名或资料标题。">
+  <Main pageTitle="搜索" pageDesc="搜索课程名、关键词或资料标题。">
     <div id="pagefind-search" transition:persist data-backurl={backUrl} data-base-path={BASE_PATH}></div>
   </Main>
   <Footer />
@@ -46,6 +46,7 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : BASE_PATH;
         showImages: false,
         showSubResults: true,
         url: basePath,
+        bundlePath: `${basePath}/pagefind/`,
         processTerm: function (term: string) {
           params.set("q", term);
           history.replaceState(history.state, "", "?" + params.toString());
