@@ -7,7 +7,7 @@ tags:
   - "Java"
   - "语法"
   - "期末复习"
-description: "Java 语言及网络编程 2025 秋季学期 的重点，来源于计算机速通之家 | QQ 群号：468081841。 本文连载于Java语言-2025fa-yy重点 - HeZzz. 基于yy ver.扩展而来 🙇‍♂️🙇‍♂️🙇‍♂️时间仓促，有不足之处烦请及时告知。邮箱hez2z@foxmail.com 或者在 速通之家 群里 @9¾。"
+description: "Java 语言及网络编程 2025 秋季学期的重点整理。"
 ---
 > Java 语言及网络编程 2025 秋季学期 的重点，来源于[计算机速通之家 | QQ 群号：468081841](https://qm.qq.com/q/ojSHMvHG5a)。
 >
