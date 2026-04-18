@@ -9,7 +9,7 @@ import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SITE } from "@/config";
+import { SITE, BASE_PATH } from "@/config";
 import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
@@ -89,7 +89,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     }
 
     <div class="my-8 text-center">
-      <LinkButton href="/posts/">
+      <LinkButton href={`${BASE_PATH}/posts/`}>
         查看全部资料
         <IconArrowRight class="inline-block rtl:-rotate-180" />
       </LinkButton>

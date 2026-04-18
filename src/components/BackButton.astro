@@ -1,7 +1,7 @@
 ---
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import LinkButton from "./LinkButton.astro";
-import { SITE } from "@/config";
+import { SITE, BASE_PATH } from "@/config";
 ---
 
 {
@@ -9,7 +9,7 @@ import { SITE } from "@/config";
     <div class="app-layout flex items-center justify-start">
       <LinkButton
         id="back-button"
-        href="/"
+        href={BASE_PATH}
         class="focus-outline -ms-2 mt-8 mb-2 hover:text-foreground/75"
       >
         <IconChevronLeft class="inline-block size-6 rtl:rotate-180" />
@@ -23,7 +23,6 @@ import { SITE } from "@/config";
   function updateGoBackUrl() {
     const backButton: HTMLAnchorElement | null =
       document.querySelector("#back-button");
-
     const backUrl = sessionStorage.getItem("backUrl");
 
     if (backUrl && backButton) {
