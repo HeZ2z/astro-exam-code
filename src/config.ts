@@ -3,7 +3,7 @@ export const SITE = {
   author: "HeZzz",
   profile: "https://github.com/HeZ2z",
   desc: "汇总课程回忆版、期末重点、小测整理与复习资料。",
-  title: "期末复习资料站",
+  title: "HeZzz's Notes",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 10,
