@@ -12,7 +12,7 @@ export const SITE = {
   showArchives: true,
   showBackButton: true,
   editPost: {
-    enabled: false,
+    enabled: true,
     text: "编辑此页",
     url: "https://github.com/HeZ2z/hez-notes/edit/main/",
   },

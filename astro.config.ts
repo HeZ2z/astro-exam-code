@@ -15,6 +15,7 @@ import { SITE } from "./src/config";
 
 export default defineConfig({
   site: SITE.website,
+  base: "/hez-notes",
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
