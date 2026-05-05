@@ -1,7 +1,7 @@
 ---
 title: "云计算技术-25fa-zb最后一课"
 author: "HeZzz"
-pubDatetime: 2025-11-29T11:26:38.000Z
+pubDatetime: 2025-11-29T11:26:38.000+08:00
 slug: "云计算技术-25fa-zb最后一课"
 tags:
   - "云计算技术"
