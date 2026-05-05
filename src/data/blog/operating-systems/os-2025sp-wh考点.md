@@ -5,7 +5,6 @@ pubDatetime: 2025-05-07T16:41:06.000Z
 slug: "os-2025sp-wh考点"
 tags:
   - "OS"
-  - "期末复习"
 description: "操作系统 2025 春季学期wh最后一课的考点整理。"
 ---
 > 本文连载于[HeZzz的博客 之 OS_2025sp考点](https://hez2z.github.io/2025/05/08/OS2025sp%E8%80%83%E7%82%B9/)

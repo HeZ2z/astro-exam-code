@@ -5,7 +5,6 @@ pubDatetime: 2025-11-29T17:00:37.000Z
 slug: "云计算技术-25fa-zb最后一课-mapreduce"
 tags:
   - "云计算技术"
-  - "期末复习"
 description: "云计算技术 2025 秋季学期最后一课中 MapReduce 部分的内容整理。"
 ---
 云计算技术最后一课的 MapReduce 部分内容整理。

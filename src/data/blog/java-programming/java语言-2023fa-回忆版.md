@@ -6,7 +6,6 @@ slug: "java语言-2023fa-回忆版"
 tags:
   - "Java"
   - "语法"
-  - "期末复习"
 description: "Java 语言及网络编程 2023 秋季学期的回忆版真题整理。"
 ---
 > Java 语言及网络编程 2023 秋季学期 的回忆版真题，来源于[计算机速通之家 | QQ 群号：468081841](https://qm.qq.com/q/ojSHMvHG5a)。
