@@ -1,15 +1,15 @@
 ---
 import Breadcrumb from "@/components/Breadcrumb.astro";
-import { SITE, BASE_PATH } from "@/config";
+import { normalizeBackUrl } from "@/utils/backUrl";
 
 type StringTitle = { pageTitle: string };
 type ArrayTitle = { pageTitle: [string, string]; titleTransition: string };
 
-type Props = (StringTitle | ArrayTitle) & { pageDesc?: string };
+type Props = (StringTitle | ArrayTitle) & { pageDesc?: string; backUrl?: string };
 
 const { props } = Astro;
 
-const backUrl = SITE.showBackButton ? Astro.url.pathname : BASE_PATH;
+const backUrl = props.backUrl ?? normalizeBackUrl(Astro.url.pathname);
 ---
 
 <Breadcrumb />
@@ -31,12 +31,14 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : BASE_PATH;
 </main>
 
 <script>
+  import { setBackUrl } from "@/utils/backUrl";
+
   document.addEventListener("astro:page-load", () => {
     const mainContent: HTMLElement | null =
       document.querySelector("#main-content");
     const backUrl = mainContent?.dataset?.backurl;
-    if (backUrl && !sessionStorage.getItem("backUrl")) {
-      sessionStorage.setItem("backUrl", backUrl);
+    if (backUrl) {
+      setBackUrl(backUrl);
     }
   });
 </script>

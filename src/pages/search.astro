@@ -5,19 +5,24 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE, BASE_PATH } from "@/config";
+import { normalizeBackUrl } from "@/utils/backUrl";
 
-const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : BASE_PATH;
+const backUrl = SITE.showBackButton
+  ? normalizeBackUrl(Astro.url.pathname, Astro.url.search)
+  : BASE_PATH;
 ---
 
 <Layout title={`搜索 | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="搜索" pageDesc="搜索课程名、关键词或资料标题。">
+  <Main pageTitle="搜索" pageDesc="搜索课程名、关键词或资料标题。" {backUrl}>
     <div id="pagefind-search" transition:persist data-backurl={backUrl} data-base-path={BASE_PATH}></div>
   </Main>
   <Footer />
 </Layout>
 
 <script>
+  import { setBackUrl } from "@/utils/backUrl";
+
   function initSearch() {
     const pageFindSearch = document.getElementById("pagefind-search");
     const basePath = pageFindSearch?.dataset?.basePath ?? "";
@@ -52,7 +57,9 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : BASE_PATH;
           history.replaceState(history.state, "", "?" + params.toString());
 
           const backUrl = pageFindSearch?.dataset?.backurl;
-          sessionStorage.setItem("backUrl", backUrl + "?" + params.toString());
+          if (backUrl) {
+            setBackUrl(`${backUrl.split("?")[0]}?${params.toString()}`);
+          }
 
           return term;
         },
@@ -71,6 +78,10 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : BASE_PATH;
       function resetSearchParam(e: Event) {
         if ((e.target as HTMLInputElement)?.value.trim() === "") {
           history.replaceState(history.state, "", window.location.pathname);
+          const backUrl = pageFindSearch?.dataset?.backurl;
+          if (backUrl) {
+            setBackUrl(backUrl.split("?")[0]);
+          }
         }
       }
     });

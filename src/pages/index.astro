@@ -98,11 +98,13 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </Layout>
 
 <script>
+  import { normalizeBackUrl, setBackUrl } from "@/utils/backUrl";
+
   document.addEventListener("astro:page-load", () => {
     const indexLayout = (document.querySelector("#main-content") as HTMLElement)
       ?.dataset?.layout;
     if (indexLayout) {
-      sessionStorage.setItem("backUrl", "/");
+      setBackUrl(normalizeBackUrl(window.location.pathname, window.location.search));
     }
   });
 </script>
