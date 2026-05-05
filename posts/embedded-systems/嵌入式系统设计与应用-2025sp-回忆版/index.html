@@ -1,0 +1,933 @@
+<!DOCTYPE html><html dir="auto" lang="zh-CN" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/hez-notes/favicon.svg"><link rel="canonical" href="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/"><meta name="generator" content="Astro v5.16.6"><!-- General Meta Tags --><title>嵌入式系统设计与应用-2025sp-回忆版 | HeZzz&#39;s Notes</title><meta name="title" content="嵌入式系统设计与应用-2025sp-回忆版 | HeZzz's Notes"><meta name="description" content="嵌入式系统设计与应用 2025 春季学期的回忆版真题整理。"><meta name="author" content="HeZzz"><link rel="sitemap" href="/hez-notes/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:title" content="嵌入式系统设计与应用-2025sp-回忆版 | HeZzz's Notes"><meta property="og:description" content="嵌入式系统设计与应用 2025 春季学期的回忆版真题整理。"><meta property="og:url" content="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/"><meta property="og:image" content="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/index.png"><!-- Article Published/Modified time --><meta property="article:published_time" content="2026-05-06T01:59:26.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/"><meta property="twitter:title" content="嵌入式系统设计与应用-2025sp-回忆版 | HeZzz's Notes"><meta property="twitter:description" content="嵌入式系统设计与应用 2025 春季学期的回忆版真题整理。"><meta property="twitter:image" content="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/index.png"><!-- Google JSON-LD Structured data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"嵌入式系统设计与应用-2025sp-回忆版 | HeZzz's Notes","image":"https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/index.png","datePublished":"2026-05-06T01:59:26.000Z","author":[{"@type":"Person","name":"HeZzz","url":"https://github.com/HeZ2z"}]}</script><!-- Enable RSS feed auto-discovery  --><!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery --><link rel="alternate" type="application/rss+xml" title="HeZzz's Notes" href="https://hez2z.github.io/hez-notes/rss.xml"><meta name="theme-color" content=""><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hez-notes/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><!-- Minimal inline script to prevent FOUC - sets theme immediately --><script>
+      (function () {
+        const initialColorScheme = ""; // "light" | "dark"
+        const currentTheme = localStorage.getItem("theme");
+
+        function getPreferTheme() {
+          if (currentTheme) return currentTheme;
+          if (initialColorScheme) return initialColorScheme;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        const themeValue = getPreferTheme();
+
+        // Set theme immediately to prevent flash
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        // Export minimal API for external script
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script><link rel="stylesheet" href="/hez-notes/_astro/about.BnDfQ4G0.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+:where([data-astro-image]){object-fit:var(--fit);object-position:var(--pos);height:auto}:where([data-astro-image=full-width]){width:100%}:where([data-astro-image=constrained]){max-width:100%}
+</style><style>[data-astro-transition-scope="astro-fam6wyqg-1"] { view-transition-name: \5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528-2025-sp-\56DE\5FC6\7248; }@layer astro { ::view-transition-old(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528-2025-sp-\56DE\5FC6\7248) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528-2025-sp-\56DE\5FC6\7248) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528-2025-sp-\56DE\5FC6\7248) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528-2025-sp-\56DE\5FC6\7248) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fam6wyqg-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fam6wyqg-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: \5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528; }@layer astro { ::view-transition-old(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5D4C\5165\5F0F\7CFB\7EDF\8BBE\8BA1\4E0E\5E94\7528) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <a id="skip-to-content" href="#main-content" class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4">
+跳到正文
+</a> <header class="app-layout flex flex-col items-center justify-between sm:flex-row"> <div id="top-nav-wrap" class="py-4 sm:py-6 border-b border-border relative w-full bg-background flex items-baseline justify-between sm:items-center"> <a href="/hez-notes" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> HeZzz&#39;s Notes </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg> </button> <ul id="menu-items" class="mt-4 grid w-44 grid-cols-2 place-content-center gap-2 [&#38;>li>a]:block [&#38;>li>a]:px-4 [&#38;>li>a]:py-3 [&#38;>li>a]:text-center [&#38;>li>a]:font-medium [&#38;>li>a]:hover:text-accent sm:[&#38;>li>a]:px-2 sm:[&#38;>li>a]:py-1 hidden sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0"> <li class="col-span-2"> <a href="/hez-notes/posts">
+资料
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/tags">
+标签
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/about">
+关于
+</a> </li> <li class="col-span-2"> <a href="/hez-notes/archives" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex justify-center p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/hez-notes/search" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex p-3 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent" title="切换亮色或暗色模式" aria-label="切换主题" aria-live="polite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function s(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),o=document.querySelector("#close-icon");!e||!t||!n||!o||e.addEventListener("click",()=>{const c=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",c?"false":"true"),e.setAttribute("aria-label",c?"打开菜单":"关闭菜单"),t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden")})}s();document.addEventListener("astro:after-swap",s);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/hez-notes" class="group inline-flex items-center gap-1 hover:text-accent focus-outline -ms-2 mt-8 mb-2 hover:text-foreground/75"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg><span>返回</span> </a></div><script type="module" src="/hez-notes/_astro/BackButton.astro_astro_type_script_index_0_lang.CUkB6YCF.js"></script> <main id="main-content" class="app-layout pb-12" data-pagefind-body> <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl" data-astro-transition-scope="astro-fam6wyqg-1"> 嵌入式系统设计与应用-2025sp-回忆版 </h1> <div class="my-2 flex items-center gap-2"> <div class="flex items-center gap-x-2 opacity-80"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 min-w-5.5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-05-06T01:59:26.000Z">6 May, 2026</time> </div> <span aria-hidden="true" class="max-sm:hidden">|</span> <a href="https://github.com/HeZ2z/hez-notes/edit/main/src/data/blog/embedded-systems/嵌入式系统设计与应用-2025sp-回忆版.md" target="_blank" rel="noopener noreferrer" class="flex justify-baseline gap-1.5 opacity-80 hover:text-accent max-sm:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg><span>在 Github 上编辑此页</span></a> </div> <article id="article" class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <blockquote>
+<p>嵌入式系统设计与应用 2025 春季学期的回忆版真题整理，来源于<a href="https://qm.qq.com/q/ojSHMvHG5a">计算机速通之家 | QQ 群号：468081841</a>。</p>
+<p>本文连载于<a href="https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88">嵌入式系统设计与应用-2025sp-回忆版 | HeZzz</a>.</p>
+<p>答案来源于 GPT-5.5 和 NotebookLM，并由我校对，可能不完全准确，仅供参考。</p>
+</blockquote>
+<p>🙇‍♂️🙇‍♂️🙇‍♂️时间仓促，有不足之处烦请及时告知。<a href="mailto:hez2z@foxmail.com">邮箱hez2z@foxmail.com</a> 或者在 <a href="https://qm.qq.com/q/ojSHMvHG5a">速通之家</a> 群里 <code>@9¾</code>。</p>
+<h2 id="一简答题共-6-题每题-5-分">一、简答题（共 6 题，每题 5 分）</h2>
+<h3 id="1简述-arm-指令集-6-种移位操作各自的作用">1、简述 ARM 指令集 6 种移位操作各自的作用</h3>
+<p>LSL：逻辑左移，空出的最低有效位用 0 填充。</p>
+<p>LSR：逻辑右移，空出的最高有效位用 0 填充。</p>
+<p>ASL：算术左移，由于左移空出的有效位用 0 填充，因此它与 LSL 同义。</p>
+<p>ASR：算术右移，算术移位的对象是带符号数，移位过程中必须保持操作数的符号不变。如果源操作数是正数，空出的最高有效位用 0 填充，如果是负数用 1 填充。</p>
+<p>ROR：循环右移，移出的字的最低有效位依次填入空出的最高有效位。</p>
+<p>RRX：带扩展的循环右移。将寄存器的内容循环右移1位，空位用原来 C 标志位填充.</p>
+<h3 id="2简述-s5pv210-中-gpio-的作用">2、简述 S5PV210 中 GPIO 的作用</h3>
+<p>GPIO（General-Purpose Input/Output Ports）全称是通用编程I/O端口。它们是CPU的引脚，可以通过它们向外输出高低电平，或者读入引脚的状态，这里的状态也是通过高电平或低电平来反应的，所以GPIO接口技术可以说是CPU众多接口技术中最为简单、常用的一种。</p>
+<p>每个GPIO端口至少需要两个寄存器:</p>
+<ul>
+<li>一个是用于控制的“通用I/O端口控制寄存器”</li>
+<li>一个是存放数据的“通用I/O端口数据寄存器”</li>
+</ul>
+<p>控制和数据寄存器的每一位和GPIO的硬件引脚相对应，由控制寄存器设置每一个引脚的数据流向，数据寄存器设置引脚输出的高低电平或读取引脚上的电平。</p>
+<h3 id="3请说出嵌入式系统有哪-2-种状态寄存器它们各自有什么作用请回答现在市面上有哪些主流的-arm-处理器系列">3、请说出嵌入式系统有哪 2 种状态寄存器，它们各自有什么作用；请回答现在市面上有哪些主流的 ARM 处理器系列</h3>
+<p>ARM处理器有两类程序状态寄存器：1 个当前程序状态寄存器 CPSR 和 6 个备份程序状态寄存器 SPSR。</p>
+<p>它们的主要功能是：</p>
+<ul>
+<li>保存最近执行的算术或逻辑运算的信息；</li>
+<li>控制中断的允许或禁止；</li>
+<li>设置处理器工作模式。</li>
+</ul>
+<p>每一种处理器模式下使用专用的备份程序状态寄存器。</p>
+<p>当特定的中断或异常发生时，处理器切换到对应的工作模式下，该模式下的备份程序状态寄存器 SPSR 保存当前程序状态寄存器 CPSR 的内容。</p>
+<p>当异常处理程序返回时，再将其内容从备份程序状态寄存器 SPSR 回复到当前程序状态寄存器 CPSR。</p>
+<p>目前 ARM 处理器主要分为经典系列和 Cortex 系列：</p>
+<ul>
+<li>
+<p>经典系列 (Classic)：</p>
+<ul>
+<li>ARM7：早期认可度最高的内核，低功耗，常用于 PDA 和低端手机。</li>
+<li>ARM9/ARM9E：采用 Harvard 架构和 5 级流水线，性能较 ARM7 有显著提升。</li>
+<li>ARM11：经典家族中性能最强的系列。</li>
+</ul>
+</li>
+<li>
+<p>Cortex 系列 (按 A、R、M 划分)：</p>
+<ul>
+<li>Cortex-A (Application)：面向高性能应用，支持 Linux、Android 等复杂操作系统，常用于智能手机、平板电脑和车载娱乐系统。</li>
+<li>Cortex-R (Real-time)：面向实时性要求极高的系统，如汽车制动系统和硬磁盘控制器。</li>
+<li>Cortex-M (Microcontroller)：面向微控制器领域，突出低成本和低功耗，广泛应用于工业控制、传感器和物联网设备。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4简述嵌入式操作系统有哪些作用嵌入式-linux-操作系统有哪些特点">4、简述嵌入式操作系统有哪些作用；嵌入式 linux 操作系统有哪些特点</h3>
+<p>作用: <strong>屏蔽硬件差异（补平界面）</strong>：隐藏底层硬件的具体细节，为上层应用提供统一、抽象的接口，使开发者无需考虑硬件差异，专注于应用逻辑开发。</p>
+<p>特点:</p>
+<ul>
+<li>具有较长的生命周期;</li>
+<li>嵌入式系统的目标代码通常是固化在非易失性存储器芯片中;</li>
+<li>嵌入式系统使用的操作系统一般是实时操作系统（RTOS），系统有实时约束；</li>
+<li>嵌入式系统需要专用开发工具和方法进行设计；</li>
+<li>嵌入式微处理器通常包含专用调试电路；</li>
+<li>嵌入式系统是技术密集、资金密集、高度分散、不断创新的知识集成系统；</li>
+<li>嵌入式系统通常是面向特定任务的，而不同于一般通用PC计算平台，是“专用”的计算机系统；</li>
+<li>嵌入式系统运行环境差异很大；</li>
+<li>嵌入式系统比通用PC系统资源少得多；</li>
+<li>嵌入式系统“嵌入”到对象的体系中，对对象、环境和嵌入式系统自身具有严格的要求，一般的嵌入式系统具有低功耗、体积小、集成度高、成本低等特点；</li>
+<li>建立完整的嵌入式系统的系统测试和可靠性评估体系，保证嵌入式系统高效、可靠、稳定工作；</li>
+</ul>
+<h3 id="5arm-linux-进程调度依据分为哪几个部分">5、ARM-Linux 进程调度依据分为哪几个部分</h3>
+<p>Arm-Linux 选择最值得运行的进程时，其调度依据主要分为以下四个部分：</p>
+<ul>
+<li><strong>进程调度策略 (Policy)</strong>：用于区分实时进程和普通进程。</li>
+<li><strong>静态优先级 (Priority)</strong>：进程的初始优先级。</li>
+<li><strong>动态优先级 (Counter)</strong>：实际意义上的动态优先级，代表进程剩余的时间片（起始值为 priority 的值）。</li>
+<li><strong>实时优先级 (rt-priority)</strong>：专门针对实时进程的优先级指标。</li>
+</ul>
+<p>这些依据共同决定了哪个进程将获得 CPU 资源。既然提到了调度依据，你想进一步了解 Linux 内核中执行调度的核心函数 <strong><code>schedule()</code></strong> 的具体工作流程吗？</p>
+<h3 id="6简述大端存储器组织是什么结构">6、简述大端存储器组织是什么结构</h3>
+<p>在大端存储（Big-endian）模式中，数据的低地址存放的是字数据的高字节，而高地址存放的是字数据的低字节。</p>
+<p>以 32 位字数据 <code>0x12345678</code> 为例，其在大端模式下的分布如下：</p>
+<ul>
+<li><strong>低地址</strong>：存放 <code>0x12</code>（最高字节）</li>
+<li><strong>次低地址</strong>：存放 <code>0x34</code></li>
+<li><strong>次高地址</strong>：存放 <code>0x56</code></li>
+<li><strong>高地址</strong>：存放 <code>0x78</code>（最低字节）</li>
+</ul>
+<p>这种组织结构可以简记为“<strong>高对低，低对高</strong>”。与之相对的是 ARM 处理器默认常用的<strong>小端模式</strong>（低字节对低地址），需要我对比一下这两者的差异吗？</p>
+<hr>
+<h2 id="二看语句写作用共-5-题每题-2-分">二、看语句写作用（共 5 题，每题 2 分）</h2>
+<ol>
+<li>
+<p><code>MRS R1，CPSR</code></p>
+<p>作用：将当前程序状态寄存器 <code>CPSR</code> 的内容读出，并送入寄存器 <code>R1</code>。</p>
+<p>详细说明：</p>
+<ul>
+<li><code>MRS</code> 的全称可以理解为 Move PSR to Register，即“把状态寄存器内容送到通用寄存器”。</li>
+<li>常见用法是：
+<ul>
+<li><code>MRS Rd, CPSR</code></li>
+<li><code>MRS Rd, SPSR</code></li>
+</ul>
+</li>
+<li>也就是说，它的作用是“读状态寄存器”。</li>
+<li>这里的 <code>CPSR</code> 是当前程序状态寄存器，里面保存了：
+<ul>
+<li>条件标志位；</li>
+<li>中断允许/禁止位；</li>
+<li>当前处理器工作模式等信息。</li>
+</ul>
+</li>
+<li>在这条语句里：
+<ul>
+<li><code>R1</code> 是目标寄存器；</li>
+<li><code>CPSR</code> 是源操作数。</li>
+</ul>
+</li>
+<li>因此这句话的具体作用就是：
+<ul>
+<li>把当前 <code>CPSR</code> 的值读出来，保存到 <code>R1</code> 中，方便后续查看、修改或恢复处理器状态。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>ORR R1，[R1,#1]</code></p>
+<p>作用：对 <code>R1</code> 的内容按位或上常数 <code>1</code>，并将结果保存回 <code>R1</code>。</p>
+<p>详细说明：</p>
+<ul>
+<li><code>ORR</code> 是按位或指令，作用是对两个操作数逐位进行逻辑或运算。</li>
+<li>常见用法是：
+<ul>
+<li><code>ORR Rd, Rn, Operand2</code></li>
+</ul>
+</li>
+<li>它表示：
+<ul>
+<li><code>Rd = Rn OR Operand2</code></li>
+</ul>
+</li>
+<li>本题这条语句按常见考试写法应理解为：
+<ul>
+<li><code>ORR R1, R1, #1</code></li>
+</ul>
+</li>
+<li>其中：
+<ul>
+<li><code>R1</code> 原本保存一个数值；</li>
+<li><code>#1</code> 表示立即数 1。</li>
+</ul>
+</li>
+<li>因为 1 的二进制最低位是 1，所以把 <code>R1</code> 和 <code>1</code> 做按位或之后，会产生这样的效果：
+<ul>
+<li><code>R1</code> 的最低位被强制置为 1；</li>
+<li>其他位保持原值不变。</li>
+</ul>
+</li>
+<li>因此在这里，这条语句的具体作用就是：
+<ul>
+<li>将 <code>R1</code> 的最低位置 1，再把结果写回 <code>R1</code>。</li>
+</ul>
+</li>
+<li>这种写法常用于：
+<ul>
+<li>设置某个控制位；</li>
+<li>打开某个标志位；</li>
+<li>对寄存器进行位操作配置。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>MSR CPSR,R1</code></p>
+<p>作用：将寄存器 <code>R1</code> 中的内容写回当前程序状态寄存器 <code>CPSR</code>。</p>
+<p>详细说明：</p>
+<ul>
+<li><code>MSR</code> 的全称可以理解为 Move to Status Register，即“把数据写入状态寄存器”。</li>
+<li>常见用法是：
+<ul>
+<li><code>MSR CPSR, Rm</code></li>
+<li><code>MSR SPSR, Rm</code></li>
+</ul>
+</li>
+<li>它和上一题的 <code>MRS</code> 正好相对：
+<ul>
+<li><code>MRS</code> 是把状态寄存器读到通用寄存器；</li>
+<li><code>MSR</code> 是把通用寄存器内容写回状态寄存器。</li>
+</ul>
+</li>
+<li>在这条语句里：
+<ul>
+<li><code>R1</code> 中保存着准备写入的状态值；</li>
+<li><code>CPSR</code> 是被修改的目标状态寄存器。</li>
+</ul>
+</li>
+<li>因此这条语句的具体作用就是：
+<ul>
+<li>把 <code>R1</code> 中的内容写入 <code>CPSR</code>，从而恢复或改变当前处理器状态。</li>
+</ul>
+</li>
+<li>它通常可用于：
+<ul>
+<li>恢复先前保存的状态；</li>
+<li>修改中断使能位；</li>
+<li>改变条件标志位；</li>
+<li>切换处理器模式。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>BLX FUNC1</code></p>
+<p>作用：带链接跳转到子程序 <code>FUNC1</code> 执行，并可根据目标状态切换指令集状态。</p>
+<p>详细说明：</p>
+<ul>
+<li><code>BLX</code> 可以拆开理解：
+<ul>
+<li><code>BL</code> 是 Branch with Link，表示“带返回地址保存的跳转”；</li>
+<li><code>X</code> 表示在跳转时还可能发生指令集状态切换。</li>
+</ul>
+</li>
+<li>常见用法是：
+<ul>
+<li><code>BLX label</code></li>
+<li><code>BLX Rm</code></li>
+</ul>
+</li>
+<li>它的核心作用有两个：
+<ul>
+<li>跳转到目标子程序执行；</li>
+<li>把返回地址保存到 <code>LR</code>（即 <code>R14</code>）中。</li>
+</ul>
+</li>
+<li>这样子程序执行完后，就可以通过 <code>BX LR</code> 等方式返回调用点。</li>
+<li>与普通 <code>B</code> 指令不同：
+<ul>
+<li><code>B</code> 只是单纯跳转；</li>
+<li><code>BLX</code> 既跳转又保存返回地址，还可能切换 ARM/Thumb 状态。</li>
+</ul>
+</li>
+<li>在这里，这条语句的具体作用就是：
+<ul>
+<li>调用子程序 <code>FUNC1</code>；</li>
+<li>同时把当前下一条指令地址保存到 <code>LR</code> 中；</li>
+<li>如有需要还会切换到目标函数对应的指令集状态执行。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>STRH R4，[R1,R2]!</code></p>
+<p>作用：将寄存器 <code>R4</code> 的低 16 位数据作为半字存入由 <code>R1 + R2</code> 形成的内存地址中，并把更新后的地址写回 <code>R1</code>。</p>
+<p>详细说明：</p>
+<ul>
+<li><code>STRH</code> 是 Store Register Halfword，表示“存储半字”。</li>
+<li>半字的长度是 16 位，也就是 2 个字节。</li>
+<li>常见用法是：
+<ul>
+<li><code>STRH Rd, [Rn]</code></li>
+<li><code>STRH Rd, [Rn, #offset]</code></li>
+<li><code>STRH Rd, [Rn, Rm]!</code></li>
+</ul>
+</li>
+<li>本题中的 <code>[R1, R2]!</code> 属于基址加偏移寻址，并带写回功能：
+<ul>
+<li>有效地址 = <code>R1 + R2</code></li>
+<li><code>!</code> 表示写回，即访存后把新地址写回基址寄存器</li>
+</ul>
+</li>
+<li>在这条语句里：
+<ul>
+<li>被存入内存的数据来自 <code>R4</code> 的低 16 位；</li>
+<li>存储地址由 <code>R1 + R2</code> 计算得到；</li>
+<li>执行完后 <code>R1</code> 会更新为 <code>R1 + R2</code>。</li>
+</ul>
+</li>
+<li>因此它的具体作用可以分成三步理解：
+<ol>
+<li>先计算目标地址 <code>R1 + R2</code>；</li>
+<li>把 <code>R4</code> 的低 16 位写到该地址中；</li>
+<li>再把这个更新后的地址写回 <code>R1</code>。</li>
+</ol>
+</li>
+<li>这种写法常用于：
+<ul>
+<li>数组或缓冲区访问；</li>
+<li>连续写入多个半字数据；</li>
+<li>带指针自增效果的存储操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三程序题共-2-题第一题-5-分第二题-12-分">三、程序题（共 2 题，第一题 5 分，第二题 12 分）</h2>
+<h3 id="1给你一段冒泡排序程序挖空让你填-5-个空">1、给你一段冒泡排序程序挖空，让你填 5 个空</h3>
+<p><strong>题目</strong>：无符号数据字块存储在 0x400004，无符号数据字块数目字存储在 0x400000</p>
+<p>（回忆者注:别问我为什么要用这么复杂的表述方法，我当初看了半天才看懂这是讲的什么，你们也必须感受我的痛苦！/(ㄒ oㄒ)/~~）</p>
+<p><strong>代码如下</strong>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="plaintext"><code><span class="line"><span>AREA  SORT，CODE，READONLY</span></span>
+<span class="line"><span>ENTRY</span></span>
+<span class="line"><span>START</span></span>
+<span class="line"><span>MOV  R1，#0x400000</span></span>
+<span class="line"><span>LP     SUBS  R1，R1，#1</span></span>
+<span class="line"><span>       BEQ  EXIT</span></span>
+<span class="line"><span>       MOV  R7，R1</span></span>
+<span class="line"><span>       LDR  R0，= [填空 1]</span></span>
+<span class="line"><span>LP1    LDR  R2，[R0]，#4</span></span>
+<span class="line"><span>       LDR  R3，[R0]</span></span>
+<span class="line"><span>       CMP  R2，R3</span></span>
+<span class="line"><span>       [填空 2]</span></span>
+<span class="line"><span>       [填空 3]</span></span>
+<span class="line"><span>       SUBS R7，R7，#1</span></span>
+<span class="line"><span>       BNE  [填空 4]</span></span>
+<span class="line"><span>       B  [填空 5]</span></span>
+<span class="line"><span>EXIT   END</span></span></code></pre>
+<p><strong>答案</strong>：</p>
+<ul>
+<li>（1）<code>0x400004</code></li>
+<li>（2）<code>STRLO  R3，[R0,#-4]</code></li>
+<li>（3）<code>STRLO  R2，[R0]</code></li>
+<li>（4）<code>LP1</code></li>
+<li>（5）<code>LP</code></li>
+</ul>
+<p>详细说明：</p>
+<p>这道题本质上是在考：</p>
+<ol>
+<li>冒泡排序的基本思想；</li>
+<li>ARM 汇编中的循环结构；</li>
+<li>条件执行指令；</li>
+<li>数组顺序访问时的地址更新方式。</li>
+</ol>
+<h4 id="程序整体功能">程序整体功能</h4>
+<p>这段程序的作用是：<br>
+对存放在内存中的一组无符号数进行冒泡排序。</p>
+<ul>
+<li><code>0x400000</code> 这个地址中存放的是“数据个数”；</li>
+<li><code>0x400004</code> 开始存放真正的数据内容；</li>
+<li>程序通过两层循环不断比较相邻两个数；</li>
+<li>如果前一个数大于后一个数，就交换它们；</li>
+<li>这样经过多趟扫描后，整个数据块变成有序。</li>
+</ul>
+<h4 id="每条关键语句的作用">每条关键语句的作用</h4>
+<h5 id="mov-r1-0x400000"><code>MOV R1, #0x400000</code></h5>
+<ul>
+<li><code>MOV</code> 是数据传送指令；</li>
+<li>这里的作用是把地址 <code>0x400000</code> 装入 <code>R1</code>。</li>
+<li>按题目本意，后续外层循环会使用这个值来控制比较趟数。</li>
+</ul>
+<h5 id="subs-r1-r1-1"><code>SUBS R1, R1, #1</code></h5>
+<ul>
+<li><code>SUB</code> 是减法，<code>S</code> 表示更新条件标志位；</li>
+<li>这里的作用是让 <code>R1 = R1 - 1</code>，同时更新零标志位等状态信息；</li>
+<li>这样下一条 <code>BEQ</code> 才能根据结果决定是否退出。</li>
+</ul>
+<h5 id="beq-exit"><code>BEQ EXIT</code></h5>
+<ul>
+<li><code>BEQ</code> 表示“若相等则跳转”；</li>
+<li>实际上它是根据上一条指令设置的零标志位来判断；</li>
+<li>如果 <code>R1 - 1 = 0</code>，就说明外层循环结束，程序跳到 <code>EXIT</code>。</li>
+</ul>
+<h5 id="mov-r7-r1"><code>MOV R7, R1</code></h5>
+<ul>
+<li>把外层循环当前次数复制给 <code>R7</code>；</li>
+<li><code>R7</code> 用作内层循环计数器；</li>
+<li>也就是每一趟冒泡都要做若干次相邻比较。</li>
+</ul>
+<h5 id="ldr-r0-0x400004"><code>LDR R0, =0x400004</code></h5>
+<ul>
+<li><code>LDR</code> 在这里是伪指令，用来加载一个常数地址；</li>
+<li>它把数据区起始地址 <code>0x400004</code> 送入 <code>R0</code>；</li>
+<li>也就是说，<code>R0</code> 从这里开始依次访问待排序数组。</li>
+</ul>
+<h4 id="为什么填空-1-是-0x400004">为什么填空 1 是 <code>0x400004</code></h4>
+<p>因为题目已经说明：</p>
+<ul>
+<li><code>0x400000</code> 处存的是数据个数；</li>
+<li>真正的数据块从 <code>0x400004</code> 开始。</li>
+</ul>
+<p>所以 <code>R0</code> 要指向第一个数据单元，填：</p>
+<ul>
+<li><code>0x400004</code></li>
+</ul>
+<h5 id="ldr-r2-r0-4"><code>LDR R2, [R0], #4</code></h5>
+<ul>
+<li><code>LDR</code> 是加载一个字；</li>
+<li><code>[R0], #4</code> 是后变址寻址；</li>
+<li>含义是：
+<ol>
+<li>先取出 <code>R0</code> 当前地址中的数据到 <code>R2</code>；</li>
+<li>再把 <code>R0 = R0 + 4</code>。</li>
+</ol>
+</li>
+<li>由于每个字占 4 字节，所以这相当于读取当前元素后，指针移动到下一个元素地址。</li>
+</ul>
+<h5 id="ldr-r3-r0"><code>LDR R3, [R0]</code></h5>
+<ul>
+<li>读取当前 <code>R0</code> 所指向地址中的内容到 <code>R3</code>；</li>
+<li>因为前一句已经把 <code>R0</code> 后移 4 个字节，所以这里读到的是“下一个元素”。</li>
+</ul>
+<p>因此，这两句合起来的作用是：</p>
+<ul>
+<li><code>R2</code> 取前一个元素；</li>
+<li><code>R3</code> 取后一个相邻元素。</li>
+</ul>
+<h5 id="cmp-r2-r3"><code>CMP R2, R3</code></h5>
+<ul>
+<li><code>CMP</code> 是比较指令；</li>
+<li>本质上相当于做 <code>R2 - R3</code>，但不保存结果，只更新条件标志位；</li>
+<li>后面的条件执行语句就根据比较结果决定是否交换。</li>
+</ul>
+<h4 id="为什么填空-2-是-strlo-r3-r0-4">为什么填空 2 是 <code>STRLO R3, [R0,#-4]</code></h4>
+<ul>
+<li><code>STR</code> 是存储一个字；</li>
+<li><code>LO</code> 是条件后缀，表示“无符号小于”条件成立时执行；</li>
+<li>这里 <code>CMP R2, R3</code> 之后，如果满足交换条件，就需要把较小的数放到前面。</li>
+</ul>
+<p><code>[R0,#-4]</code> 的含义是：</p>
+<ul>
+<li>当前 <code>R0</code> 指向的是后一个元素；</li>
+<li><code>R0 - 4</code> 就是前一个元素的位置。</li>
+</ul>
+<p>所以：</p>
+<ul>
+<li><code>STRLO R3, [R0,#-4]</code></li>
+</ul>
+<p>表示：</p>
+<ul>
+<li>当满足条件时，把 <code>R3</code> 的值写回前一个位置。</li>
+</ul>
+<p>也就是说：</p>
+<ul>
+<li>把两个相邻元素中更合适放前面的那个数写到前一个单元。</li>
+</ul>
+<h4 id="为什么填空-3-是-strlo-r2-r0">为什么填空 3 是 <code>STRLO R2, [R0]</code></h4>
+<p>这句与上一句配合完成交换：</p>
+<ul>
+<li><code>R0</code> 当前指向后一个元素的位置；</li>
+<li><code>R2</code> 是原来的前一个元素。</li>
+</ul>
+<p>所以：</p>
+<ul>
+<li><code>STRLO R2, [R0]</code></li>
+</ul>
+<p>表示：</p>
+<ul>
+<li>当满足条件时，把 <code>R2</code> 写到后一个位置。</li>
+</ul>
+<p>这样两句一起就完成了相邻两个元素的交换。</p>
+<h4 id="为什么填空-4-是-lp1">为什么填空 4 是 <code>LP1</code></h4>
+<h5 id="subs-r7-r7-1"><code>SUBS R7, R7, #1</code></h5>
+<ul>
+<li>内层循环计数器减 1；</li>
+<li>同时更新标志位。</li>
+</ul>
+<h5 id="bne-lp1"><code>BNE LP1</code></h5>
+<ul>
+<li><code>BNE</code> 表示“不等于 0 就跳转”；</li>
+<li>只要 <code>R7</code> 还没有减到 0，就继续回到内层循环。</li>
+</ul>
+<p>因此填空 4 应该是：</p>
+<ul>
+<li><code>LP1</code></li>
+</ul>
+<p>表示继续做下一次相邻元素比较。</p>
+<h4 id="为什么填空-5-是-lp">为什么填空 5 是 <code>LP</code></h4>
+<p>当内层循环结束后，说明一趟冒泡完成了。<br>
+此时应返回外层循环，开始下一趟扫描。</p>
+<p>所以：</p>
+<ul>
+<li><code>B LP</code></li>
+</ul>
+<p>表示回到外层循环入口继续执行。</p>
+<p>因此填空 5 应该是：</p>
+<ul>
+<li><code>LP</code></li>
+</ul>
+<h4 id="这段程序的执行逻辑">这段程序的执行逻辑</h4>
+<p>可以按下面顺序理解：</p>
+<ol>
+<li>外层循环控制总共要做多少趟冒泡；</li>
+<li>每一趟开始时，把数组首地址重新装入 <code>R0</code>；</li>
+<li>内层循环每次取出两个相邻元素：
+<ul>
+<li>前一个放入 <code>R2</code></li>
+<li>后一个放入 <code>R3</code></li>
+</ul>
+</li>
+<li>比较 <code>R2</code> 和 <code>R3</code>；</li>
+<li>如果需要交换，就把它们写回相反的位置；</li>
+<li>内层循环结束后，完成一趟冒泡；</li>
+<li>外层循环继续，直到所有数据有序。</li>
+</ol>
+<h4 id="考场可直接写的简洁版">考场可直接写的简洁版</h4>
+<p>这段程序实现的是冒泡排序。<br>
+<code>0x400000</code> 存数据个数，<code>0x400004</code> 开始存数据内容，所以填空 1 为 <code>0x400004</code>。<br>
+程序每次取出两个相邻元素到 <code>R2</code> 和 <code>R3</code> 中比较，若满足交换条件，则用 <code>STRLO R3,[R0,#-4]</code> 和 <code>STRLO R2,[R0]</code> 交换两者位置，所以填空 2、3 如上。<br>
+内层循环结束后跳回 <code>LP1</code> 继续比较，因此填空 4 为 <code>LP1</code>；一趟结束后返回外层循环 <code>LP</code>，因此填空 5 为 <code>LP</code>。</p>
+<h3 id="2-给定一个初始地址为-0x400000-的有-100-个单元的有符号字符串要求将字符串内部所有的所有大写字母转为小写字母其他字符不变要求使用汇编语言">2. 给定一个初始地址为 0x400000 的有 100 个单元的有符号字符串，要求将字符串内部所有的所有大写字母转为小写字母，其他字符不变；(要求使用汇编语言)</h3>
+<p>参考答案：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="plaintext"><code><span class="line"><span>AREA FUNC1, CODE, READONLY</span></span>
+<span class="line"><span>ENTRY</span></span>
+<span class="line"><span>START</span></span>
+<span class="line"><span>    LDR   R0, =0x400000      ; R0 指向字符串首地址</span></span>
+<span class="line"><span>    MOV   R1, #100           ; R1 作为循环计数器</span></span>
+<span class="line"><span>    MOV   R2, #'A'           ; 大写字母下界</span></span>
+<span class="line"><span>    MOV   R3, #'Z'           ; 大写字母上界</span></span>
+<span class="line"><span>    MOV   R5, #32            ; 'a' - 'A' = 32</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>LOOP</span></span>
+<span class="line"><span>    LDRB  R4, [R0]           ; 读当前字符</span></span>
+<span class="line"><span>    CMP   R4, R2</span></span>
+<span class="line"><span>    BLT   NEXT               ; 小于 'A'，不是大写字母</span></span>
+<span class="line"><span>    CMP   R4, R3</span></span>
+<span class="line"><span>    BGT   NEXT               ; 大于 'Z'，不是大写字母</span></span>
+<span class="line"><span>    ADD   R4, R4, R5         ; 转为小写</span></span>
+<span class="line"><span>    STRB  R4, [R0]           ; 写回原地址</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>NEXT</span></span>
+<span class="line"><span>    ADD   R0, R0, #1         ; 指向下一个字符</span></span>
+<span class="line"><span>    SUBS  R1, R1, #1         ; 计数减 1</span></span>
+<span class="line"><span>    BNE   LOOP               ; 未处理完则继续</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>STOP</span></span>
+<span class="line"><span>    B     STOP</span></span>
+<span class="line"><span>END</span></span></code></pre>
+<p>详细说明：</p>
+<p>这道题主要考查：</p>
+<ol>
+<li>字符串逐字节访问；</li>
+<li>ASCII 码范围判断；</li>
+<li>ARM 中 <code>LDRB</code>、<code>STRB</code> 的使用；</li>
+<li>用循环处理固定长度数组。</li>
+</ol>
+<h4 id="程序整体功能-1">程序整体功能</h4>
+<p>题目要求：</p>
+<ul>
+<li>从内存地址 <code>0x400000</code> 开始；</li>
+<li>一共有 100 个字符单元；</li>
+<li>如果某个字符是大写字母 <code>A~Z</code>，则改成对应的小写字母；</li>
+<li>其他字符保持不变。</li>
+</ul>
+<p>因此整个程序的思路是：</p>
+<ol>
+<li>用一个寄存器保存字符串首地址；</li>
+<li>用一个计数器记录还剩多少字符没处理；</li>
+<li>每次读出 1 个字节；</li>
+<li>判断这个字节是否在 <code>'A'</code> 到 <code>'Z'</code> 之间；</li>
+<li>如果是，就加上 32 变成小写；</li>
+<li>写回原地址；</li>
+<li>指针后移，继续处理下一个字符。</li>
+</ol>
+<h4 id="每条关键语句的作用-1">每条关键语句的作用</h4>
+<h5 id="ldr-r0-0x400000"><code>LDR R0, =0x400000</code></h5>
+<ul>
+<li>把字符串首地址装入 <code>R0</code>；</li>
+<li><code>R0</code> 后续作为指针使用，始终指向当前正在处理的字符。</li>
+</ul>
+<h5 id="mov-r1-100"><code>MOV R1, #100</code></h5>
+<ul>
+<li><code>R1</code> 作为循环计数器；</li>
+<li>表示总共要处理 100 个字符。</li>
+</ul>
+<h5 id="mov-r2-a"><code>MOV R2, #'A'</code></h5>
+<ul>
+<li>把字符 <code>'A'</code> 的 ASCII 码送入 <code>R2</code>；</li>
+<li>它是判断大写字母范围的下界。</li>
+</ul>
+<h5 id="mov-r3-z"><code>MOV R3, #'Z'</code></h5>
+<ul>
+<li>把字符 <code>'Z'</code> 的 ASCII 码送入 <code>R3</code>；</li>
+<li>它是判断大写字母范围的上界。</li>
+</ul>
+<h5 id="mov-r5-32"><code>MOV R5, #32</code></h5>
+<ul>
+<li>因为 ASCII 中：
+<ul>
+<li><code>'a' - 'A' = 32</code></li>
+</ul>
+</li>
+<li>所以只要对大写字母加 32，就能变成对应的小写字母。</li>
+</ul>
+<h5 id="ldrb-r4-r0"><code>LDRB R4, [R0]</code></h5>
+<ul>
+<li><code>LDRB</code> 表示按字节读取数据；</li>
+<li>因为字符串按字符存储，每个字符占 1 字节；</li>
+<li>所以这里必须用 <code>LDRB</code>，不能用 <code>LDR</code>。</li>
+</ul>
+<p>这句的作用是：</p>
+<ul>
+<li>读出当前字符到 <code>R4</code>。</li>
+</ul>
+<h5 id="cmp-r4-r2"><code>CMP R4, R2</code></h5>
+<ul>
+<li>比较当前字符和 <code>'A'</code>；</li>
+<li>如果当前字符比 <code>'A'</code> 还小，就不可能是大写字母。</li>
+</ul>
+<h5 id="blt-next"><code>BLT NEXT</code></h5>
+<ul>
+<li><code>BLT</code> 表示“小于则跳转”；</li>
+<li>若当前字符小于 <code>'A'</code>，直接跳到 <code>NEXT</code>，不做转换。</li>
+</ul>
+<h5 id="cmp-r4-r3"><code>CMP R4, R3</code></h5>
+<ul>
+<li>比较当前字符和 <code>'Z'</code>；</li>
+<li>如果当前字符大于 <code>'Z'</code>，也不是大写字母。</li>
+</ul>
+<h5 id="bgt-next"><code>BGT NEXT</code></h5>
+<ul>
+<li><code>BGT</code> 表示“大于则跳转”；</li>
+<li>若当前字符大于 <code>'Z'</code>，跳过转换。</li>
+</ul>
+<p>因此这两次比较合起来就在判断：</p>
+<ul>
+<li>当前字符是否属于 <code>A~Z</code>。</li>
+</ul>
+<h5 id="add-r4-r4-r5"><code>ADD R4, R4, R5</code></h5>
+<ul>
+<li><code>ADD</code> 是加法指令；</li>
+<li>若当前字符是大写字母，就加上 32；</li>
+<li>这样就得到对应的小写字母。</li>
+</ul>
+<p>例如：</p>
+<ul>
+<li><code>'A' + 32 = 'a'</code></li>
+<li><code>'B' + 32 = 'b'</code></li>
+</ul>
+<h5 id="strb-r4-r0"><code>STRB R4, [R0]</code></h5>
+<ul>
+<li><code>STRB</code> 表示按字节存储；</li>
+<li>把转换后的字符写回原来的地址。</li>
+</ul>
+<h5 id="add-r0-r0-1"><code>ADD R0, R0, #1</code></h5>
+<ul>
+<li>指针加 1；</li>
+<li>因为字符串是逐字节存放的，所以每次处理完一个字符就移动 1 个字节。</li>
+</ul>
+<h5 id="subs-r1-r1-1-1"><code>SUBS R1, R1, #1</code></h5>
+<ul>
+<li>计数器减 1；</li>
+<li><code>S</code> 表示更新标志位；</li>
+<li>后面的 <code>BNE</code> 会用到这个结果。</li>
+</ul>
+<h5 id="bne-loop"><code>BNE LOOP</code></h5>
+<ul>
+<li>只要 <code>R1</code> 还不为 0，就继续循环；</li>
+<li>直到 100 个字符全部处理完为止。</li>
+</ul>
+<h4 id="程序执行逻辑">程序执行逻辑</h4>
+<p>整段程序可以概括为：</p>
+<ol>
+<li>初始化指针、计数器和比较边界；</li>
+<li>每次读入一个字符；</li>
+<li>判断它是不是大写字母；</li>
+<li>如果是，就转成小写并写回；</li>
+<li>如果不是，就原样跳过；</li>
+<li>指针后移，继续处理；</li>
+<li>共处理 100 次后结束。</li>
+</ol>
+<h4 id="为什么要用-ldrbstrb">为什么要用 <code>LDRB/STRB</code></h4>
+<p>因为这里处理的是“字符串”，本质上是字符数组。</p>
+<ul>
+<li>一个字符占 1 字节；</li>
+<li><code>LDRB</code> 表示读 1 字节；</li>
+<li><code>STRB</code> 表示写 1 字节。</li>
+</ul>
+<p>如果误用 <code>LDR/STR</code>，就会按 4 字节读写，破坏字符串内容。</p>
+<h4 id="为什么判断范围是-az">为什么判断范围是 <code>A~Z</code></h4>
+<p>因为题目要求只把大写字母转成小写，其他字符不变。<br>
+所以必须先判断该字符是否属于大写字母区间：</p>
+<ul>
+<li>下界：<code>'A'</code></li>
+<li>上界：<code>'Z'</code></li>
+</ul>
+<p>只有处在这个区间内的字符才执行加 32 转换。</p>
+<h4 id="回顾">回顾</h4>
+<p>本题可用循环逐字节扫描字符串实现。<br>
+先令 <code>R0</code> 指向 <code>0x400000</code>，<code>R1=100</code> 作为计数器，再以 <code>R2='A'</code>、<code>R3='Z'</code> 作为判断区间。<br>
+循环中用 <code>LDRB</code> 读取当前字符，若字符在 <code>A~Z</code> 范围内，则执行 <code>ADD R4, R4, #32</code> 将其转为小写，再用 <code>STRB</code> 写回；否则保持不变。<br>
+每次处理完后 <code>R0</code> 加 1，<code>R1</code> 减 1，直到 100 个字符全部处理完成。</p>
+<hr>
+<h2 id="四回答题共-4-题每题-5-分">四、回答题（共 4 题，每题 5 分）</h2>
+<h3 id="1简述嵌入式系统硬件基本结构简述嵌入式系统软件的基本结构">1、简述嵌入式系统硬件基本结构；简述嵌入式系统软件的基本结构</h3>
+<p>根据提供的资料，嵌入式系统的硬件与软件基本结构如下：</p>
+<h4 id="1-硬件基本结构">1. 硬件基本结构</h4>
+<p>嵌入式硬件以<strong>嵌入式处理器</strong>为中心，通过数据线、地址线和控制信号连接以下核心部件：</p>
+<ul>
+<li><strong>存储器</strong>：用于存放程序和数据（如 RAM、ROM、Flash）。</li>
+<li><strong>I/O 接口及设备</strong>：实现人机交互（如键盘、触摸屏、LCD、LED）。</li>
+<li><strong>通信模块</strong>：负责数据交换（如 RS-232、USB、以太网、WiFi）。</li>
+<li><strong>电源及辅助设备</strong>：提供电力支持并辅助系统运行。
+其特点是配置精简、可根据需求进行“裁剪”和定制化。</li>
+</ul>
+<h4 id="2-软件基本结构">2. 软件基本结构</h4>
+<p>嵌入式软件通常由四个层面组成，从底层到高层依次为：</p>
+<ul>
+<li><strong>设备驱动层</strong>：直接操作硬件，屏蔽底层差异。</li>
+<li><strong>实时操作系统 (RTOS)</strong>：提供多任务管理、存储管理、周边资源管理及中断管理等核心服务。</li>
+<li><strong>应用程序接口 (API) 层</strong>：为上层应用提供标准、统一的调用接口。</li>
+<li><strong>实际应用层</strong>：实现特定业务功能的最终用户程序。</li>
+</ul>
+<p>对于复杂的系统（如 ARM-Linux），还会包含 <strong>BootLoader</strong> 作为开机程序，负责为操作系统准备软硬件环境。</p>
+<h3 id="2请说出-bootloader-的作用">2、请说出 BootLoader 的作用</h3>
+<p>BootLoader 是嵌入式系统的<strong>开机引导程序</strong>，其核心作用是为操作系统或后续程序的运行准备好<strong>软硬件环境</strong>。</p>
+<p>具体职责包括：</p>
+<ul>
+<li><strong>初始化硬件</strong>：配置处理器、系统时钟、内存（DRAM）及必要的外设（如串口、闪存等）。</li>
+<li><strong>加载内核</strong>：将操作系统镜像从非易失性存储介质（如 Flash 或 SD 卡）复制并解压到 RAM 中。</li>
+<li><strong>跳转执行</strong>：在准备工作完成后，将 CPU 控制权交给操作系统内核。</li>
+</ul>
+<p>它在功能上对应于通用 PC 中的 <strong>BIOS</strong>，是系统加电复位后 CPU 执行的第一段程序。</p>
+<h3 id="3请简要说明嵌入式协同设计开发流程">3、请简要说明嵌入式协同设计开发流程</h3>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="mermaid"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">flowchart TD</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    A[系统定义] --> B[可行性分析]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    B --> C[需求分析]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    C --> D[系统总体设计]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    D --> E[硬件设计]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    D --> F[软件设计]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    E --> G[硬件测试]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    F --> H[软件测试]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    G --> I[软硬件集成、测试]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    H --> I</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    I --> J{符合要求}</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    J -- 是 --> K([开发结束])</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    J -- 否 --> D</span></span></code></pre>
+<p>嵌入式协同设计开发流程是一个迭代的过程，主要包括以下阶段：</p>
+<ol>
+<li><strong>前期准备</strong>：
+<ul>
+<li><strong>系统定义</strong>：提出目标系统的初步方案。</li>
+<li><strong>可行性分析</strong>：论证技术与经济上的实现可能。</li>
+<li><strong>需求分析</strong>：确立系统必须满足的功能与性能指标。</li>
+</ul>
+</li>
+<li><strong>核心决策</strong>：
+<ul>
+<li><strong>系统总体设计</strong>：这是整个流程的分水岭。在此阶段进行<strong>软硬件划分</strong>（确定功能由电路还是代码实现）、处理器选型及操作系统选择。</li>
+</ul>
+</li>
+<li><strong>并行设计与单元测试</strong>：
+<ul>
+<li><strong>硬件/软件设计</strong>：根据划分结果，两个团队<strong>独立且并行</strong>地开展工作。</li>
+<li><strong>硬件/软件测试</strong>：分别对设计出的单板或程序进行初步的功能验证。</li>
+</ul>
+</li>
+<li><strong>集成与反馈</strong>：
+<ul>
+<li><strong>软硬件集成、测试</strong>：将两者结合，对整个产品进行全面的<strong>集成测试</strong>。</li>
+<li><strong>符合要求判断</strong>：若测试通过，则开发结束；若不符合要求，流程将**回溯到“系统总体设计”**重新调整划分或方案。</li>
+</ul>
+</li>
+</ol>
+<p>这种流程的特点是“先划分、后独立开发”。你想了解<strong>现代协同设计</strong>是如何通过“系统级仿真建模”来减少最后一步回溯风险的吗？</p>
+<h3 id="4简述-arm-linux-系统调用原理及其作用">4、简述 ARM-Linux 系统调用原理及其作用</h3>
+<p>ARM-Linux 系统调用是连接用户空间与内核空间的桥梁，其原理与作用如下：</p>
+<h4 id="1-系统调用原理">1. 系统调用原理</h4>
+<ul>
+<li><strong>触发机制</strong>：用户态程序通过执行特定的<strong>软件中断指令</strong>（在 ARMv7/Cortex-A8 中为 <code>SWI</code> 指令，在 ARM64 中为 <code>svc</code> 指令）向内核发出服务请求。</li>
+<li><strong>模式切换</strong>：执行该指令后，处理器会产生软件中断，从<strong>用户模式</strong>（User）强制切换到<strong>管理模式</strong>（SVC），并跳转到预定义的中断向量地址执行内核代码。</li>
+<li><strong>参数传递</strong>：内核通过<strong>系统调用号</strong>来识别具体的请求，参数通常存放在通用寄存器（如 R0<del>R3 或 X0</del>X5）中传递。</li>
+<li><strong>状态保存与恢复</strong>：系统会自动将当前状态寄存器（CPSR）备份到备份状态寄存器（SPSR），处理完毕后通过 <code>eret</code> 或恢复 PC 的指令返回用户态并恢复现场。</li>
+</ul>
+<h4 id="2-系统调用的作用">2. 系统调用的作用</h4>
+<ul>
+<li><strong>安全性（安全屏障）</strong>：限制用户程序直接访问底层硬件或篡改内核资源，防止因单个应用错误导致系统崩溃。</li>
+<li><strong>抽象与封装（屏蔽硬件）</strong>：为复杂的硬件操作提供统一接口，开发者无需了解底层硬件细节即可进行文件读写或网络通信。</li>
+<li><strong>可移植性</strong>：使应用程序与特定硬件解耦，保证软件能在不同的硬件架构上保持兼容。</li>
+<li><strong>高效资源管理</strong>：允许内核集中管理和优化 CPU、存储等受限资源，提高整体运行效率。</li>
+</ul> </article> <hr class="my-8 border-dashed"> <a href="https://github.com/HeZ2z/hez-notes/edit/main/src/data/blog/embedded-systems/嵌入式系统设计与应用-2025sp-回忆版.md" target="_blank" rel="noopener noreferrer" class="flex justify-baseline gap-1.5 opacity-80 hover:text-accent sm:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg><span>在 Github 上编辑此页</span></a> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/hez-notes/tags/嵌入式系统设计与应用/" class="flex items-center gap-0.5 border-b-2 border-dashed border-foreground hover:-mt-0.5 hover:border-accent hover:text-accent focus-visible:border-none focus-visible:text-accent text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 9l14 0" /><path d="M5 15l14 0" /><path d="M11 4l-4 16" /><path d="M17 4l-4 16" /></svg> 嵌入式系统设计与应用 </a> </li> </ul> <div id="btt-btn-container" class="fixed end-4 bottom-8 z-50 md:sticky md:end-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group relative bg-background px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block rotate-90 md:hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg> <span class="sr-only text-sm group-hover:text-accent md:not-sr-only"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 5l0 14" /><path d="M16 9l-4 -4" /><path d="M8 9l4 -4" /></svg>
+Back To Top
+</span> </button> </div> <script data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    // Attach click event handler for back-to-top button
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+
+    // Handle button visibility according to scroll position
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇资料：</span><div class="text-center"><a href="https://wa.me/?text=https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/" title="通过 WhatsApp 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="sr-only">通过 WhatsApp 分享这篇资料</span> </a><a href="https://www.facebook.com/sharer.php?u=https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/" title="分享到 Facebook" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg><span class="sr-only">分享到 Facebook</span> </a><a href="https://x.com/intent/post?url=https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/" title="分享到 X" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg><span class="sr-only">分享到 X</span> </a><a href="https://t.me/share/url?url=https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/" title="通过 Telegram 分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="sr-only">通过 Telegram 分享这篇资料</span> </a><a href="https://pinterest.com/pin/create/button/?url=https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/" title="分享到 Pinterest" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="sr-only">分享到 Pinterest</span> </a><a href="mailto:?subject=分享一篇复习资料&#38;body=https://hez2z.github.io/hez-notes/posts/embedded-systems/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8-2025sp-%E5%9B%9E%E5%BF%86%E7%89%88/" title="通过邮件分享这篇资料" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg><span class="sr-only">通过邮件分享这篇资料</span> </a></div></div> <hr class="my-6 border-dashed"> <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">  <a href="/hez-notes/posts/embedded-systems/嵌入式系统设计与应用-2026sp-重点" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-sm text-accent/85">嵌入式系统设计与应用-2026sp-重点</div> </div> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none rtl:rotate-180"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg> </a> </div> </main> <footer class="app-layout mt-auto"> <div class="py-6 sm:py-4 border-t border-border flex flex-col items-center justify-between sm:flex-row-reverse"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/HeZ2z/hez-notes" title="HeZzz's Notes GitHub 仓库" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg> <span class="sr-only">HeZzz&#39;s Notes GitHub 仓库</span>  </a><a href="mailto:hez2z@foxmail.com" title="给 HeZzz's Notes 发送邮件" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <span class="sr-only">给 HeZzz&#39;s Notes 发送邮件</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>期末复习资料整理与分享</span> </div> </div> </footer>  <!-- Load full theme logic --> <script type="module">const s="theme",r="light",m="dark";function h(){const t=localStorage.getItem(s);return t||(window.matchMedia("(prefers-color-scheme: dark)").matches?m:r)}let e=window.theme?.themeValue??h();function c(){localStorage.setItem(s,e),o()}function o(){document.firstElementChild?.setAttribute("data-theme",e);const t=e===m?"切换到亮色模式":"切换到暗色模式";document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const n=document.body;if(n){const i=window.getComputedStyle(n).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}}window.theme?(window.theme.setPreference=c,window.theme.reflectPreference=o):window.theme={themeValue:e,setPreference:c,reflectPreference:o,getTheme:()=>e,setTheme:t=>{e=t}};o();function d(){o(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{e=e===r?m:r,window.theme?.setTheme(e),c()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",t=>{const n=t,a=document.querySelector("meta[name='theme-color']")?.getAttribute("content");a&&n.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",a)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:t})=>{e=t?m:r,window.theme?.setTheme(e),c()});</script> </body> </html> <script type="module" src="/hez-notes/_astro/PostDetails.astro_astro_type_script_index_0_lang.BAoXT2Mh.js"></script>
