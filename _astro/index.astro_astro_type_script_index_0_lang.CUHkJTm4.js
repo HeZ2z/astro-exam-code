@@ -1,0 +1,1 @@
+import{s as a,n as o}from"./backUrl.CIY9X9P8.js";document.addEventListener("astro:page-load",()=>{document.querySelector("#main-content")?.dataset?.layout&&a(o(window.location.pathname,window.location.search))});
