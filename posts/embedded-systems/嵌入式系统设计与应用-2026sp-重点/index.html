@@ -394,12 +394,12 @@
 </ol>
 <p>这些寻址方式中，<strong>堆栈寻址（FD）<strong>和</strong>基址加偏址寻址</strong>在程序设计题（如冒泡排序或字符串处理）中非常常用。</p>
 <h4 id="第二操作数移位方式指令中移位">第二操作数移位方式(指令中移位)</h4>
-<p>LSL：逻辑左移，空出的最低有效位用 0 填充。</p>
-<p>LSR：逻辑右移，空出的最高有效位用 0 填充。</p>
-<p>ASL：算术左移，由于左移空出的有效位用 0 填充，因此它与 LSL 同义。</p>
-<p>ASR：算术右移，算术移位的对象是带符号数，移位过程中必须保持操作数的符号不变。如果源操作数是正数，空出的最高有效位用 0 填充，如果是负数用 1 填充。</p>
-<p>ROR：循环右移，移出的字的最低有效位依次填入空出的最高有效位。</p>
-<p>RRX：带扩展的循环右移。将寄存器的内容循环右移1位，空位用原来 C 标志位填充.</p>
+<p>LSL (Logical Shift Left)：逻辑左移，空出的最低有效位用 0 填充。</p>
+<p>LSR (Logical Shift Right)：逻辑右移，空出的最高有效位用 0 填充。</p>
+<p>ASL (Arithmetic Shift Left)：算术左移，由于左移空出的有效位用 0 填充，因此它与 LSL 同义。</p>
+<p>ASR (Arithmetic Shift Right)：算术右移，算术移位的对象是带符号数，移位过程中必须保持操作数的符号不变。如果源操作数是正数，空出的最高有效位用 0 填充，如果是负数用 1 填充。</p>
+<p>ROR (Rotate Right)：循环右移，移出的字的最低有效位依次填入空出的最高有效位。</p>
+<p>RRX (Rotate Right with Extend)：带扩展的循环右移。将寄存器的内容循环右移1位，空位用原来 C 标志位填充.</p>
 <h3 id="第四章-s5pv210微处理器与接口--thumb-指令集">第四章 S5PV210微处理器与接口 / Thumb 指令集</h3>
 <h4 id="s5pv210-处理器组成">S5PV210 处理器组成</h4>
 <p>S5PV210处理器主要由6大部分组成，分别为 CPU 核心、系统外设、多媒体、电源管理、存储器接口和 Connectivity 模块。CPU 和各个部分之间通过多层次 AHB/AXI 总线进行通信。</p>
@@ -478,14 +478,14 @@
 <span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    A[系统定义] --> B[可行性分析]</span></span>
 <span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    B --> C[需求分析]</span></span>
 <span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    C --> D[系统总体设计]</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    D --> E[硬件设计]</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    D --> F[软件设计]</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    E --> G[硬件测试]</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    F --> H[软件测试]</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    G --> I[软硬件集成、测试]</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    H --> I</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    D --> E[系统级仿真建模]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    E --> F[硬件综合]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    E --> G[软件综合]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    F --> H[软硬件协同仿真和验证]</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    G --> H</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    H --> I[系统集成、测试]</span></span>
 <span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    I --> J{符合要求}</span></span>
-<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    J -- 是 --> K([开发结束])</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    J -- 是 --> K[开发结束]</span></span>
 <span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">    J -- 否 --> D</span></span></code></pre>
 <hr>
 <p>嵌入式系统组成，作用特点，软件和硬件，软件里 Linux 操作系统组成，硬件 S5PV210 内容</p>
